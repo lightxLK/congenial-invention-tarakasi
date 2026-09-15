@@ -1,0 +1,521 @@
+{
+  "project": {
+    "name": "Rupa Tarakasi — Cuttack's Silver Filigree",
+    "type": "heritage editorial / digital exhibition website",
+    "goal": "Build an immersive, museum-quality digital exhibition about Cuttack Rupa Tarakasi — the craft's own material (drawn silver wire, light, shadow, scale) is the visual language, not decoration borrowed from generic 'Indian heritage' web design.",
+    "north_star": "The silver itself should be the visual effect. Beauty comes from macro photography, negative space, hairline rules, restrained type and physically-plausible motion — never from gradients, glow, glass or ornament.",
+    "content_rule": "All factual/editorial content must be derived only from the six supplied source documents (see source_policy). Do not add unsourced history, artisan biographies, statistics, quotes, product claims, tourism claims, or cultural interpretations. Every factual paragraph in content_inventory below carries an inline [source_key] tag; the developer must keep that mapping intact in the CMS/content layer so every claim stays traceable.",
+    "design_rule": "Avoid AI-slop aesthetics: no excessive gradients, glassmorphism, floating blobs, neon gold, generic Indian-pattern backgrounds, arbitrary 3D objects, excessive rounded cards, fake artisan portraits, stock-looking imagery, or animation for animation's sake. See anti_slop_checklist.",
+    "primary_feeling": [
+      "quiet wonder",
+      "human patience",
+      "silver light",
+      "craftsmanship",
+      "heritage",
+      "intimacy",
+      "material honesty"
+    ],
+    "audience": [
+      "people discovering Tarakasi for the first time",
+      "Odisha/Cuttack diaspora and residents",
+      "craft, design and material-culture enthusiasts",
+      "students and researchers (archaeology, craft history, GI law)",
+      "heritage/cultural-tourism audiences",
+      "potential buyers/collectors seeking provenance and authenticity"
+    ],
+    "tone_of_voice": "Precise, unhurried, respectful. Write like a craft-documentary narrator or museum catalogue essay — never like a tourism brochure or e-commerce landing page. Short declarative sentences mixed with one longer sentence per section for rhythm. No exclamation marks. No 'Discover the magic of...' constructions."
+  },
+
+  "source_policy": {
+    "source_keys": {
+      "wiki": {
+        "label": "Wikipedia — Tarakasi",
+        "url": "https://en.wikipedia.org/wiki/Tarakasi",
+        "role": "Primary source for process detail, alloy composition, motifs, Odissi ornament names, and the Chandi Medha/Durga Puja scale history with dated installations."
+      },
+      "vikaspedia": {
+        "label": "Vikaspedia / Archaeological Survey of India — Cuttack Rupa Tarakasi: The Timeless Silver Filigree Art From the Silver City",
+        "url": "https://en.vikaspedia.in/viewcontent/education/archaeological-survey-of-india/cuttack-rupa-tarakasi-the-timeless-silver-filigree-art-from-the-silver-city",
+        "role": "Primary source for the 'exact origin is unclear' framing and the 12th-century reference; ASI-hosted, so treated as the most institutionally authoritative voice on the unresolved-origin question.",
+        "note_to_developer": "This source page did not fully render at build time (JS-gated content). Content attributed to it below preserves the previously-verified claim (12th-century reference, unclear exact origin). Before launch, a human editor should re-visit the live URL and confirm exact wording, then update this file's 'origin_and_history' claims accordingly."
+      },
+      "gac": {
+        "label": "Google Arts & Culture / Dastkari Haat Samiti — Tarakasi: The Making of Silver Filigree",
+        "url": "https://artsandculture.google.com/story/tarakasi-the-making-of-silver-filigree-dastkari-haat-samiti/1AVxVAl70Rj6LA",
+        "role": "Primary source for the step-by-step making process: silver bricks, wire-drawing machine, dies, workshop scale, finishing stages. Documented by photographer Chirodeep Chaudhuri with artisan Ruksar Ali for Dastkari Haat Samiti."
+      },
+      "virasat": {
+        "label": "Virasat-E-Hind Foundation — Tarakasi Art: On the Brink of Survival",
+        "url": "https://blogvirasatehind.wordpress.com/2017/08/18/tarakasi-art-on-the-brink-of-survival/",
+        "role": "Primary source for the Persia-via-Indonesia maritime-trade origin theory, Mughal-era patronage, the Madhusudan Das / Utkal Arts Work Factory and 1962 Kalinga Filigree Cooperative Society revival history, the rose-motif detail, the '90 types of wire designs' figure, and the living-craft survival challenges."
+      },
+      "drishti": {
+        "label": "Drishti IAS — GI Tag to Cuttack Rupa Tarakasi",
+        "url": "https://www.drishtiias.com/daily-updates/daily-news-analysis/gi-tag-to-cuttack-rupa-tarakasi",
+        "role": "Primary source for the GI recognition date, the legal/regulatory explainer (DPIIT, GI Act 1999, TRIPS), and the ancient Mesopotamian filigree lineage (3500 BCE)."
+      },
+      "oaklores": {
+        "label": "Oak Lores — Tales in Twisted Silver: A Tribute to Odisha's Filigree Craft (Sanket Kumar Mahana)",
+        "url": "https://oaklores.com/2025/04/23/tales-in-twisted-silver-a-tribute-to-odishas-filigree-craft/",
+        "role": "Primary source for the mid-16th-century/Bhoi-dynasty dating, the 'Silver City' epithet, Bali Yatra connection, named Cuttack market neighbourhoods, and contemporary-craft/fashion-revival notes."
+      }
+    },
+    "editorial_conflict_rule": "Where sources disagree — especially on dating — do not silently merge them into one confident timeline. Use attributive language: 'Vikaspedia/ASI notes...', 'the Virasat-E-Hind account places it at roughly 500 years, tracing a Persian route...', 'Oak Lores dates the craft's Cuttack presence to the mid-16th-century Bhoi dynasty...'. The site should make the plurality of accounts itself part of the story — this is honest heritage journalism, not a wiki infobox.",
+    "copyright_rule": "All website copy must be original paraphrase in the site's own editorial voice. Do not reproduce verbatim sentences from any source beyond short, clearly quoted fragments (under ~15 words) with attribution. The content_inventory text below is written as ready-to-adapt paraphrase, not final copy — a copywriter should still pass over it for voice, but the facts and their source tags must not change.",
+    "media_rule": "Use only media the project holds rights/licence to, or that is explicitly reusable. Source citation does not grant image rights. Do not scrape images from the six source pages. See media_and_asset_manifest."
+  },
+
+  "content_inventory": {
+    "identity": {
+      "title": "Tarakasi",
+      "alternate_name": "Cuttack Rupa Tarakasi",
+      "meaning_note": "The common gloss offered across sources is 'tara' (wire) and 'kasi' (design/engraving) — present this as the traditional etymology, not a settled linguistic fact.",
+      "one_line_definition": "A silver filigree tradition native to Cuttack, Odisha, in which pure silver is drawn into hair-fine wire and hand-shaped into ornament.",
+      "epithet": "Cuttack is known as the 'Silver City of Odisha' because of this craft. [oaklores]"
+    },
+
+    "origin_and_history": {
+      "claims": [
+        { "text": "Historians trace silver filigree work in Cuttack to the mid-16th century, during the reign of the Bhoi dynasty.", "source": "oaklores" },
+        { "text": "Persian artisans connected to the Mughal empire are described as bringing intricate wire-design expertise into Odisha; native artisans are said to have acculturated these techniques, folding in temple iconography, local mythology and folklore.", "source": "oaklores" },
+        { "text": "A separate account describes the craft reaching Cuttack roughly 500 years ago, possibly by sea — from Persia, by way of Indonesia, through maritime trade.", "source": "virasat" },
+        { "text": "Wikipedia's material independently describes the art as 'more than 500 years old', practised historically by artisans along Odisha's eastern shores.", "source": "wiki" },
+        { "text": "Vikaspedia — hosted by the Archaeological Survey of India — notes that Tarakasi's exact origin in Cuttack is not settled, and records the craft's presence as far back as the 12th century.", "source": "vikaspedia" },
+        { "text": "Filigree as a technique is far older than its Cuttack chapter: Drishti IAS traces ornamental fine-wire work to ancient Mesopotamia, with evidence of filigree jewellery from as early as 3500 BCE.", "source": "drishti" },
+        { "text": "The Mughal era is described across sources as a period of royal patronage that strengthened Cuttack's reputation for delicate silverwork.", "source": ["oaklores", "virasat"] },
+        { "text": "A 19th-century documentary trace exists: an Archaeological Survey of India photograph from around 1873 shows Tarakasi artisans at work in Cuttack.", "source": "wiki" },
+        { "text": "The early 20th century saw a decline in the craft. Madhusudan Das — described as an architect of modern Odisha — founded the Utkal Arts Work Factory to help revive it.", "source": "virasat" },
+        { "text": "In 1962, Chief Minister Biju Patnaik established the Kalinga Filigree Cooperative Society to support local Tarakasi artisans.", "source": "virasat" },
+        { "text": "In March 2024, Cuttack Rupa Tarakasi received Geographical Indication (GI) recognition.", "source": "drishti" }
+      ],
+      "design": "Do not render this as one confident date-line. Build it as a small set of parallel 'accounts' — Bhoi-dynasty/16th-century, ~500-years/maritime-Persia, 12th-century/origin-unclear, Mesopotamian-deep-lineage — each explicitly source-tagged, converging only at documented, undisputed anchors: the 1873 ASI photograph, the early-20th-century decline and Madhusudan Das revival, 1962 cooperative, 2024 GI.",
+      "narrative_frame": "'A Craft With Many Beginnings' — treat the disagreement between sources as evidence of how old and how orally-transmitted the tradition is, not as a flaw to paper over."
+    },
+
+    "making": {
+      "sequence_narrative": [
+        { "step": "Raw silver", "detail": "Silver arrives as bricks/lumps, historically sourced from trading centres such as Kolkata and Mumbai.", "source": "gac" },
+        { "step": "Melting", "detail": "A silver lump is placed in a small clay pot set within a bucket of hot coals; the fire is regulated by a hand-cranked bellows. Melting takes roughly ten minutes.", "source": "wiki" },
+        { "step": "Casting", "detail": "Molten silver is poured into a rod-shaped mould, then cooled in water.", "source": "wiki" },
+        { "step": "Drawing into wire", "detail": "The cooled rod is pressed and pulled into long, thin wire using a wire-drawing machine — historically a two-man hand process — producing 'flat wires' as a base form.", "source": ["wiki", "gac"] },
+        { "step": "Refining the gauge", "detail": "Thicker wires are burned/drawn down further to produce finer wire; gauge is chosen according to the design, and the finest wire can be extremely delicate — by one account, thinner than a strand of hair.", "source": ["gac", "oaklores"] },
+        { "step": "Twisting and curling", "detail": "Wire is hand-carved into pattern, or softened over a kerosene flame directed through a mouth-held blow-tube, then strung, twisted and shaped by hand and basic tools — needles for twisting, dies for shaping. Dies produce small circular forms and fine dotted detail.", "source": ["wiki", "gac"] },
+        { "step": "The design vocabulary", "detail": "Across the craft, an estimated 90 types of wire design exist — spirals, curls, creepers, jaali-like lattices — the alphabet from which every motif is built.", "source": "virasat" },
+        { "step": "Building the frame (farma)", "detail": "A hand-drawn sketch guides the piece. A thicker wire is bent into the outer frame, or farma; thinner wires are then curled and packed inward to build interior detail.", "source": "gac" },
+        { "step": "Assembly", "detail": "Individual wire elements are assembled into the final composition; for larger pieces, flat cut silver shapes supplement the wirework.", "source": "gac" },
+        { "step": "Soldering / fusing", "detail": "The assembled piece is set in a mixture of borax powder and water, soldering powder is sprinkled over the joins, and heat is applied to fuse the piece — while the metal is still warm it is shaped into its final ornament form.", "source": "wiki" },
+        { "step": "Related techniques", "detail": "Beyond core wirework, artisans also practise granulation, snow-glazing, casting, platinum polishing and silver-brass fusion.", "source": "wiki" },
+        { "step": "Cleaning", "detail": "The finished piece is immersed briefly in a dilute acid solution to clean it.", "source": "gac" },
+        { "step": "Polishing", "detail": "A polishing solution is applied, then the piece is hand-polished to a perfect shine using brass-tipped tools and brushes — or, alternatively, oxidised for an antique finish.", "source": ["gac", "oaklores"] }
+      ],
+      "workshop_realities": [
+        { "text": "Teams of four to five artisans typically collaborate on a piece; workshops are often small, cramped spaces behind showrooms or inside artisans' homes.", "source": "gac" },
+        { "text": "Winter months are the preferred working season.", "source": "gac" },
+        { "text": "A complex piece can take two to three weeks to complete depending on intricacy, and a single mistake can undo days of work — the craft demands sustained precision.", "source": "oaklores" }
+      ],
+      "interaction": "A single continuous fine silver line travels down the page as the user scrolls, physically bending and coiling into each successive process-stage illustration — melt, cast, draw, twist, frame, fill, fuse, clean, polish — so the 'wire' itself performs the narrative rather than a generic progress bar."
+    },
+
+    "forms_and_motifs": {
+      "materials_and_forms": [
+        "earrings", "necklaces", "bangles", "anklets", "toe rings", "arm jewellery",
+        "waist bands (traditional marriage use)", "brooches", "pendants", "hairpins",
+        "vermilion boxes", "miniature handbags", "souvenirs", "showpieces", "idols",
+        "architectural/monument replicas", "large silver festival backdrops (Chandi Medha)",
+        "decorative frames", "customised gifts"
+      ],
+      "motifs_and_subjects": [
+        { "motif": "Animals, birds, flowers, vines/creepers, geometric lattice (jaali)", "source": "wiki" },
+        { "motif": "Konark Chakra (the Sun Temple's stone wheel) and temple mementoes", "source": "wiki" },
+        { "motif": "Scenes from the Mahabharata — most notably the Bhagavad Gita's chariot of Arjuna with Krishna", "source": "wiki" },
+        { "motif": "Lord Jagannath, Subhadra and Balabhadra, and other temple/architectural elements", "source": "oaklores" },
+        { "motif": "Non-Odishan landmark replicas — the Taj Mahal, the Eiffel Tower — made as souvenirs", "source": "wiki" },
+        { "motif": "Sun-wheel designs referencing the Konark Sun Temple", "source": "oaklores" }
+      ],
+      "specific_design_detail": {
+        "text": "One rose motif — a recurring subject in Tarakasi work — takes roughly three to four hours of continuous work to complete.",
+        "source": "virasat",
+        "presentation_note": "Present as this source's specific account of one motif's labour cost, not as a universal benchmark for all Tarakasi work."
+      }
+    },
+
+    "odissi": {
+      "content": "Tarakasi jewellery forms the traditional ornament set of Odissi dance costume, worn from head to waist. Natural, uncut stones are sometimes set within silver-and-gold work for these pieces.",
+      "source": "wiki",
+      "named_forms": [
+        { "name": "Choker", "zone": "neck" },
+        { "name": "Padaka-tilaka", "zone": "neck (long necklace)" },
+        { "name": "Bahichudi / Tayila", "zone": "arm (armlets)" },
+        { "name": "Kankana", "zone": "wrist (bracelets)" },
+        { "name": "Mekhala", "zone": "waist (belt)" },
+        { "name": "Anklets and bells", "zone": "feet" },
+        { "name": "Kapa", "zone": "ear" },
+        { "name": "Sinthi", "zone": "head/forehead" }
+      ],
+      "visual_direction": "Museum-catalogue treatment: neutral backdrop, close crop, generous negative space, labels that behave like object-identification tags in a real exhibition case — never a fashion-editorial mood board."
+    },
+
+    "durga_puja": {
+      "content": "Tarakasi is central to Cuttack's Durga Puja — most visibly in the immense silver backdrops known as Chandi Medha, which frame the goddess's idol, alongside silver crowns and ornaments made for the occasion.",
+      "source": "wiki",
+      "tradition_root": { "text": "The Sharadiya Utsav puja tradition in this form is linked to a 16th-century visit by Chaitanya Mahaprabhu, with consecration historically conducted at the Binod Behari Devi Mandap.", "source": "wiki" },
+      "scale_and_labour": { "text": "More than 150 filigree artisans are engaged each year making the backdrop and ornament designs for Cuttack's Durga Puja.", "source": "wiki" },
+      "named_puja_areas": ["Chandni Chowk (Chaandi Medha)", "Chauliaganj", "Choudhury Bazar", "Khan Nagar", "Banka Bazar", "Dargaah Bazaar", "Balu Bazar"],
+      "chandi_medha_history": [
+        { "year": "1956", "place": "Choudhury Bazaar", "detail": "First large chandi medha installed, weighing 250 kg." },
+        { "year": "1991", "place": "Sheikh Bazaar", "detail": "Puja mandap installed a 350 kg backdrop." },
+        { "year": "2004", "place": "Ranihat", "detail": "Installed a 483 kg chandi medha." },
+        { "year": "2005", "place": "Haripur-Dolamundai", "detail": "Installed a 500 kg backdrop." },
+        { "year": "2006", "place": "Sheikh Bazaar", "detail": "Committee remodelled its backdrop using 450 kg of silver." }
+      ],
+      "source": "wiki",
+      "bali_yatra_note": { "text": "Tarakasi work is also associated with Cuttack's Bali Yatra (Sand Festival) celebrations.", "source": "oaklores" },
+      "visual_direction": "Scale contrast is the point: a hairline of wire beside hundreds of kilograms of assembled silver. Use a real macro-to-panorama transition, not an abstract number counter."
+    },
+
+    "cuttack": {
+      "content": "Cuttack has been a commercial hub on Odisha's eastern coast since the early medieval period, and its silverwork earned it the epithet 'Silver City of Odisha'.",
+      "source": "oaklores",
+      "market_neighbourhoods": { "text": "Tarakasi is sold and worked across neighbourhoods including Nayasadak, Balu Bazaar and Mangalabag, where hundreds of shops carry the craft.", "source": "oaklores" },
+      "cultural_role": { "text": "Across India, silver filigree carries associations with purity and ritual — used in ceremonial and auspicious occasions, in royal households historically, in temple ritual objects, and in festival processions.", "source": "oaklores" }
+    },
+
+    "gi": {
+      "content": "Cuttack Rupa Tarakasi received Geographical Indication (GI) recognition on 15 March 2024.",
+      "source": "drishti",
+      "explanation": "A GI tag identifies a product as originating from a specific geographic region and legally restricts use of that name to authorised producers from that place; once registered, protection lasts ten years.",
+      "regulator": "In India, GI registration is administered by the Department for Promotion of Industry and Internal Trade (DPIIT) under the Geographical Indications of Goods (Registration and Protection) Act, 1999 — itself aligned with the WTO's TRIPS agreement.",
+      "context": "Cuttack Rupa Tarakasi's GI recognition was granted alongside GI tags for Banglar Muslin (West Bengal), Narasapur Crochet Lace (Andhra Pradesh) and Kutch Rogan Craft (Gujarat) around the same period.",
+      "source_note": "Use only the Drishti IAS source for the GI date and legal explainer; do not introduce further legal claims beyond what is documented here."
+    },
+
+    "living_craft_and_challenges": {
+      "themes": [
+        { "text": "The craft is intensely labour-intensive: complex pieces can take two to three weeks, and precision leaves no margin — a single mistake can undo days of work.", "source": "oaklores" },
+        { "text": "Raw material costs are rising sharply as silver prices climb.", "source": ["oaklores", "virasat"] },
+        { "text": "Cuttack's artisans face competition from Kolkata, which produces coarser, cheaper machine-assisted filigree at volume — factory processes can replicate thousands of pieces a day, undercutting hand work on price.", "source": ["virasat", "oaklores"] },
+        { "text": "Interest among younger generations is declining, given the skill, patience and modest returns the craft currently offers.", "source": ["virasat", "oaklores"] },
+        { "text": "Approximately 400 artisans are estimated to still be working in Cuttack; the craft is described as being in real danger of erosion without continued support.", "source": "virasat" },
+        { "text": "On the positive side, designers are increasingly bringing Tarakasi into fashion shows, luxury collections and international exhibitions, and handicraft training centres are offering renewed institutional support.", "source": "oaklores" }
+      ],
+      "tone": "Lead with expertise and mastery, not pity. State the structural pressures — price, competition, generational transmission — as facts an informed reader should understand, then close the section on the documented signs of renewed interest, ending the site's difficult chapter on continuity rather than loss."
+    }
+  },
+
+  "information_architecture": {
+    "navigation": [
+      "The Craft", "The Making", "Motifs", "In Culture", "Cuttack", "GI Recognition", "The Challenge", "Sources"
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "title": "Tarakasi",
+        "subtitle": "Silver, drawn into wire. Wire, shaped into a city's memory.",
+        "purpose": "Immediate emotional introduction without sounding like marketing copy.",
+        "visual": "Extreme macro photograph or slow-motion video of real filigree wire catching directional light, shallow depth of field. The object stays sharp; the environment stays dark and quiet.",
+        "motion": "A very slow camera drift (60–90s loop) or parallax under 20px. No kinetic headline effects, no typewriter text, no particle systems.",
+        "epigraph_option": "Consider a single small kicker line above the title: 'Cuttack, Odisha — the Silver City' [oaklores], set in the micro type, understated, not competing with the wordmark."
+      },
+      {
+        "id": "opening",
+        "title": "The Silver City",
+        "purpose": "Establish Cuttack and Tarakasi as a living craft tradition, not a museum relic.",
+        "layout": "Full-width editorial text column (reading_width) with one large image of Cuttack/the craft and a small SourceNote.",
+        "copy_seed": "Cuttack has stood as a trading city on Odisha's eastern coast since the early medieval period. Somewhere inside that long commercial history, silver was drawn into wire, and the wire was given a name it still carries: Tarakasi. [oaklores]",
+        "motion": "Text reveals upward by 12–20px, 600–800ms, cubic-bezier(0.22,1,0.36,1)."
+      },
+      {
+        "id": "what-is-tarakasi",
+        "title": "What Is Tarakasi?",
+        "purpose": "Plain-language definition plus close-up visual evidence and the etymology.",
+        "layout": "Split 45/55 desktop (text/image); stacked mobile, image first.",
+        "copy_seed": "Tara, wire. Kasi, design. Tarakasi is Cuttack's tradition of pulling silver — usually 90% pure or finer [wiki] — into threads thinner than a hair [oaklores], then coiling those threads into pattern by hand.",
+        "interaction": "Hover (desktop) / tap (mobile) reveals a magnified inset of real wire detail — an optical loupe effect, not a lightbox modal."
+      },
+      {
+        "id": "history",
+        "title": "A Craft With Many Beginnings",
+        "purpose": "Present the differing historical accounts honestly, letting the disagreement itself communicate the craft's age and oral-transmission nature.",
+        "layout": "Editorial vertical timeline (desktop: alternating left/right; mobile: single left rail), each entry explicitly source-labelled.",
+        "milestones": [
+          { "era": "~3500 BCE", "text": "Filigree as a technique is already old by the time it reaches India — evidence of fine-wire jewellery exists from ancient Mesopotamia.", "source": "drishti" },
+          { "era": "12th century", "text": "Vikaspedia/ASI records silver-working traditions in the Cuttack region reaching back this far, while noting the craft's exact local origin is unclear.", "source": "vikaspedia" },
+          { "era": "Mid-16th century", "text": "Historians trace organised silver filigree work in Cuttack to the Bhoi dynasty.", "source": "oaklores" },
+          { "era": "~500 years ago", "text": "A separate account places the craft's arrival by sea, from Persia via Indonesia.", "source": "virasat" },
+          { "era": "Mughal era", "text": "Royal patronage strengthens Cuttack's reputation for fine silverwork.", "source": ["oaklores", "virasat"] },
+          { "era": "c. 1873", "text": "An Archaeological Survey of India photograph documents Tarakasi artisans at work in Cuttack — the craft's earliest visual record in these sources.", "source": "wiki" },
+          { "era": "Early 20th century", "text": "The craft declines; Madhusudan Das founds the Utkal Arts Work Factory to revive it.", "source": "virasat" },
+          { "era": "1962", "text": "Chief Minister Biju Patnaik establishes the Kalinga Filigree Cooperative Society.", "source": "virasat" },
+          { "era": "15 March 2024", "text": "Cuttack Rupa Tarakasi receives Geographical Indication recognition.", "source": "drishti" }
+        ],
+        "design": "Do not present this as a single confident line. Use a visibly forked/braided rail for the pre-16th-century entries to signal 'multiple accounts', converging into a single confirmed thread from the 1873 photograph onward."
+      },
+      {
+        "id": "making",
+        "title": "From Silver to Filigree",
+        "purpose": "The signature experiential section — the process, told with the material's own logic.",
+        "layout": "Scroll-driven process narrative, one wire-path animation running the full section length.",
+        "steps": ["Melt", "Cast", "Draw", "Refine gauge", "Twist & curl", "Frame (farma)", "Fill", "Assemble", "Fuse", "Clean", "Polish"],
+        "step_source_map": "See content_inventory.making.sequence_narrative for the exact copy and source tag per step — pass this array directly into the ProcessStepper component's content model.",
+        "interaction": "A fine silver line travels through each stage; each stage reveals a real process photograph (or, if unavailable, a specification placeholder — see media_and_asset_manifest) and 1–2 sentences of sourced explanation.",
+        "workshop_aside": "Include a small aside card using the workshop_realities facts (team of four-to-five, winter working season, weeks-long timelines) to humanise the sequence without inventing an individual artisan's story.",
+        "mobile_behavior": "Convert scroll choreography into a vertical stepper with scroll-snap; the wire line becomes a simple vertical rail. No horizontal scrolling."
+      },
+      {
+        "id": "wire_language",
+        "title": "A Language of Wire",
+        "purpose": "Explain that varying wire gauge plus a repertoire of roughly 90 wire-design types [virasat] — spirals, curls, creepers, jaali — form the entire visual vocabulary of the craft.",
+        "layout": "Large typographic statement ('Ninety ways to bend a line.') followed by a macro image grid of distinct wire patterns.",
+        "interaction": "Tap a grid tile to isolate that motif full-bleed against a darkened backdrop with its pattern name, if known, and its use."
+      },
+      {
+        "id": "objects",
+        "title": "What Silver Becomes",
+        "purpose": "Show the breadth of Tarakasi beyond jewellery: the full materials_and_forms list.",
+        "layout": "Asymmetrical catalogue gallery (editorial masonry, not a uniform card grid).",
+        "categories": ["Jewellery", "Ornaments & vermilion boxes", "Souvenirs & miniatures", "Idols & showpieces", "Architectural replicas", "Festival work (Chandi Medha)"],
+        "rule": "Use only real, licensed photographs. Never generate replacement artefacts that could be mistaken for authentic Tarakasi — this is a hard rule, not a style preference."
+      },
+      {
+        "id": "odissi",
+        "title": "Silver in Motion",
+        "purpose": "Explain Tarakasi's role as the traditional ornament set of Odissi dance, head to waist.",
+        "layout": "Full-height editorial image of an Odissi dancer's ornament set with labelled zones (see content_inventory.odissi.named_forms).",
+        "interaction": "Tap/hover labels to identify each named ornament form and its body zone — behaves like an interactive museum object label, not a shopping tag."
+      },
+      {
+        "id": "durga_puja",
+        "title": "When Cuttack Turns Silver",
+        "purpose": "Tell the Chandi Medha story: the 16th-century Sharadiya Utsav root, 150+ artisans working annually, and the dated history of specific backdrops growing from 250 kg to 500 kg+.",
+        "layout": "Large photographic panorama of a Chandi Medha backdrop, with a detail inset showing individual wirework up close.",
+        "data_visual": "A minimal, typographic weight-timeline (1956 → 250kg, 1991 → 350kg, 2004 → 483kg, 2005 → 500kg, 2006 → 450kg) rendered as a restrained bar-rule chart in silver tones — not a flashy infographic.",
+        "interaction": "Pinch/drag zoom on the panorama image, desktop and mobile alike."
+      },
+      {
+        "id": "cuttack",
+        "title": "Made in Cuttack",
+        "purpose": "Connect the craft to the city's identity as a historic trading hub and the 'Silver City' epithet.",
+        "layout": "Minimal city section — a short editorial paragraph, one strong photograph, and a small labelled note of the three named craft neighbourhoods (Nayasadak, Balu Bazaar, Mangalabag). No generic tourism map interface.",
+        "content": "Use only Cuttack-related description present in content_inventory.cuttack."
+      },
+      {
+        "id": "gi",
+        "title": "A Name Protected by Place",
+        "purpose": "Explain the 2024 GI recognition and what it legally means.",
+        "visual": "Quiet, typographic seal-like treatment built from type and a hairline circle rule — explicitly not a fake government emblem or official-looking crest.",
+        "interaction": "Simple expandable explainer: date, definition, regulator, 10-year protection term, sibling GI crafts named the same period."
+      },
+      {
+        "id": "challenge",
+        "title": "The Craft Must Continue",
+        "purpose": "Address the survival challenge with dignity, specificity, and an ending on continuity rather than loss.",
+        "layout": "Dark editorial section (charcoal ground, silver_light type), restrained photography of real tools/workshop interiors — no pity imagery, no artisan portraits without explicit rights.",
+        "themes": ["rising silver prices", "competition from cheaper machine-made filigree", "generational transmission", "artisan returns and livelihood pressure", "~400 artisans currently estimated working in Cuttack", "renewed interest via fashion/exhibition and training centres"],
+        "closing_beat": "End this section, and by extension the site's difficult content, on the oaklores note about renewed design interest and training support — the craft's continuation, not its endangerment, is the last word."
+      },
+      {
+        "id": "closing",
+        "title": "The Thread Continues",
+        "purpose": "End on the craft itself, not a generic call-to-action.",
+        "visual": "One slowly moving macro shot of a finished piece catching natural light — can echo/loop back to the hero shot to close the circle.",
+        "cta": "Explore the making",
+        "secondary": "Read the sources"
+      },
+      {
+        "id": "sources",
+        "title": "Sources & Further Reading",
+        "purpose": "Transparent attribution and editorial provenance — this is a load-bearing trust section for a heritage site, not a footnote.",
+        "layout": "Clean bibliography: six entries, each with publication/site name, article title, direct URL, and role played in the site's content (pull from source_policy.source_keys[*].role).",
+        "additional_note": "Include the accessed-date and the note that the Vikaspedia source's exact wording should be reverified by an editor before launch (see source_policy.source_keys.vikaspedia.note_to_developer)."
+      }
+    ]
+  },
+
+  "visual_system": {
+    "art_direction": "Contemporary museum catalogue meets intimate craft documentary. Think: a beautifully typeset exhibition catalogue for a serious jewellery/metalwork museum show, shot through with the slow patience of a craft documentary film.",
+    "reference_mood": [
+      "Cooper Hewitt / V&A digital exhibition microsites",
+      "Aesop's editorial restraint (without becoming a beauty-brand pastiche)",
+      "Japanese craft documentaries — long static macro shots, natural light, silence",
+      "Physical jewellery-house lookbooks that photograph the object, not a model wearing it"
+    ],
+    "palette": {
+      "background": "#F4F1EA",
+      "background_alt": "#EDE9DF",
+      "ink": "#171717",
+      "silver_light": "#D8D5CE",
+      "silver_mid": "#9D9A93",
+      "silver_dark": "#575650",
+      "charcoal": "#20201E",
+      "warm_accent": "#A47B45",
+      "rule": "#C9C4BA",
+      "focus_ring": "#3A6EA5"
+    },
+    "palette_rule": "Silver is represented through photography, real material texture, and tonal/value contrast — never a fake CSS metallic gradient. The warm_accent is used sparingly (a single word, a rule, a small numeral) — never as a dominant brand colour, since the subject is silver, not gold.",
+    "typography": {
+      "display": "An elegant, high-contrast serif (e.g. a Didone or transitional serif such as Canela, Reckless, or GT Sectra) for titles and section headers. If multilingual (Odia) support is added later, pair with a serif offering solid Odia-script metrics rather than a mismatched system fallback.",
+      "body": "A neutral humanist sans-serif with excellent readability at small sizes (e.g. Inter, Untitled Sans, or GT America) for editorial copy.",
+      "micro": "A restrained sans or monospace (e.g. a light-weight grotesk or a quiet mono like GT America Mono) for process labels, source citations, timeline dates and metadata — signals 'documentation', separate from the editorial voice.",
+      "scale_note": "Large typography is used to slow the reader down at key moments (hero title, wire_language statement), but never becomes decoration for its own sake — every oversized line must carry real content.",
+      "line_height": "1.5 for body copy at reading_width; 1.1–1.2 for display type."
+    },
+    "texture": {
+      "allowed": ["subtle paper grain (2–4% opacity max)", "real metal texture from photography only", "fine hairline rules (1px, rule colour)"],
+      "forbidden": ["AI-generated ornamental background", "generic mandala/paisley/lotus motifs used as decoration", "gold-foil gradients", "noise-heavy overlays", "fake embossing/bevel effects on type"]
+    },
+    "layout": {
+      "grid": "12-column desktop editorial grid; 4-column mobile grid.",
+      "max_width": "1440px",
+      "reading_width": "680–760px",
+      "gutter": "clamp(18px, 3vw, 48px)",
+      "section_spacing": "clamp(88px, 12vw, 180px)",
+      "asymmetry_rule": "Object/gallery and history sections should break the grid deliberately (off-center images, uneven column spans) — the 12-col grid is a discipline to break with intent, not a rule to follow uniformly on every section."
+    },
+    "imagery_direction": {
+      "photography_style": "Macro-first. Shallow depth of field, single directional light source (mimics workshop lamp/window light), true-to-material silver tone — not warmed/goldened in post. Avoid flat product-catalogue lighting for hero/section-opener images; reserve flat even lighting only for the museum-catalogue object shots in 'objects' and 'odissi'.",
+      "people_policy": "No AI-generated or stock 'artisan' faces. If real, rights-cleared artisan photography becomes available, treat hands-at-work shots (mid-process, tools visible) as strongly preferred over posed portraits.",
+      "scale_device": "Recurring visual device across the site: extreme close-up of wire juxtaposed with a wide shot of a massive Chandi Medha — repeat this scale contrast at least twice (making section, durga_puja section) to reinforce the site's core visual idea."
+    }
+  },
+
+  "motion_system": {
+    "principle": "Motion should feel like handling a delicate object: slow, precise, almost physical — as though the interface itself could be dented if moved carelessly.",
+    "signature_motion": "The 'wire line' motif: a single SVG path that draws/bends/coils in sync with scroll position, used in the hero-to-opening transition and throughout the making section. This is the site's one recurring, ownable motion signature — do not introduce a second competing signature effect elsewhere.",
+    "allowed": [
+      "fade + 12–24px translate on scroll-into-view",
+      "slow image scale from 1.03 to 1.00 on load/reveal",
+      "mask reveals (image revealed via an expanding shape, not a wipe gimmick)",
+      "SVG line-drawing (stroke-dashoffset) for the wire motif",
+      "gentle parallax under 30px on hero imagery only",
+      "micro hover brightness/contrast shift (±4–6%) on interactive tiles",
+      "magnifier/loupe reveal on hover or tap for macro detail insets"
+    ],
+    "durations": { "micro": "180–240ms", "standard": "500–750ms", "editorial": "900–1400ms" },
+    "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "forbidden": [
+      "scroll-jacking (hijacking native scroll physics)",
+      "constant/idle floating or breathing animation on static elements",
+      "bouncy/spring-overshoot card entrances",
+      "cursor-following gimmicks (magnetic buttons, cursor trails)",
+      "rapid staggered word/letter text reveals",
+      "3D-spinning jewellery or product-configurator style rotation",
+      "parallax layers that hurt mobile scroll performance",
+      "autoplaying carousels"
+    ],
+    "reduced_motion": "Respect prefers-reduced-motion fully: replace all scroll choreography (wire line, parallax, mask reveals) with simple opacity fades; the ProcessStepper must remain fully legible as a static vertical list with no animation dependency."
+  },
+
+  "responsive_behavior": {
+    "breakpoints": { "mobile": "< 640px", "tablet": "640–1023px", "desktop": "1024–1439px", "wide": ">= 1440px" },
+    "mobile_rules": [
+      "Mobile is designed as a first-class editorial experience, not a collapsed desktop layout.",
+      "Hero is capped at 72–88vh and never places text over busy image detail — use a scrim or a quieter crop instead of lowering text contrast.",
+      "All split (text/image) layouts stack, image-to-text rhythm deliberately alternated section to section so the page doesn't feel monotonous.",
+      "No horizontal carousel as the sole way to reach content — gallery/catalogue sections must remain fully reachable via vertical scroll.",
+      "Touch targets minimum 44×44px.",
+      "The making-section wire animation becomes a vertical stepper with scroll-snap between steps.",
+      "Large images use true responsive crops (art-directed per breakpoint), not a shrunk desktop image.",
+      "Navigation collapses to a full-screen or bottom-sheet menu with large touch-friendly section links.",
+      "Source notes stay inline and readable at mobile width — never hidden behind a hover-only tooltip.",
+      "No essential information is hover-only; every interactive reveal (loupe, labels, expandable GI explainer) has a tap-equivalent."
+    ]
+  },
+
+  "component_system": {
+    "components": [
+      "EditorialHeader", "HeroMacro", "SectionIntro", "SourceNote",
+      "HistoryTimeline (forked/braided rail variant)", "ProcessStepper (wire-line + vertical-stepper variants)",
+      "WireMotifViewer", "ObjectGallery (asymmetrical masonry)", "OdissiOrnamentLabels",
+      "FestivalScaleViewer (panorama + weight-timeline)", "GIExplainer (expandable)",
+      "ChallengeSection", "SourceList", "Footer"
+    ],
+    "card_rule": "Cards are used only where they genuinely improve information grouping (e.g. the GI sibling-crafts note, the workshop-realities aside). Default to editorial compositions, image-led layouts and open space rather than boxed cards."
+  },
+
+  "media_and_asset_manifest": {
+    "principle": "Build a separate structured image manifest before development starts — this design file specifies its shape, not its content, since actual photography/licensing is the client's responsibility.",
+    "manifest_fields": ["asset_id", "section_id", "source_key (if drawn from a cited source's context)", "licence/permission status", "crop variants per breakpoint", "alt_text", "focal_point", "format (AVIF/WebP + fallback)"],
+    "placeholder_policy": "Until real, licensed photography is supplied, use clearly-labelled grey/silver placeholder blocks with a text note of the intended shot (e.g. 'MACRO — wire being twisted, directional light') rather than AI-generated stand-in imagery — a placeholder must never be mistaken for a real artefact.",
+    "priority_shot_list": [
+      "Hero: macro of finished filigree catching light",
+      "Making: one photo per process step (11 shots)",
+      "Wire language: 6–10 distinct wire-pattern macro tiles",
+      "Objects: minimum 2 photos per category (12+ total)",
+      "Odissi: one full ornament-set photograph",
+      "Durga Puja: one panorama Chandi Medha shot + one macro detail inset",
+      "Cuttack: one city/market photograph",
+      "Challenge: 2–3 workshop/tool interior shots (no posed portraits without explicit rights)"
+    ]
+  },
+
+  "accessibility": {
+    "requirements": [
+      "WCAG 2.2 AA target",
+      "full keyboard navigation, including the wire-line scroll animation and expandable GI explainer",
+      "visible focus states using palette.focus_ring",
+      "semantic heading hierarchy (single h1 in hero, h2 per section)",
+      "descriptive alt text for every meaningful image, referencing the manifest's alt_text field",
+      "decorative imagery marked aria-hidden / empty alt",
+      "captions/transcripts for any documentary video",
+      "reduced-motion support (see motion_system.reduced_motion)",
+      "minimum readable body size 16px",
+      "sufficient text contrast, including silver_mid/silver_dark text-on-background combinations checked against AA",
+      "no information conveyed by colour alone (timeline eras, GI status use icon/text, not colour coding)"
+    ]
+  },
+
+  "performance": {
+    "targets": [
+      "mobile-first loading",
+      "responsive WebP/AVIF imagery with defined crop variants",
+      "lazy-load all below-the-fold media",
+      "preload only the hero asset",
+      "avoid autoplay video on mobile unless extremely lightweight (<2MB, muted, short loop) and user-controllable",
+      "keep all animation GPU-friendly (transform/opacity only, avoid layout-triggering properties)",
+      "prefer CSS/Web Animations API over large animation libraries; a scroll-linked library is acceptable only for the wire-line motif if CSS scroll-timeline support is insufficient",
+      "target excellent Core Web Vitals (LCP < 2.5s, CLS < 0.1, INP < 200ms) on a mid-tier mobile device profile"
+    ]
+  },
+
+  "seo_and_metadata": {
+    "title": "Tarakasi — The Silver Filigree of Cuttack",
+    "description": "Explore Cuttack Rupa Tarakasi: its many-accounted history, the silver-wire making process, its motifs, its role in Odissi and Durga Puja, its 2024 GI recognition, and the challenges facing this living craft today.",
+    "structured_data": ["Article", "ImageObject", "BreadcrumbList"],
+    "rule": "Do not add unsupported historical dates or claims to metadata or structured data that are not already present in content_inventory."
+  },
+
+  "anti_slop_checklist": [
+    "No generic 'Discover the beauty of India' copy.",
+    "No fake poetic claims not grounded in the supplied sources.",
+    "No AI-generated artisan faces.",
+    "No invented artisan names or quotes (Jagdish Mishra, the one named artisan in the Wikipedia source, may be referenced only if his quoted material is reproduced accurately and attributed — do not invent additional dialogue for him).",
+    "No invented statistics beyond those explicitly sourced (500+ years, 90% silver, 90 wire types, ~400 artisans, 150+ puja artisans, specific Chandi Medha weights/years, 15 March 2024 GI date).",
+    "No generic lotus/mandala decoration just because the subject is Indian.",
+    "No gold-heavy luxury-brand treatment — the subject is silver; warm_accent stays a minor note, not a dominant hue.",
+    "No excessive rounded rectangles / bubbly card UI.",
+    "No gradient-heavy hero.",
+    "No stock-photo-looking workshop scenes.",
+    "No decorative animation that competes with or upstages the filigree photography.",
+    "No fake museum labels pretending to be historical records — the HistoryTimeline must always show its source attribution, never present as an unsourced 'fact plaque'.",
+    "No single definitive origin story when the supplied sources themselves qualify or disagree on the origin — see origin_and_history.design.",
+    "No fake GI seal/emblem styled to resemble an official government mark."
+  ],
+
+  "recommended_page_flow": [
+    "Hero", "The Silver City", "What is Tarakasi?", "A Craft With Many Beginnings",
+    "From Silver to Filigree", "A Language of Wire", "What Silver Becomes",
+    "Silver in Motion — Odissi", "When Cuttack Turns Silver — Durga Puja",
+    "Made in Cuttack", "A Name Protected by Place — GI", "The Craft Must Continue",
+    "The Thread Continues", "Sources & Further Reading"
+  ],
+
+  "implementation_notes": {
+    "preferred_stack": "Any modern React/Next.js (or equivalent) stack; semantic HTML, CSS-first animation, progressive enhancement so content reads without JS.",
+    "image_strategy": "Build the image manifest (see media_and_asset_manifest) before component work starts — asset id, source key, licence status, crop variants, alt text, focal point.",
+    "content_model": "Keep all editorial copy, including source tags, in structured JSON/MDX (mirroring content_inventory's shape) rather than hard-coding paragraphs into components — this keeps the source-attribution system enforceable and editable.",
+    "animation_architecture": "IntersectionObserver / CSS scroll-timeline for reveals; a dedicated SVG path-animation module for the wire-line signature motif, driven by scroll progress and gracefully degrading to a static image under reduced-motion.",
+    "mobile_testing": "Test at 320, 360, 390, 412 and 430px widths plus tablet portrait/landscape, focusing especially on the ProcessStepper vertical-stepper mode and the FestivalScaleViewer pinch-zoom.",
+    "pre_launch_editorial_task": "A human editor must re-verify the Vikaspedia source's exact wording live (see source_policy.source_keys.vikaspedia.note_to_developer) before the History section ships, since that page did not fully render during this design pass.",
+    "quality_bar": "The final result should read as a digital exhibition or premium cultural publication — closer to a museum microsite than a template-based business/portfolio site. If in doubt on any design decision, choose the option that removes an element rather than adds one."
+  }
+}
