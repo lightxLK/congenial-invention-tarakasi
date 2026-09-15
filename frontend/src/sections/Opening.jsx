@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { Ph, Reveal, SectionHead, SourceNote, placeholderUrl } from '../components/Shared';
 
-const LOUPE_SRC = placeholderUrl('opening-loupe-wire-macro — wire detail', 'aspect-[4/5]', 800);
+const LOUPE_SRC = placeholderUrl('opening-loupe-wire-macro: wire detail', 'aspect-[4/5]', 800);
 
 function Loupe() {
   const ref = useRef(null);
@@ -47,7 +47,7 @@ function Loupe() {
         />
       )}
       <span className="absolute bottom-3 left-3 bg-paper/85 px-2 py-1 font-micro text-[10px] uppercase tracking-[0.18em] text-silverd">
-        Move to inspect — optical loupe
+        Move to inspect: optical loupe
       </span>
     </div>
   );
@@ -63,18 +63,18 @@ export default function Opening() {
           <Reveal>
             <p className="max-w-[680px] text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
               <span className="float-left mr-3 mt-1 font-display text-6xl font-light leading-[0.8] text-accent md:text-7xl">C</span>
-              uttack has stood as a trading city on Odisha&rsquo;s eastern coast since the early medieval period. Somewhere inside that long commercial history, silver was drawn into wire — and the wire was given a name it still carries: Tarakasi.{' '}
+              uttack has stood as a trading city on Odisha&rsquo;s eastern coast since the early medieval period. Somewhere inside that long commercial history, silver was drawn into wire, and the wire was given a name it still carries: Tarakasi.{' '}
               <SourceNote keys={['oaklores']} />
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 max-w-[680px] text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">
-              Its silverwork earned the city its epithet — the Silver City of Odisha. This is not a museum relic; it is a living tradition, worked daily in neighbourhoods where hundreds of shops still carry the craft.{' '}
+              Its silverwork earned the city its epithet, the Silver City of Odisha. This is not a museum relic; it is a living tradition, worked daily in neighbourhoods where hundreds of shops still carry the craft.{' '}
               <SourceNote keys={['oaklores']} />
             </p>
           </Reveal>
           <Reveal delay={0.15} className="mt-12">
-            <Ph label="CITY — Cuttack silver-market street, documentary wide" meta="Photograph to be supplied · 3:2, natural light" ratio="aspect-[3/2]" />
+            <Ph label="CITY: Cuttack silver-market street, documentary wide" meta="Photograph to be supplied, 3:2, natural light" ratio="aspect-[3/2]" />
           </Reveal>
         </div>
 
@@ -96,7 +96,7 @@ export default function Opening() {
               <p className="ml-auto self-end font-micro text-[10px] uppercase tracking-[0.14em] text-silverm">traditional etymology</p>
             </div>
             <p className="mt-6 text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
-              Tarakasi is Cuttack&rsquo;s tradition of pulling silver — usually 90% pure or finer <SourceNote keys={['wiki']} /> — into threads thinner than a hair <SourceNote keys={['oaklores']} />, then coiling those threads into pattern by hand.
+              Tarakasi is Cuttack&rsquo;s tradition of pulling silver, usually 90% pure or finer <SourceNote keys={['wiki']} />, into threads thinner than a hair <SourceNote keys={['oaklores']} />, then coiling those threads into pattern by hand.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="mt-10">

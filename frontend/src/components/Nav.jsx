@@ -29,7 +29,7 @@ export default function Nav() {
             onClick={() => go('top')}
             data-testid="nav-wordmark"
             className="flex items-baseline gap-2"
-            aria-label="Tarakasi — back to top"
+            aria-label="Tarakasi, back to top"
           >
             <span className="font-display text-xl italic tracking-tight text-ink">Tarakasi</span>
             <span className="hidden font-micro text-[10px] uppercase tracking-[0.2em] text-silverd sm:inline">Cuttack Rupa Tarakasi</span>
@@ -96,7 +96,7 @@ export default function Nav() {
                 </motion.button>
               ))}
             </nav>
-            <p className="px-8 pb-10 font-micro text-[10px] uppercase tracking-[0.2em] text-silverd">Cuttack, Odisha — the Silver City</p>
+            <p className="px-8 pb-10 font-micro text-[10px] uppercase tracking-[0.2em] text-silverd">Cuttack, Odisha, the Silver City</p>
           </motion.div>
         )}
       </AnimatePresence>

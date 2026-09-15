@@ -25,8 +25,8 @@ function Challenge() {
             </ol>
           </div>
           <div className="space-y-8 lg:col-span-4 lg:col-start-9">
-            <Reveal><Ph dark label="WORKSHOP — tools at rest, window light" meta="Photograph to be supplied · no posed portraits" ratio="aspect-[4/5]" /></Reveal>
-            <Reveal delay={0.08}><Ph dark label="INTERIOR — small workshop behind a showroom" meta="Photograph to be supplied" ratio="aspect-[4/3]" /></Reveal>
+            <Reveal><Ph dark label="WORKSHOP: tools at rest, window light" meta="Photograph to be supplied, no posed portraits" ratio="aspect-[4/5]" /></Reveal>
+            <Reveal delay={0.08}><Ph dark label="INTERIOR: small workshop behind a showroom" meta="Photograph to be supplied" ratio="aspect-[4/3]" /></Reveal>
           </div>
         </div>
         <Reveal className="mt-20 border-t border-silverd/30 pt-10">
@@ -40,7 +40,7 @@ function Challenge() {
 }
 
 function Marquee() {
-  const seq = 'Tara — wire · Kasi — design · Cuttack Rupa Tarakasi · Geographical Indication · 15 March 2024 · The Silver City of Odisha · ';
+  const seq = 'Tara: wire · Kasi: design · Cuttack Rupa Tarakasi · Geographical Indication · 15 March 2024 · The Silver City of Odisha · ';
   return (
     <div className="overflow-hidden border-b border-rule bg-paper py-7" aria-hidden="true" data-testid="marquee">
       <div className="animate-marquee flex w-max whitespace-nowrap">
@@ -56,7 +56,7 @@ function Thread() {
   return (
     <section className="relative flex min-h-[85vh] items-center overflow-hidden" data-testid="section-closing">
       <motion.img
-        src={placeholderUrl('closing-finished-piece — natural light', 'aspect-[16/9]', 1600)}
+        src={placeholderUrl('closing-finished-piece: natural light', 'aspect-[16/9]', 1600)}
         alt="Photograph to be supplied: one slowly moving macro shot of a finished piece catching natural light"
         className="absolute inset-0 h-full w-full object-cover"
         initial={{ scale: 1.12 }}
@@ -73,7 +73,7 @@ function Thread() {
         </h2>
         <Reveal delay={0.3}>
           <p className="mt-8 max-w-md text-sm leading-relaxed text-silverl md:text-base">
-            Pure silver, drawn finer than hair, bent by patient hands into a city&rsquo;s memory — and still being bent today.
+            Pure silver, drawn finer than hair, bent by patient hands into a city&rsquo;s memory, and still being bent today.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <button
@@ -136,7 +136,7 @@ function Sources() {
       <Reveal className="mt-10 space-y-3">
         <p className="font-micro text-[11px] leading-relaxed tracking-wide text-silverm">All sources accessed July 2026.</p>
         <p className="max-w-2xl font-micro text-[11px] leading-relaxed tracking-wide text-silverm">
-          Editorial note — the Vikaspedia / ASI page did not fully render during the design pass; its exact wording is to be re-verified by an editor against the live URL before launch.
+          Editorial note: the Vikaspedia / ASI page did not fully render during the design pass; its exact wording is to be re-verified by an editor against the live URL before launch.
         </p>
       </Reveal>
     </section>
@@ -155,7 +155,7 @@ function Footer() {
         </div>
         <div className="space-y-2 md:text-right">
           <p className="font-micro text-[10px] uppercase leading-relaxed tracking-[0.16em] text-silverm">
-            Stand-in textures: Bayu Prahara, Logan Voss, The Witch&rsquo;s House — Unsplash
+            Placeholder imagery via placehold.co, pending real photography
           </p>
           <button
             onClick={() => scrollToId('top')}

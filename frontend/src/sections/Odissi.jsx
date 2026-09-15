@@ -11,13 +11,13 @@ export default function Odissi() {
       <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-28">
-            <SectionHead num="06" kicker="In Culture — Odissi" title="Silver in Motion" />
+            <SectionHead num="06" kicker="In Culture: Odissi" title="Silver in Motion" />
             <Reveal>
               <p className="max-w-md text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
                 Tarakasi jewellery forms the traditional ornament set of Odissi dance costume, worn from head to waist. Natural, uncut stones are sometimes set within silver-and-gold work for these pieces. <SourceNote keys={['wiki']} />
               </p>
               <p className="mt-5 max-w-md font-micro text-[10px] uppercase leading-relaxed tracking-[0.18em] text-silverm">
-                Object labels — tap a marker, as you would read an exhibition case
+                Object labels: tap a marker, as you would read an exhibition case
               </p>
             </Reveal>
           </div>
@@ -28,7 +28,7 @@ export default function Odissi() {
             <div
               className="relative aspect-[3/4] bg-paper2"
               role="img"
-              aria-label="Odissi ornament set — photograph to be supplied; markers indicate the eight named ornament forms from head to feet"
+              aria-label="Odissi ornament set, photograph to be supplied; markers indicate the eight named ornament forms from head to feet"
               data-testid="odissi-panel"
             >
               <i className="absolute left-0 top-0 h-3 w-3 border-l border-t border-silverm" aria-hidden="true" />
@@ -36,7 +36,7 @@ export default function Odissi() {
               <i className="absolute bottom-0 left-0 h-3 w-3 border-b border-l border-silverm" aria-hidden="true" />
               <i className="absolute bottom-0 right-0 h-3 w-3 border-b border-r border-silverm" aria-hidden="true" />
               <span className="absolute inset-x-0 top-6 text-center font-micro text-[10px] uppercase tracking-[0.22em] text-silverm">
-                Full ornament set — photograph to be supplied
+                Full ornament set, photograph to be supplied
               </span>
               <span className="absolute left-1/2 top-[7%] h-[86%] w-px bg-rule" aria-hidden="true" />
 
@@ -47,7 +47,7 @@ export default function Odissi() {
                     <button
                       onClick={() => setActive(on ? null : i)}
                       data-testid={`odissi-marker-${f.name.toLowerCase().replace(/[\s/]+/g, '-')}`}
-                      aria-label={`${f.name} — ${f.zone}`}
+                      aria-label={`${f.name}, ${f.zone}`}
                       aria-expanded={on}
                       className="flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
                     >

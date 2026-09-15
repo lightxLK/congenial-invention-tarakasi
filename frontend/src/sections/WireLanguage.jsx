@@ -18,7 +18,7 @@ export default function WireLanguage() {
 
       <Reveal>
         <p className="max-w-[680px] text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">
-          Gauge varies; the vocabulary does not. Across the craft, an estimated ninety types of wire design exist — spirals, curls, creepers, jaali-like lattices — the alphabet from which every motif is built. <SourceNote keys={['virasat']} />
+          Gauge varies; the vocabulary does not. Across the craft, an estimated ninety types of wire design exist: spirals, curls, creepers, jaali-like lattices, the alphabet from which every motif is built. <SourceNote keys={['virasat']} />
         </p>
       </Reveal>
 
@@ -37,7 +37,7 @@ export default function WireLanguage() {
               className="group block w-full text-left"
             >
               <div className="transition-[filter] duration-300 group-hover:brightness-[1.04]">
-                <Ph label={`MACRO — ${m.name.toLowerCase()} wire pattern`} ratio="aspect-square" />
+                <Ph label={`MACRO: ${m.name.toLowerCase()} wire pattern`} ratio="aspect-square" />
               </div>
               <div className="mt-3 flex items-baseline justify-between">
                 <span className="font-display text-lg font-light text-ink md:text-xl">{m.name}</span>
@@ -60,7 +60,7 @@ export default function WireLanguage() {
             data-testid="motif-overlay"
             role="dialog"
             aria-modal="true"
-            aria-label={`Wire pattern — ${open.name}`}
+            aria-label={`Wire pattern: ${open.name}`}
           >
             <motion.div
               className="w-full max-w-2xl"
@@ -73,7 +73,7 @@ export default function WireLanguage() {
               <p className="font-micro text-[10px] uppercase tracking-[0.24em] text-silverm">Wire pattern</p>
               <h3 className="mt-2 font-display text-4xl font-light italic text-paper md:text-5xl">{open.name}</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-silverl">{open.note} <SourceNote keys={open.sources} dark /></p>
-              <Ph dark label={`FULL-BLEED MACRO — ${open.name.toLowerCase()} pattern`} meta="Photograph to be supplied · single pattern, raking light" ratio="aspect-[16/9]" className="mt-8" />
+              <Ph dark label={`FULL-BLEED MACRO: ${open.name.toLowerCase()} pattern`} meta="Photograph to be supplied, single pattern, raking light" ratio="aspect-[16/9]" className="mt-8" />
               <button
                 onClick={() => setOpen(null)}
                 data-testid="motif-overlay-close"

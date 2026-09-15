@@ -74,7 +74,7 @@ export default function Making() {
                   Silver arrives as bricks and lumps, historically sourced from trading centres such as Kolkata and Mumbai. <SourceNote keys={['gac']} />
                 </p>
                 <p className="mt-5 max-w-sm text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
-                  Follow the wire. A single line runs the length of the process — melting, drawing, twisting, fusing — the way a single strand runs through every piece.
+                  Follow the wire. A single line runs the length of the process (melting, drawing, twisting, fusing), the way a single strand runs through every piece.
                 </p>
               </Reveal>
             </div>
@@ -104,7 +104,7 @@ export default function Making() {
                         <p className="mt-3 max-w-md text-sm leading-relaxed text-silverd md:leading-[1.7]">{s.detail}</p>
                         <div className="mt-3"><SourceNote keys={s.sources} /></div>
                         <Ph
-                          label={`PROCESS — ${s.name.toLowerCase()}, workshop macro`}
+                          label={`PROCESS: ${s.name.toLowerCase()}, workshop macro`}
                           meta="Photograph to be supplied"
                           ratio="aspect-[16/9]"
                           className="mt-5 max-w-md"

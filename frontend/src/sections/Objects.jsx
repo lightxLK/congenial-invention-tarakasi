@@ -10,7 +10,7 @@ export default function Objects() {
 
       <Reveal>
         <p className="max-w-[680px] text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">
-          Tarakasi is not jewellery alone. The same wire becomes waist bands for marriage, vermilion boxes, miniature handbags, idols, monument replicas — and the immense festival backdrops of the Durga Puja. <SourceNote keys={['wiki', 'oaklores']} />
+          Tarakasi is not jewellery alone. The same wire becomes waist bands for marriage, vermilion boxes, miniature handbags, idols, monument replicas, and the immense festival backdrops of the Durga Puja. <SourceNote keys={['wiki', 'oaklores']} />
         </p>
       </Reveal>
 
@@ -18,7 +18,7 @@ export default function Objects() {
         {OBJECT_CATS.map((c, i) => (
           <Reveal key={c.name} className="mb-8" delay={(i % 3) * 0.06}>
             <div className={i % 2 === 1 ? 'lg:mt-14' : ''}>
-              <Ph label={`${c.name.toUpperCase()} — catalogue object shot`} meta="Photograph to be supplied · even museum lighting" ratio={RATIOS[i]} />
+              <Ph label={`${c.name.toUpperCase()}: catalogue object shot`} meta="Photograph to be supplied, even museum lighting" ratio={RATIOS[i]} />
               <h3 className="mt-4 font-display text-xl font-light text-ink md:text-2xl">{c.name}</h3>
               <p className="mt-1 text-sm leading-relaxed text-silverd">{c.items}</p>
             </div>
@@ -32,7 +32,7 @@ export default function Objects() {
           Animals, birds, flowers and vines; the Konark Chakra and temple mementoes; the chariot of Arjuna with Krishna from the Gita; Lord Jagannath, Subhadra and Balabhadra; souvenir replicas of the Taj Mahal and the Eiffel Tower. <SourceNote keys={['wiki', 'oaklores']} />
         </p>
         <p className="mt-6 max-w-xl text-sm leading-relaxed text-silverd">
-          One rose motif — a recurring subject — takes roughly three to four hours of continuous work to complete. <SourceNote keys={['virasat']} />
+          One rose motif, a recurring subject, takes roughly three to four hours of continuous work to complete. <SourceNote keys={['virasat']} />
         </p>
       </Reveal>
     </section>

@@ -33,7 +33,7 @@ export default function GI() {
                 <span className="font-micro text-[10px] uppercase tracking-[0.3em] text-silverd">Geographical Indication</span>
                 <span className="font-micro text-xs tracking-[0.2em] text-accent">15 · 03 · 2024</span>
               </div>
-              <p className="font-micro text-[10px] uppercase tracking-[0.16em] text-silverm">Typographic marker — not an official emblem</p>
+              <p className="font-micro text-[10px] uppercase tracking-[0.16em] text-silverm">Typographic marker, not an official emblem</p>
             </div>
           </Reveal>
 

@@ -25,12 +25,12 @@ export default function History() {
             <SectionHead num="02" kicker="History" title="A Craft With Many Beginnings" />
             <Reveal>
               <p className="max-w-sm text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
-                The sources do not agree on when Tarakasi began — and that disagreement is itself evidence of how old, and how orally transmitted, the tradition is. Where accounts diverge, they are shown as diverging. Where the record firms up, the thread becomes one.
+                The sources do not agree on when Tarakasi began, and that disagreement is itself evidence of how old, and how orally transmitted, the tradition is. Where accounts diverge, they are shown as diverging. Where the record firms up, the thread becomes one.
               </p>
               <div className="mt-8 space-y-3 font-micro text-[10px] uppercase tracking-[0.18em] text-silverd">
                 <p className="flex items-center gap-3">
                   <span className="relative flex h-3 w-3 items-center justify-center"><span className="absolute h-3 w-px rotate-45 bg-silverm" /><span className="absolute h-3 w-px -rotate-45 bg-silverm" /></span>
-                  Account — sources differ
+                  Account: sources differ
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="h-[9px] w-[9px] rounded-full border border-accent" />

@@ -97,7 +97,7 @@ function ratioValue(ratio) {
 export function placeholderUrl(label, ratio = 'aspect-[4/3]', width = 1200) {
   const h = Math.round(width / ratioValue(ratio));
   const text = encodeURIComponent(`${width}x${h}\n${label}`);
-  return `https://placehold.co/${width}x${h}/EDE9DF/9D9A93?text=${text}&font=roboto`;
+  return `https://placehold.co/${width}x${h}/EDE9DF/9D9A93?text=${text}&font=lora`;
 }
 
 export function Ph({ label, meta, ratio = 'aspect-[4/3]', dark = false, className = '', width = 1200 }) {
@@ -108,7 +108,7 @@ export function Ph({ label, meta, ratio = 'aspect-[4/3]', dark = false, classNam
     >
       <img
         src={placeholderUrl(label, ratio, width)}
-        alt={`Photograph to be supplied: ${label}${meta ? ` — ${meta}` : ''}`}
+        alt={`Photograph to be supplied: ${label}${meta ? `, ${meta}` : ''}`}
         className="h-full w-full object-cover"
         loading="lazy"
       />

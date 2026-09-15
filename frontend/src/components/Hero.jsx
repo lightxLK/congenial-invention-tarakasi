@@ -23,7 +23,7 @@ export default function Hero() {
               aria-hidden="true"
             />
             <MaskLine delay={0.2} className="font-micro text-[11px] uppercase tracking-[0.24em] text-silverd">
-              Cuttack, Odisha — the Silver City
+              Cuttack, Odisha, the Silver City
             </MaskLine>
           </div>
 
@@ -45,7 +45,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9, delay: 1.15, ease: EASE }}
             >
-              A silver filigree tradition native to Cuttack, Odisha — pure silver drawn into hair-fine wire, hand-shaped into ornament.
+              A silver filigree tradition native to Cuttack, Odisha: pure silver drawn into hair-fine wire, hand-shaped into ornament.
             </motion.p>
           </div>
         </motion.div>
@@ -66,7 +66,7 @@ export default function Hero() {
             transition={{ duration: 1.3, delay: 0.55, ease: EASE }}
           >
             <motion.img
-              src={placeholderUrl('hero-macro — finished filigree catching light', 'aspect-[2/3]', 1200)}
+              src={placeholderUrl('hero-macro: finished filigree catching light', 'aspect-[2/3]', 1200)}
               alt="Photograph to be supplied: hero macro of finished filigree catching light"
               className="h-full w-full object-cover"
               style={{ y: imgY, scale: 1.06 }}
@@ -82,7 +82,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            Macro — metal loops in directional light · stand-in texture, filigree photograph to be supplied
+            Hero macro, finished filigree catching light. Photograph to be supplied.
           </motion.figcaption>
         </div>
       </div>
