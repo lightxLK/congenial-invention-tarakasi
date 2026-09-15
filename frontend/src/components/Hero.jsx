@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
-import { EASE, MaskLine, scrollToId } from './Shared';
+import { EASE, MaskLine, placeholderUrl, scrollToId } from './Shared';
 
 export default function Hero() {
   const ref = useRef(null);
@@ -65,24 +65,16 @@ export default function Hero() {
             animate={{ clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 }}
             transition={{ duration: 1.3, delay: 0.55, ease: EASE }}
           >
-            <motion.div
-              className="relative flex h-full w-full items-center justify-center bg-paper2 text-silverd"
+            <motion.img
+              src={placeholderUrl('hero-macro — finished filigree catching light', 'aspect-[2/3]', 1200)}
+              alt="Photograph to be supplied: hero macro of finished filigree catching light"
+              className="h-full w-full object-cover"
               style={{ y: imgY, scale: 1.06 }}
               initial={{ scale: 1.14 }}
               animate={{ scale: 1.06 }}
               transition={{ duration: 2.4, delay: 0.55, ease: EASE }}
               data-testid="hero-image"
-              role="img"
-              aria-label="Photograph to be supplied: hero macro of finished filigree catching light"
-            >
-              <i className="absolute left-3 top-3 h-3 w-3 border-l border-t border-silverm" aria-hidden="true" />
-              <i className="absolute right-3 top-3 h-3 w-3 border-r border-t border-silverm" aria-hidden="true" />
-              <i className="absolute bottom-3 left-3 h-3 w-3 border-b border-l border-silverm" aria-hidden="true" />
-              <i className="absolute bottom-3 right-3 h-3 w-3 border-b border-r border-silverm" aria-hidden="true" />
-              <span className="font-micro text-[10px] uppercase tracking-[0.22em]">
-                Hero — macro of finished filigree, photograph to be supplied
-              </span>
-            </motion.div>
+            />
           </motion.figure>
           <motion.figcaption
             className="mt-3 font-micro text-[10px] uppercase tracking-[0.18em] text-silverm"

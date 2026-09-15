@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { EASE, MaskLine, Ph, Reveal, SectionHead, SourceNote, scrollToId } from '../components/Shared';
+import { EASE, MaskLine, Ph, Reveal, SectionHead, SourceNote, placeholderUrl, scrollToId } from '../components/Shared';
 import { CHALLENGES, SOURCES } from '../content';
 
 function Challenge() {
@@ -55,19 +55,15 @@ function Marquee() {
 function Thread() {
   return (
     <section className="relative flex min-h-[85vh] items-center overflow-hidden" data-testid="section-closing">
-      <motion.div
-        className="absolute inset-0 flex items-center justify-center bg-charcoal text-silverm"
+      <motion.img
+        src={placeholderUrl('closing-finished-piece — natural light', 'aspect-[16/9]', 1600)}
+        alt="Photograph to be supplied: one slowly moving macro shot of a finished piece catching natural light"
+        className="absolute inset-0 h-full w-full object-cover"
         initial={{ scale: 1.12 }}
         whileInView={{ scale: 1.02 }}
         viewport={{ once: true }}
         transition={{ duration: 3.2, ease: EASE }}
-        role="img"
-        aria-label="Photograph to be supplied: one slowly moving macro shot of a finished piece catching natural light"
-      >
-        <span className="font-micro text-[10px] uppercase tracking-[0.22em]">
-          Closing — finished piece catching natural light, photograph to be supplied
-        </span>
-      </motion.div>
+      />
       <div className="absolute inset-0 bg-ink/55" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-32 md:px-10">
         <MaskLine inView className="font-micro text-[11px] uppercase tracking-[0.24em] text-silverl">Closing</MaskLine>

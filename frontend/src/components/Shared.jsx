@@ -88,22 +88,30 @@ export function SourceNote({ keys = [], dark = false }) {
   );
 }
 
-export function Ph({ label, meta, ratio = 'aspect-[4/3]', dark = false, className = '' }) {
+function ratioValue(ratio) {
+  if (ratio.includes('square')) return 1;
+  const m = ratio.match(/\[(\d+)\/(\d+)\]/);
+  return m ? parseInt(m[1], 10) / parseInt(m[2], 10) : 4 / 3;
+}
+
+export function placeholderUrl(label, ratio = 'aspect-[4/3]', width = 1200) {
+  const h = Math.round(width / ratioValue(ratio));
+  const text = encodeURIComponent(label);
+  return `https://placehold.co/${width}x${h}/EDE9DF/9D9A93?text=${text}&font=roboto`;
+}
+
+export function Ph({ label, meta, ratio = 'aspect-[4/3]', dark = false, className = '', width = 1200 }) {
   return (
     <figure
       data-testid="image-placeholder"
       className={`relative overflow-hidden ${ratio} ${dark ? 'bg-ink/60 text-silverm' : 'bg-paper2 text-silverd'} ${className}`}
-      role="img"
-      aria-label={`Photograph to be supplied: ${label}`}
     >
-      <i className={`absolute left-0 top-0 h-3 w-3 border-l border-t ${dark ? 'border-silverd' : 'border-silverm'}`} aria-hidden="true" />
-      <i className={`absolute right-0 top-0 h-3 w-3 border-r border-t ${dark ? 'border-silverd' : 'border-silverm'}`} aria-hidden="true" />
-      <i className={`absolute bottom-0 left-0 h-3 w-3 border-b border-l ${dark ? 'border-silverd' : 'border-silverm'}`} aria-hidden="true" />
-      <i className={`absolute bottom-0 right-0 h-3 w-3 border-b border-r ${dark ? 'border-silverd' : 'border-silverm'}`} aria-hidden="true" />
-      <figcaption className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-6 text-center">
-        <span className="font-micro text-[10px] uppercase tracking-[0.22em]">{label}</span>
-        {meta && <span className={`font-micro text-[10px] tracking-wide ${dark ? 'text-silverd' : 'text-silverm'}`}>{meta}</span>}
-      </figcaption>
+      <img
+        src={placeholderUrl(label, ratio, width)}
+        alt={`Photograph to be supplied: ${label}${meta ? ` — ${meta}` : ''}`}
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
     </figure>
   );
 }

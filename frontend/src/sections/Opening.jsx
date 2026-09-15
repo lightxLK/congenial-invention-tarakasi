@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react';
-import { Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
+import { Ph, Reveal, SectionHead, SourceNote, placeholderUrl } from '../components/Shared';
+
+const LOUPE_SRC = placeholderUrl('opening-loupe-wire-macro — wire detail', 'aspect-[4/5]', 800);
 
 function Loupe() {
   const ref = useRef(null);
@@ -23,23 +25,26 @@ function Loupe() {
       onClick={move}
       data-testid="loupe-image"
     >
-      <div
-        className="flex h-full w-full items-center justify-center bg-paper2 text-silverd"
-        role="img"
-        aria-label="Photograph to be supplied: macro of real wire detail for the optical-loupe interaction"
-      >
-        <span className="font-micro text-[10px] uppercase tracking-[0.22em]">
-          MACRO — wire detail, photograph to be supplied
-        </span>
-      </div>
+      <img
+        src={LOUPE_SRC}
+        alt="Photograph to be supplied: macro of real wire detail for the optical-loupe interaction"
+        className="h-full w-full object-cover"
+        loading="lazy"
+      />
       {lens && (
         <div
-          className="pointer-events-none absolute flex items-center justify-center rounded-full border border-paper bg-paper2 shadow-[0_0_0_1px_rgba(23,23,23,0.25)]"
-          style={{ width: R * 2, height: R * 2, left: lens.x - R, top: lens.y - R }}
+          className="pointer-events-none absolute rounded-full border border-paper shadow-[0_0_0_1px_rgba(23,23,23,0.25)]"
+          style={{
+            width: R * 2,
+            height: R * 2,
+            left: lens.x - R,
+            top: lens.y - R,
+            backgroundImage: `url(${LOUPE_SRC})`,
+            backgroundSize: `${lens.w * ZOOM}px ${lens.h * ZOOM}px`,
+            backgroundPosition: `-${lens.x * ZOOM - R}px -${lens.y * ZOOM - R}px`,
+          }}
           aria-hidden="true"
-        >
-          <span className="font-micro text-[8px] uppercase tracking-[0.14em] text-silverd">loupe</span>
-        </div>
+        />
       )}
       <span className="absolute bottom-3 left-3 bg-paper/85 px-2 py-1 font-micro text-[10px] uppercase tracking-[0.18em] text-silverd">
         Move to inspect — optical loupe
