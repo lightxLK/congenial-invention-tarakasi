@@ -27,8 +27,8 @@ module.exports = {
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'serif'],
-        sans: ['Recursive', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        micro: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+        sans: ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        micro: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       transitionTimingFunction: {
         editorial: 'cubic-bezier(0.22, 1, 0.36, 1)',
