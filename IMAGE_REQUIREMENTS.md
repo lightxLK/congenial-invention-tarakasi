@@ -107,12 +107,21 @@ One slowly moving macro shot of a finished piece catching natural light — can 
 - Aspect: fills viewport, treat as 16:9 minimum crop
 - Min. resolution: 2400×1350px
 - Note: this is a dark, full-bleed section (55% black overlay applied in CSS) — image should hold up under that overlay, not go muddy.
+- **Delivered as a 3-image crossfade + Ken Burns carousel** (`closing-finished-piece-1/2/3.png`), not a single static shot — upgrade over spec, not a shortfall.
 
 **Total: 34 image slots** (11 of which are the Making sequence).
 
-**Delivered so far (33/34):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece. Remaining placeholder (1/34): making-workshop-aside.
+**Delivered (33/34):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece (×3, carousel). Remaining placeholder (1/34): making-workshop-aside — low priority, small aside image only.
 
 **Note:** `challenge-workshop-interior` shows the artisan's face in profile, which violates rule 3 ("no artisan faces"). Shipped anyway as it's the only interior shot supplied — swap if a faceless version becomes available.
+
+## Brand assets (outside the 34-shot content list)
+
+Delivered and wired in this session, client-supplied (not AI-generated, rule 1 doesn't apply — real logo art):
+
+- **`logo-full.png`** — header nav (desktop + mobile menu) and footer, replacing the "Tarakasi" text wordmark. 240px-tall PNG, transparent, `object-contain`.
+- **`favicon-32.png`** / **`apple-touch-icon.png`** (180×180) — browser tab icon and iOS home-screen icon, replacing the temporary "T" monogram placeholder. Source also kept at 512×512 (`images/favicon-512.png`) for future PWA manifest use if the site ever adds one.
+- **`og-image.jpg`** (1200×630, ~68KB) — purpose-built social share card combining the real brand mark + "Tarakasi" wordmark on charcoal, matching the site's own corner-bracket motif. Not a cropped content photo.
 
 ## Priority order if photography has to be supplied in batches
 
