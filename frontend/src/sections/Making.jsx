@@ -8,6 +8,13 @@ const STEP_IMAGES = [
   '/images/making-step-2.png',
   '/images/making-step-3.png',
   '/images/making-step-04.png',
+  undefined,
+  '/images/making-step-06.png',
+  '/images/making-step-07.png',
+  '/images/making-step-08.png',
+  '/images/making-step-09.png',
+  '/images/making-step-10.png',
+  '/images/making-step-11.png',
 ];
 
 function buildWirePath(n, W, H, amp) {
