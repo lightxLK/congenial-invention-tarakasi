@@ -5,8 +5,8 @@ import { STEPS, WORKSHOP } from '../content';
 
 const STEP_IMAGES = [
   '/images/making-step-01.png',
-  '/images/making-step-02.png',
-  '/images/making-step-03.png',
+  '/images/making-step-2.png',
+  '/images/making-step-3.png',
   '/images/making-step-04.png',
 ];
 
