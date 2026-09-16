@@ -69,14 +69,14 @@ export const OBJECT_CATS = [
 ];
 
 export const ODISSI_FORMS = [
-  { name: 'Sinthi', zone: 'Head / forehead', x: 50, y: 7 },
-  { name: 'Kapa', zone: 'Ear', x: 33, y: 17 },
-  { name: 'Choker', zone: 'Neck', x: 61, y: 27 },
-  { name: 'Padaka-tilaka', zone: 'Neck, long necklace', x: 37, y: 39 },
-  { name: 'Bahichudi / Tayila', zone: 'Arm, armlets', x: 65, y: 48 },
-  { name: 'Kankana', zone: 'Wrist, bracelets', x: 33, y: 58 },
-  { name: 'Mekhala', zone: 'Waist, belt', x: 58, y: 66 },
-  { name: 'Anklets & bells', zone: 'Feet', x: 45, y: 89 },
+  { name: 'Sinthi', zone: 'Head / forehead', x: 15, y: 70 },
+  { name: 'Kapa', zone: 'Ear', x: 23.5, y: 47.5 },
+  { name: 'Choker', zone: 'Neck', x: 28, y: 63 },
+  { name: 'Padaka-tilaka', zone: 'Neck, long necklace', x: 35, y: 41 },
+  { name: 'Bahichudi / Tayila', zone: 'Arm, armlets', x: 41, y: 71 },
+  { name: 'Kankana', zone: 'Wrist, bracelets', x: 48, y: 33 },
+  { name: 'Mekhala', zone: 'Waist, belt', x: 53, y: 63 },
+  { name: 'Anklets & bells', zone: 'Feet', x: 91, y: 40 },
 ];
 
 export const MEDHA = [
