@@ -55,7 +55,7 @@ function Loupe() {
 
 export default function Opening() {
   return (
-    <section id="craft" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-craft">
+    <section id="craft" className="mx-auto max-w-[1440px] px-5 pb-24 pt-10 md:px-10 md:pb-40 md:pt-16" data-testid="section-craft">
       <SectionHead num="01" kicker="The Craft" title="The Silver City" />
 
       <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">

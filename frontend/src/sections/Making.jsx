@@ -97,27 +97,31 @@ export default function Making() {
               {STEPS.map((s, i) => {
                 const left = i % 2 === 0;
                 return (
-                  <li key={s.name} className="relative pb-16 pl-16 md:pb-24 md:pl-0" data-testid={`step-${i + 1}`}>
-                    <div className={`md:w-[calc(50%-110px)] ${left ? '' : 'md:ml-[calc(50%+110px)]'}`}>
+                  <li key={s.name} className="relative pb-20 pl-16 md:pb-28 md:pl-0" data-testid={`step-${i + 1}`}>
+                    <div className={`md:w-[calc(50%-90px)] ${left ? '' : 'md:ml-[calc(50%+90px)]'}`}>
                       <Reveal>
-                        <div className="flex items-baseline gap-4">
-                          <span className={`font-micro text-xs tracking-[0.2em] transition-colors duration-500 ${i <= active ? 'text-accent' : 'text-silverm'}`}>
-                            {String(i + 1).padStart(2, '0')}
-                          </span>
-                          <h3 className={`font-display text-2xl font-light transition-colors duration-500 md:text-3xl ${i <= active ? 'text-ink' : 'text-silverd'}`}>
-                            {s.name}
-                          </h3>
+                        <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:gap-8">
+                          <div className="xl:w-[42%] xl:shrink-0">
+                            <div className="flex items-baseline gap-4">
+                              <span className={`font-micro text-sm tracking-[0.2em] transition-colors duration-500 ${i <= active ? 'text-accent' : 'text-silverm'}`}>
+                                {String(i + 1).padStart(2, '0')}
+                              </span>
+                              <h3 className={`font-display text-3xl font-light transition-colors duration-500 md:text-4xl ${i <= active ? 'text-ink' : 'text-silverd'}`}>
+                                {s.name}
+                              </h3>
+                            </div>
+                            <p className="mt-4 text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">{s.detail}</p>
+                            <div className="mt-3"><SourceNote keys={s.sources} /></div>
+                          </div>
+                          <Ph
+                            label={`PROCESS: ${s.name.toLowerCase()}, workshop macro`}
+                            meta="Photograph to be supplied"
+                            ratio="aspect-[4/3]"
+                            className="rounded-2xl xl:min-w-0 xl:flex-1"
+                            src={STEP_IMAGES[i]}
+                            alt={`Tarakasi workshop, ${s.name.toLowerCase()} step`}
+                          />
                         </div>
-                        <p className="mt-3 max-w-md text-sm leading-relaxed text-silverd md:leading-[1.7]">{s.detail}</p>
-                        <div className="mt-3"><SourceNote keys={s.sources} /></div>
-                        <Ph
-                          label={`PROCESS: ${s.name.toLowerCase()}, workshop macro`}
-                          meta="Photograph to be supplied"
-                          ratio="aspect-[16/9]"
-                          className="mt-5 max-w-md"
-                          src={STEP_IMAGES[i]}
-                          alt={`Tarakasi workshop, ${s.name.toLowerCase()} step`}
-                        />
                       </Reveal>
                     </div>
                   </li>
@@ -125,7 +129,7 @@ export default function Making() {
               })}
             </ol>
 
-            <Reveal className="relative ml-16 md:ml-[calc(50%+110px)] md:w-[calc(50%-110px)]">
+            <Reveal className="relative ml-16 md:ml-[calc(50%+90px)] md:w-[calc(50%-90px)]">
               <aside className="border border-rule bg-paper p-6 md:p-8" data-testid="workshop-aside">
                 <p className="font-micro text-[10px] uppercase tracking-[0.22em] text-accent">Workshop realities</p>
                 <ul className="mt-5 space-y-4">
