@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
-import { EASE, MaskLine, placeholderUrl, scrollToId } from './Shared';
+import { EASE, MaskLine, scrollToId } from './Shared';
 
 export default function Hero() {
   const ref = useRef(null);
@@ -66,8 +66,8 @@ export default function Hero() {
             transition={{ duration: 1.3, delay: 0.55, ease: EASE }}
           >
             <motion.img
-              src={placeholderUrl('hero-macro: finished filigree catching light', 'aspect-[2/3]', 1200)}
-              alt="Photograph to be supplied: hero macro of finished filigree catching light"
+              src="/images/hero-macro.png"
+              alt="Macro of a finished Tarakasi silver filigree cross pendant catching light"
               className="h-full w-full object-cover"
               style={{ y: imgY, scale: 1.06 }}
               initial={{ scale: 1.14 }}
@@ -82,7 +82,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            Hero macro, finished filigree catching light. Photograph to be supplied.
+            Hero macro, finished filigree catching light.
           </motion.figcaption>
         </div>
       </div>

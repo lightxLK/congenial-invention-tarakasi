@@ -100,15 +100,15 @@ export function placeholderUrl(label, ratio = 'aspect-[4/3]', width = 1200) {
   return `https://placehold.co/${width}x${h}/EDE9DF/9D9A93?text=${text}&font=lora`;
 }
 
-export function Ph({ label, meta, ratio = 'aspect-[4/3]', dark = false, className = '', width = 1200 }) {
+export function Ph({ label, meta, ratio = 'aspect-[4/3]', dark = false, className = '', width = 1200, src, alt }) {
   return (
     <figure
-      data-testid="image-placeholder"
+      data-testid={src ? 'image' : 'image-placeholder'}
       className={`relative overflow-hidden ${ratio} ${dark ? 'bg-ink/60 text-silverm' : 'bg-paper2 text-silverd'} ${className}`}
     >
       <img
-        src={placeholderUrl(label, ratio, width)}
-        alt={`Photograph to be supplied: ${label}${meta ? `, ${meta}` : ''}`}
+        src={src || placeholderUrl(label, ratio, width)}
+        alt={src ? alt || label : `Photograph to be supplied: ${label}${meta ? `, ${meta}` : ''}`}
         className="h-full w-full object-cover"
         loading="lazy"
       />

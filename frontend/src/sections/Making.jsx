@@ -3,6 +3,13 @@ import { motion, useMotionValueEvent, useReducedMotion, useScroll, useSpring, us
 import { EASE, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { STEPS, WORKSHOP } from '../content';
 
+const STEP_IMAGES = [
+  '/images/making-step-01.png',
+  '/images/making-step-02.png',
+  '/images/making-step-03.png',
+  '/images/making-step-04.png',
+];
+
 function buildWirePath(n, W, H, amp) {
   const cx = W / 2;
   const stepH = H / n;
@@ -108,6 +115,8 @@ export default function Making() {
                           meta="Photograph to be supplied"
                           ratio="aspect-[16/9]"
                           className="mt-5 max-w-md"
+                          src={STEP_IMAGES[i]}
+                          alt={`Tarakasi workshop, ${s.name.toLowerCase()} step`}
                         />
                       </Reveal>
                     </div>

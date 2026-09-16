@@ -74,7 +74,11 @@ export default function Opening() {
             </p>
           </Reveal>
           <Reveal delay={0.15} className="mt-12">
-            <Ph label="CITY: Cuttack silver-market street, documentary wide" meta="Photograph to be supplied, 3:2, natural light" ratio="aspect-[3/2]" />
+            <Ph
+              src="/images/opening-city-street.png"
+              alt="A Cuttack silver-market lane lined with filigree jewellery shops"
+              ratio="aspect-[3/2]"
+            />
           </Reveal>
         </div>
 
