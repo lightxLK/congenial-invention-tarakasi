@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import { Ph, Reveal, SectionHead, SourceNote, placeholderUrl } from '../components/Shared';
+import { Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 
-const LOUPE_SRC = placeholderUrl('opening-loupe-wire-macro: wire detail', 'aspect-[4/5]', 800);
+const LOUPE_SRC = '/images/opening-loupe-wire-macro.png';
 
 function Loupe() {
   const ref = useRef(null);
@@ -27,7 +27,7 @@ function Loupe() {
     >
       <img
         src={LOUPE_SRC}
-        alt="Photograph to be supplied: macro of real wire detail for the optical-loupe interaction"
+        alt="Macro of a silver filigree butterfly brooch, wire-on-wire detail"
         className="h-full w-full object-cover"
         loading="lazy"
       />

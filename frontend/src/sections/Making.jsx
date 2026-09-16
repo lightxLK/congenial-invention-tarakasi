@@ -97,33 +97,31 @@ export default function Making() {
               {STEPS.map((s, i) => {
                 const left = i % 2 === 0;
                 return (
-                  <li key={s.name} className="relative pb-20 pl-16 md:pb-28 md:pl-0" data-testid={`step-${i + 1}`}>
-                    <div className={`md:w-[calc(50%-90px)] ${left ? '' : 'md:ml-[calc(50%+90px)]'}`}>
-                      <Reveal>
-                        <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:gap-8">
-                          <div className="xl:w-[42%] xl:shrink-0">
-                            <div className="flex items-baseline gap-4">
-                              <span className={`font-micro text-sm tracking-[0.2em] transition-colors duration-500 ${i <= active ? 'text-accent' : 'text-silverm'}`}>
-                                {String(i + 1).padStart(2, '0')}
-                              </span>
-                              <h3 className={`font-display text-3xl font-light transition-colors duration-500 md:text-4xl ${i <= active ? 'text-ink' : 'text-silverd'}`}>
-                                {s.name}
-                              </h3>
-                            </div>
-                            <p className="mt-4 text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">{s.detail}</p>
-                            <div className="mt-3"><SourceNote keys={s.sources} /></div>
+                  <li key={s.name} className="relative pb-20 md:pb-28" data-testid={`step-${i + 1}`}>
+                    <Reveal>
+                      <div className="grid grid-cols-1 gap-8 pl-16 md:grid-cols-2 md:items-center md:gap-x-[180px] md:pl-0">
+                        <div className={left ? 'md:order-1' : 'md:order-2'}>
+                          <div className="flex items-baseline gap-4">
+                            <span className={`font-micro text-sm tracking-[0.2em] transition-colors duration-500 ${i <= active ? 'text-accent' : 'text-silverm'}`}>
+                              {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <h3 className={`font-display text-3xl font-light transition-colors duration-500 md:text-4xl ${i <= active ? 'text-ink' : 'text-silverd'}`}>
+                              {s.name}
+                            </h3>
                           </div>
-                          <Ph
-                            label={`PROCESS: ${s.name.toLowerCase()}, workshop macro`}
-                            meta="Photograph to be supplied"
-                            ratio="aspect-[4/3]"
-                            className="rounded-2xl xl:min-w-0 xl:flex-1"
-                            src={STEP_IMAGES[i]}
-                            alt={`Tarakasi workshop, ${s.name.toLowerCase()} step`}
-                          />
+                          <p className="mt-4 text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">{s.detail}</p>
+                          <div className="mt-3"><SourceNote keys={s.sources} /></div>
                         </div>
-                      </Reveal>
-                    </div>
+                        <Ph
+                          label={`PROCESS: ${s.name.toLowerCase()}, workshop macro`}
+                          meta="Photograph to be supplied"
+                          ratio="aspect-[4/3]"
+                          className={`rounded-2xl ${left ? 'md:order-2' : 'md:order-1'}`}
+                          src={STEP_IMAGES[i]}
+                          alt={`Tarakasi workshop, ${s.name.toLowerCase()} step`}
+                        />
+                      </div>
+                    </Reveal>
                   </li>
                 );
               })}
