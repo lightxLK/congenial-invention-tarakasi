@@ -75,8 +75,8 @@ function Thread() {
           src={CLOSING_SLIDES[slide]}
           alt="Finished Tarakasi silver filigree showpiece catching light"
           className="absolute inset-0 h-full w-full object-cover object-center"
-          initial={{ opacity: 0, scale: 1 }}
-          animate={{ opacity: 1, scale: 1.08 }}
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ opacity: { duration: 1.6, ease: EASE }, scale: { duration: 5, ease: 'linear' } }}
         />
