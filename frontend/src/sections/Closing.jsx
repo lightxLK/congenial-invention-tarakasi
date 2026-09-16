@@ -1,6 +1,13 @@
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { EASE, MaskLine, Ph, Reveal, SectionHead, SourceNote, scrollToId } from '../components/Shared';
 import { CHALLENGES, SOURCES } from '../content';
+
+const CLOSING_SLIDES = [
+  '/images/closing-finished-piece-1.png',
+  '/images/closing-finished-piece-2.png',
+  '/images/closing-finished-piece-3.png',
+];
 
 function Challenge() {
   return (
@@ -53,17 +60,27 @@ function Marquee() {
 }
 
 function Thread() {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setSlide((s) => (s + 1) % CLOSING_SLIDES.length), 5000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative flex min-h-[85vh] items-center overflow-hidden" data-testid="section-closing">
-      <motion.img
-        src="/images/closing-finished-piece.png"
-        alt="Finished Tarakasi silver filigree showpiece catching light"
-        className="absolute inset-0 h-full w-full object-cover"
-        initial={{ scale: 1.12 }}
-        whileInView={{ scale: 1.02 }}
-        viewport={{ once: true }}
-        transition={{ duration: 3.2, ease: EASE }}
-      />
+      <AnimatePresence initial={false}>
+        <motion.img
+          key={slide}
+          src={CLOSING_SLIDES[slide]}
+          alt="Finished Tarakasi silver filigree showpiece catching light"
+          className="absolute inset-0 h-full w-full object-cover"
+          initial={{ x: '100%' }}
+          animate={{ x: '0%' }}
+          exit={{ x: '-100%' }}
+          transition={{ duration: 1, ease: EASE }}
+        />
+      </AnimatePresence>
       <div className="absolute inset-0 bg-ink/55" aria-hidden="true" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-32 md:px-10">
         <MaskLine inView className="font-micro text-[11px] uppercase tracking-[0.24em] text-silverl">Closing</MaskLine>
