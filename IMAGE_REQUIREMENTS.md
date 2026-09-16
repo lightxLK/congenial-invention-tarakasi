@@ -110,7 +110,7 @@ One slowly moving macro shot of a finished piece catching natural light — can 
 
 **Total: 34 image slots** (11 of which are the Making sequence).
 
-**Delivered so far (6/34):** hero-macro, opening-city-street, making-step-01…04 (Melt, Cast, Draw, Refine gauge). Remaining 28 slots still show placeholders.
+**Delivered so far (27/34):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set. Remaining placeholders (7/34): making-workshop-aside, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece.
 
 ## Priority order if photography has to be supplied in batches
 
