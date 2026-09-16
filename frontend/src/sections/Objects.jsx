@@ -2,6 +2,14 @@ import { Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { OBJECT_CATS } from '../content';
 
 const RATIOS = ['aspect-[3/4]', 'aspect-[4/3]', 'aspect-square', 'aspect-[3/4]', 'aspect-[16/10]', 'aspect-[4/5]'];
+const OBJECT_IMAGES = [
+  '/images/objects-jewellery.png',
+  '/images/objects-ornaments.png',
+  '/images/objects-souvenirs.png',
+  '/images/objects-idols.png',
+  '/images/objects-architectural.png',
+  '/images/objects-festival.png',
+];
 
 export default function Objects() {
   return (
@@ -18,7 +26,12 @@ export default function Objects() {
         {OBJECT_CATS.map((c, i) => (
           <Reveal key={c.name} className="mb-8" delay={(i % 3) * 0.06}>
             <div className={i % 2 === 1 ? 'lg:mt-14' : ''}>
-              <Ph label={`${c.name.toUpperCase()}: catalogue object shot`} meta="Photograph to be supplied, even museum lighting" ratio={RATIOS[i]} />
+              <Ph
+                label={`${c.name.toUpperCase()}: catalogue object shot`}
+                ratio={RATIOS[i]}
+                src={OBJECT_IMAGES[i]}
+                alt={`Tarakasi ${c.name.toLowerCase()}, catalogue shot`}
+              />
               <h3 className="mt-4 font-display text-xl font-light text-ink md:text-2xl">{c.name}</h3>
               <p className="mt-1 text-sm leading-relaxed text-silverd">{c.items}</p>
             </div>

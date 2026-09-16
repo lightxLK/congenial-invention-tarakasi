@@ -31,13 +31,11 @@ export default function Odissi() {
               aria-label="Odissi ornament set, photograph to be supplied; markers indicate the eight named ornament forms from head to feet"
               data-testid="odissi-panel"
             >
-              <i className="absolute left-0 top-0 h-3 w-3 border-l border-t border-silverm" aria-hidden="true" />
-              <i className="absolute right-0 top-0 h-3 w-3 border-r border-t border-silverm" aria-hidden="true" />
-              <i className="absolute bottom-0 left-0 h-3 w-3 border-b border-l border-silverm" aria-hidden="true" />
-              <i className="absolute bottom-0 right-0 h-3 w-3 border-b border-r border-silverm" aria-hidden="true" />
-              <span className="absolute inset-x-0 top-6 text-center font-micro text-[10px] uppercase tracking-[0.22em] text-silverm">
-                Full ornament set, photograph to be supplied
-              </span>
+              <img
+                src="/images/odissi-ornament-set.png"
+                alt="Odissi dancer wearing the full traditional Tarakasi ornament set, head to waist"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <span className="absolute left-1/2 top-[7%] h-[86%] w-px bg-rule" aria-hidden="true" />
 
               {ODISSI_FORMS.map((f, i) => {

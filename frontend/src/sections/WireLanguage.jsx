@@ -3,6 +3,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { EASE, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { MOTIFS } from '../content';
 
+const MOTIF_IMAGES = {
+  Spiral: '/images/wire-motif-spiral.png',
+  Curl: '/images/wire-motif-curl.png',
+  Creeper: '/images/wire-motif-creeper.png',
+  'Jaali lattice': '/images/wire-motif-jaali.png',
+  Circle: '/images/wire-motif-circle.png',
+  Dot: '/images/wire-motif-dot.png',
+};
+
 export default function WireLanguage() {
   const [open, setOpen] = useState(null);
 
@@ -37,7 +46,12 @@ export default function WireLanguage() {
               className="group block w-full text-left"
             >
               <div className="transition-[filter] duration-300 group-hover:brightness-[1.04]">
-                <Ph label={`MACRO: ${m.name.toLowerCase()} wire pattern`} ratio="aspect-square" />
+                <Ph
+                  label={`MACRO: ${m.name.toLowerCase()} wire pattern`}
+                  ratio="aspect-square"
+                  src={MOTIF_IMAGES[m.name]}
+                  alt={`Tarakasi ${m.name.toLowerCase()} wire pattern, macro`}
+                />
               </div>
               <div className="mt-3 flex items-baseline justify-between">
                 <span className="font-display text-lg font-light text-ink md:text-xl">{m.name}</span>
@@ -73,7 +87,14 @@ export default function WireLanguage() {
               <p className="font-micro text-[10px] uppercase tracking-[0.24em] text-silverm">Wire pattern</p>
               <h3 className="mt-2 font-display text-4xl font-light italic text-paper md:text-5xl">{open.name}</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-silverl">{open.note} <SourceNote keys={open.sources} dark /></p>
-              <Ph dark label={`FULL-BLEED MACRO: ${open.name.toLowerCase()} pattern`} meta="Photograph to be supplied, single pattern, raking light" ratio="aspect-[16/9]" className="mt-8" />
+              <Ph
+                dark
+                label={`FULL-BLEED MACRO: ${open.name.toLowerCase()} pattern`}
+                ratio="aspect-[16/9]"
+                className="mt-8"
+                src={MOTIF_IMAGES[open.name]}
+                alt={`Tarakasi ${open.name.toLowerCase()} wire pattern, macro`}
+              />
               <button
                 onClick={() => setOpen(null)}
                 data-testid="motif-overlay-close"
