@@ -110,7 +110,9 @@ One slowly moving macro shot of a finished piece catching natural light — can 
 
 **Total: 34 image slots** (11 of which are the Making sequence).
 
-**Delivered so far (27/34):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set. Remaining placeholders (7/34): making-workshop-aside, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece.
+**Delivered so far (33/34):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece. Remaining placeholder (1/34): making-workshop-aside.
+
+**Note:** `challenge-workshop-interior` shows the artisan's face in profile, which violates rule 3 ("no artisan faces"). Shipped anyway as it's the only interior shot supplied — swap if a faceless version becomes available.
 
 ## Priority order if photography has to be supplied in batches
 

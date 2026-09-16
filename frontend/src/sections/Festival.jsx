@@ -38,9 +38,9 @@ export default function Festival() {
             <div className="lg:col-span-7">
               <Reveal>
                 <div className="relative">
-                  <Ph label="PANORAMA: Chandi Medha backdrop framing the idol" meta="Photograph to be supplied, wide, festival light, drag-zoom intended" ratio="aspect-[21/10]" />
+                  <Ph label="PANORAMA: Chandi Medha backdrop framing the idol" meta="Photograph to be supplied, wide, festival light, drag-zoom intended" ratio="aspect-[21/10]" src="/images/festival-chandi-medha-panorama.png" alt="Chandi Medha silver backdrop framing the Durga idol" />
                   <div className="relative z-10 -mt-10 ml-auto w-2/5 border-4 border-paper2 md:-mt-16">
-                    <Ph label="MACRO: one motif of the same backdrop" meta="The scale contrast, in one frame" ratio="aspect-square" />
+                    <Ph label="MACRO: one motif of the same backdrop" meta="The scale contrast, in one frame" ratio="aspect-square" src="/images/festival-chandi-medha-detail.png" alt="Macro detail of the Chandi Medha silver backdrop wirework" />
                   </div>
                 </div>
               </Reveal>
@@ -101,7 +101,7 @@ export default function Festival() {
           </div>
           <div className="lg:col-span-6 lg:col-start-7 lg:pt-24">
             <Reveal>
-              <Ph label="CITY: Cuttack market lane, silver shops" meta="Photograph to be supplied, early morning, directional light" ratio="aspect-[4/3]" />
+              <Ph label="CITY: Cuttack market lane, silver shops" meta="Photograph to be supplied, early morning, directional light" ratio="aspect-[4/3]" src="/images/cuttack-market-lane.png" alt="Cuttack silver-market lane lined with Tarakasi jewellers" />
             </Reveal>
           </div>
         </div>

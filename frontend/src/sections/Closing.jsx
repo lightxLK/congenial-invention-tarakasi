@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { EASE, MaskLine, Ph, Reveal, SectionHead, SourceNote, placeholderUrl, scrollToId } from '../components/Shared';
+import { EASE, MaskLine, Ph, Reveal, SectionHead, SourceNote, scrollToId } from '../components/Shared';
 import { CHALLENGES, SOURCES } from '../content';
 
 function Challenge() {
@@ -25,8 +25,8 @@ function Challenge() {
             </ol>
           </div>
           <div className="space-y-8 lg:col-span-4 lg:col-start-9">
-            <Reveal><Ph dark label="WORKSHOP: tools at rest, window light" meta="Photograph to be supplied, no posed portraits" ratio="aspect-[4/5]" /></Reveal>
-            <Reveal delay={0.08}><Ph dark label="INTERIOR: small workshop behind a showroom" meta="Photograph to be supplied" ratio="aspect-[4/3]" /></Reveal>
+            <Reveal><Ph dark label="WORKSHOP: tools at rest, window light" meta="Photograph to be supplied, no posed portraits" ratio="aspect-[4/5]" src="/images/challenge-workshop-tools.png" alt="Tarakasi workshop tools at rest in window light" /></Reveal>
+            <Reveal delay={0.08}><Ph dark label="INTERIOR: small workshop behind a showroom" meta="Photograph to be supplied" ratio="aspect-[4/3]" src="/images/challenge-workshop-interior.png" alt="Interior of a small Tarakasi workshop behind a showroom" /></Reveal>
           </div>
         </div>
         <Reveal className="mt-20 border-t border-silverd/30 pt-10">
@@ -56,8 +56,8 @@ function Thread() {
   return (
     <section className="relative flex min-h-[85vh] items-center overflow-hidden" data-testid="section-closing">
       <motion.img
-        src={placeholderUrl('closing-finished-piece: natural light', 'aspect-[16/9]', 1600)}
-        alt="Photograph to be supplied: one slowly moving macro shot of a finished piece catching natural light"
+        src="/images/closing-finished-piece.png"
+        alt="Finished Tarakasi silver filigree showpiece catching light"
         className="absolute inset-0 h-full w-full object-cover"
         initial={{ scale: 1.12 }}
         whileInView={{ scale: 1.02 }}
