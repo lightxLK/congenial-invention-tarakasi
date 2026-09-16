@@ -165,15 +165,12 @@ function Footer() {
     <footer className="border-t border-rule bg-paper2/60" data-testid="footer">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 py-10 md:flex-row md:items-end md:justify-between md:px-10">
         <div>
-          <p className="font-display text-2xl italic text-ink">Tarakasi</p>
-          <p className="mt-2 max-w-sm font-micro text-[10px] uppercase leading-relaxed tracking-[0.16em] text-silverd">
+          <img src="/images/logo-full.png" alt="Tarakasi" className="h-10 w-auto object-contain" />
+          <p className="mt-3 max-w-sm font-micro text-[10px] uppercase leading-relaxed tracking-[0.16em] text-silverd">
             A digital exhibition · all editorial content drawn from the six cited sources
           </p>
         </div>
         <div className="space-y-2 md:text-right">
-          <p className="font-micro text-[10px] uppercase leading-relaxed tracking-[0.16em] text-silverm">
-            Placeholder imagery via placehold.co, pending real photography
-          </p>
           <button
             onClick={() => scrollToId('top')}
             data-testid="back-to-top"

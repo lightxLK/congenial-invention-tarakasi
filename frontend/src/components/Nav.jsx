@@ -28,11 +28,10 @@ export default function Nav() {
           <button
             onClick={() => go('top')}
             data-testid="nav-wordmark"
-            className="flex items-baseline gap-2"
+            className="flex items-center"
             aria-label="Tarakasi, back to top"
           >
-            <span className="font-display text-xl italic tracking-tight text-ink">Tarakasi</span>
-            <span className="hidden font-micro text-[10px] uppercase tracking-[0.2em] text-silverd sm:inline">Cuttack Rupa Tarakasi</span>
+            <img src="/images/logo-full.png" alt="Tarakasi" className="h-9 w-auto object-contain" />
           </button>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Sections">
             {NAV.map((n) => (
@@ -70,7 +69,7 @@ export default function Nav() {
             data-testid="mobile-menu"
           >
             <div className="flex h-16 items-center justify-between px-5">
-              <span className="font-display text-xl italic text-paper">Tarakasi</span>
+              <img src="/images/logo-full.png" alt="Tarakasi" className="h-9 w-auto object-contain" />
               <button
                 onClick={() => setOpen(false)}
                 data-testid="nav-menu-close"
