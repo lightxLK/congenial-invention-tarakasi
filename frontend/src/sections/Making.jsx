@@ -8,7 +8,7 @@ const STEP_IMAGES = [
   '/images/making-step-2.png',
   '/images/making-step-3.png',
   '/images/making-step-04.png',
-  undefined,
+  '/images/making-step-05.png',
   '/images/making-step-06.png',
   '/images/making-step-07.png',
   '/images/making-step-08.png',
