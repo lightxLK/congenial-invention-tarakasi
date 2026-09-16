@@ -1,57 +1,6 @@
-import { useRef, useState } from 'react';
-import { Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
+import { Loupe, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 
 const LOUPE_SRC = '/images/opening-loupe-wire-macro.png';
-
-function Loupe() {
-  const ref = useRef(null);
-  const [lens, setLens] = useState(null);
-  const R = 80;
-  const ZOOM = 2.4;
-
-  const move = (e) => {
-    const rect = ref.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    setLens({ x, y, w: rect.width, h: rect.height });
-  };
-
-  return (
-    <div
-      ref={ref}
-      className="relative aspect-[4/5] cursor-none overflow-hidden border border-rule"
-      onMouseMove={move}
-      onMouseLeave={() => setLens(null)}
-      onClick={move}
-      data-testid="loupe-image"
-    >
-      <img
-        src={LOUPE_SRC}
-        alt="Macro of a silver filigree butterfly brooch, wire-on-wire detail"
-        className="h-full w-full object-cover"
-        loading="lazy"
-      />
-      {lens && (
-        <div
-          className="pointer-events-none absolute rounded-full border border-paper shadow-[0_0_0_1px_rgba(23,23,23,0.25)]"
-          style={{
-            width: R * 2,
-            height: R * 2,
-            left: lens.x - R,
-            top: lens.y - R,
-            backgroundImage: `url(${LOUPE_SRC})`,
-            backgroundSize: `${lens.w * ZOOM}px ${lens.h * ZOOM}px`,
-            backgroundPosition: `-${lens.x * ZOOM - R}px -${lens.y * ZOOM - R}px`,
-          }}
-          aria-hidden="true"
-        />
-      )}
-      <span className="absolute bottom-3 left-3 bg-paper/85 px-2 py-1 font-micro text-[10px] uppercase tracking-[0.18em] text-silverd">
-        Move to inspect: optical loupe
-      </span>
-    </div>
-  );
-}
 
 export default function Opening() {
   return (
@@ -104,7 +53,7 @@ export default function Opening() {
             </p>
           </Reveal>
           <Reveal delay={0.1} className="mt-10">
-            <Loupe />
+            <Loupe src={LOUPE_SRC} alt="Macro of a silver filigree butterfly brooch, wire-on-wire detail" />
           </Reveal>
         </div>
       </div>

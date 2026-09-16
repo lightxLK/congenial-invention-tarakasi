@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { EASE, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
+import { EASE, Loupe, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { MOTIFS } from '../content';
 
 const MOTIF_IMAGES = {
@@ -87,14 +87,16 @@ export default function WireLanguage() {
               <p className="font-micro text-[10px] uppercase tracking-[0.24em] text-silverm">Wire pattern</p>
               <h3 className="mt-2 font-display text-4xl font-light italic text-paper md:text-5xl">{open.name}</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-silverl">{open.note} <SourceNote keys={open.sources} dark /></p>
-              <Ph
-                dark
-                label={`FULL-BLEED MACRO: ${open.name.toLowerCase()} pattern`}
-                ratio="aspect-[16/9]"
-                className="mt-8"
-                src={MOTIF_IMAGES[open.name]}
-                alt={`Tarakasi ${open.name.toLowerCase()} wire pattern, macro`}
-              />
+              <div className="mt-8">
+                <Loupe
+                  dark
+                  fit="contain"
+                  ratio="aspect-square"
+                  src={MOTIF_IMAGES[open.name]}
+                  alt={`Tarakasi ${open.name.toLowerCase()} wire pattern, macro`}
+                  label={`Move to inspect: ${open.name.toLowerCase()} macro`}
+                />
+              </div>
               <button
                 onClick={() => setOpen(null)}
                 data-testid="motif-overlay-close"

@@ -69,16 +69,16 @@ function Thread() {
 
   return (
     <section className="relative flex min-h-[85vh] items-center overflow-hidden" data-testid="section-closing">
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         <motion.img
           key={slide}
           src={CLOSING_SLIDES[slide]}
           alt="Finished Tarakasi silver filigree showpiece catching light"
-          className="absolute inset-0 h-full w-full object-cover"
-          initial={{ x: '100%' }}
-          animate={{ x: '0%' }}
-          exit={{ x: '-100%' }}
-          transition={{ duration: 1, ease: EASE }}
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1.08 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.6, ease: EASE }, scale: { duration: 5, ease: 'linear' } }}
         />
       </AnimatePresence>
       <div className="absolute inset-0 bg-ink/55" aria-hidden="true" />
