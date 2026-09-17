@@ -27,18 +27,17 @@ const RECURRING_IMAGES = [
 
 function SubjectTile({ subject, src, ratio, className = '' }) {
   return (
-    <div className={`group relative w-full overflow-hidden bg-paper2 ${ratio} ${className}`}>
-      <img
-        src={src}
-        alt={`Tarakasi work depicting ${subject.name.toLowerCase()}`}
-        className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" aria-hidden="true" />
-      <div className="absolute inset-x-0 bottom-0 p-3 md:p-4">
-        <p className="font-display text-sm font-light leading-snug text-paper md:text-lg">{subject.name}</p>
-        <p className="mt-1 hidden text-xs leading-relaxed text-silverl md:block">{subject.note}</p>
+    <div className={className}>
+      <div className={`relative w-full overflow-hidden bg-paper2 ${ratio}`}>
+        <img
+          src={src}
+          alt={`Tarakasi work depicting ${subject.name.toLowerCase()}`}
+          className="h-full w-full object-cover object-center"
+          loading="lazy"
+        />
       </div>
+      <h3 className="mt-4 font-display text-xl font-light text-ink md:text-2xl">{subject.name}</h3>
+      <p className="mt-1 text-sm leading-relaxed text-silverd">{subject.note}</p>
     </div>
   );
 }
@@ -78,7 +77,7 @@ export default function Objects() {
         </p>
         <div className="masonry mt-8 columns-2 lg:columns-3">
           {RECURRING_SUBJECTS.slice(0, 6).map((s, i) => (
-            <Reveal key={s.name} className="mb-4" delay={(i % 6) * 0.05}>
+            <Reveal key={s.name} className="mb-8" delay={(i % 6) * 0.05}>
               <SubjectTile subject={s} src={RECURRING_IMAGES[i]} ratio={RECURRING_RATIOS[i]} />
             </Reveal>
           ))}
