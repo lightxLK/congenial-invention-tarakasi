@@ -76,16 +76,12 @@ export default function Objects() {
           Across jewellery, showpieces and festival work, the same handful of subjects recur. Seven of the most common: <SourceNote keys={['wiki', 'oaklores']} />
         </p>
         <div className="masonry mt-8 columns-2 lg:columns-3">
-          {RECURRING_SUBJECTS.slice(0, 6).map((s, i) => (
+          {RECURRING_SUBJECTS.map((s, i) => (
             <Reveal key={s.name} className="mb-8" delay={(i % 6) * 0.05}>
-              <SubjectTile subject={s} src={RECURRING_IMAGES[i]} ratio={RECURRING_RATIOS[i]} />
+              <SubjectTile subject={s} src={RECURRING_IMAGES[i]} ratio={i === 6 ? 'aspect-[4/3]' : RECURRING_RATIOS[i]} />
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.3} className="mx-auto mt-4 max-w-xl">
-          <SubjectTile subject={RECURRING_SUBJECTS[6]} src={RECURRING_IMAGES[6]} ratio="aspect-[4/3]" />
-        </Reveal>
 
         <p className="mt-8 max-w-xl text-xs leading-relaxed text-silverm">
           <SourceNote keys={['virasat']} />
