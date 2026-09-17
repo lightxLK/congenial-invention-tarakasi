@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { EASE, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { ODISSI_FORMS } from '../content';
 
+const BLINK = ODISSI_FORMS.map(() => ({ duration: 0.6 + Math.random() * 0.8, delay: Math.random() * 2 }));
+
 export default function Odissi() {
   const [active, setActive] = useState(null);
 
@@ -56,7 +58,7 @@ export default function Odissi() {
                       <motion.span
                         className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'border-silverd bg-paper'}`}
                         animate={{ opacity: [1, 0.25, 1] }}
-                        transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.15 }}
+                        transition={{ duration: BLINK[i].duration, repeat: Infinity, repeatDelay: 1.5 + Math.random() * 2, ease: 'easeInOut', delay: BLINK[i].delay }}
                       >
                         <span className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`} />
                       </motion.span>
