@@ -29,7 +29,8 @@ have — I've written the exact step for each so it's a paste-and-go list, not h
 - ✅ No secrets in repo; FTP credentials live in GitHub Actions secrets only
 - ✅ No stray `console.log`/`debugger` in source
 - N/A Load testing — static FTP host serving a single page; not a meaningful test for this profile
-- ⬜ **Lighthouse** — I don't have a way to run a full Lighthouse audit from here (needs a live Chrome session, which isn't connected this session). Run it yourself: Chrome DevTools → Lighthouse tab → Analyze page load, on the live URL, both mobile and desktop. Send me the JSON/screenshot if anything scores red and I'll fix it.
+- ✅ **Image weight (this pass):** all content photos were uncompressed PNG (262MB total public/images/, several single files 7-11MB). Converted the full photo set to WebP (q82) — 262MB → 19MB, a 93% reduction. Added `loading="lazy"` to the one raw `<img>` missing it (Odissi section) and `fetchpriority="high"` + a `<link rel="preload">` on the hero image (the page's LCP element).
+- ⬜ **Lighthouse** — I don't have a way to run a full Lighthouse audit from here (needs a live Chrome session, which isn't connected this session). Run it yourself: Chrome DevTools → Lighthouse tab → Analyze page load, on the live URL, both mobile and desktop. Send me the JSON/screenshot if anything scores red and I'll fix it. Should score much better now than before the image pass above.
 
 ### Data hygiene
 - N/A No backend, no admin user, no seed data
