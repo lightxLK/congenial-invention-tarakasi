@@ -36,8 +36,6 @@ export default function Odissi() {
                 alt="Odissi dancer wearing the full traditional Tarakasi ornament set, head to waist"
                 className="absolute inset-0 h-full w-full object-cover"
               />
-              <span className="absolute left-1/2 top-[7%] h-[86%] w-px bg-rule" aria-hidden="true" />
-
               {ODISSI_FORMS.map((f, i) => {
                 const on = active === i;
                 return (

@@ -5,6 +5,9 @@ export const SOURCES = {
   virasat: { label: 'Virasat-E-Hind Foundation', title: 'Tarakasi Art: On the Brink of Survival', url: 'https://blogvirasatehind.wordpress.com/2017/08/18/tarakasi-art-on-the-brink-of-survival/', role: 'The Persia-via-Indonesia maritime origin theory, Mughal patronage, the Madhusudan Das and 1962 cooperative revival, the rose-motif labour detail, and the survival challenges.' },
   drishti: { label: 'Drishti IAS', title: 'GI Tag to Cuttack Rupa Tarakasi', url: 'https://www.drishtiias.com/daily-updates/daily-news-analysis/gi-tag-to-cuttack-rupa-tarakasi', role: 'The GI recognition date, the legal explainer (DPIIT, GI Act 1999, TRIPS), and the ancient Mesopotamian filigree lineage.' },
   oaklores: { label: 'Oak Lores', title: "Tales in Twisted Silver: A Tribute to Odisha's Filigree Craft", url: 'https://oaklores.com/2025/04/23/tales-in-twisted-silver-a-tribute-to-odishas-filigree-craft/', role: "The Bhoi-dynasty dating, the 'Silver City' epithet, Bali Yatra, named market neighbourhoods, and contemporary revival notes." },
+  orissapost: { label: 'OrissaPOST', title: 'Fading Sparkle', url: 'https://www.orissapost.com/fading-sparkle/', role: 'Committee-by-committee record of chandi medha installations across Cuttack, including Khan Nagar, Ganga Mandir and Bapuji Club, and the count of backdrops city-wide.' },
+  obytes1: { label: 'OdishaBytes', title: "Two New Entrants To Elite 'Chandi Medhas' Club Of Odisha's Cuttack", url: 'https://odishabytes.com/durga-puja-two-new-entrants-to-elite-chandi-medhas-club-of-odishas-cuttack/', role: 'Jobra and Maa Mangala Puja Committee entering the chandi medha club, with weight, dimensions and cost detail.' },
+  obytes2: { label: 'OdishaBytes', title: "Four More 'Chandi Medha' For Durga Puja In Odisha's Cuttack", url: 'https://odishabytes.com/four-more-chandi-medha-for-durga-puja-in-odishas-cuttack/', role: 'Kafla Bazaar, Mohamadia Bazaar, Nima Sahi and Nimchouri joining the chandi medha club, with weight and dimension detail.' },
 };
 
 export const NAV = [
@@ -85,9 +88,23 @@ export const MEDHA = [
   { year: '2004', place: 'Ranihat', kg: 483, note: 'Chandi medha installed' },
   { year: '2005', place: 'Haripur-Dolamundai', kg: 500, note: 'Backdrop installed' },
   { year: '2006', place: 'Sheikh Bazaar', kg: 450, note: 'Backdrop remodelled in silver' },
+  { year: '2011', place: 'Khan Nagar', kg: 300, note: 'Three-quintal silver backdrop unveiled' },
+  { year: '2016-23', place: 'Mohamadia Bazaar', kg: 150, note: 'Work begun 2016, halted by the pandemic, completed 2023' },
+  { year: '2023', place: 'Nimchouri', kg: 150, note: 'Silver tableau joins the club' },
+  { year: '2023', place: 'Kafla Bazaar', kg: 280, note: '22 ft tableau installed' },
+  { year: '2024', place: 'Jobra', kg: 250, note: "75th-year silver tableau, roughly ₹3.5 crore's worth of work" },
 ];
 
-export const PUJA_AREAS = ['Chandni Chowk', 'Chauliaganj', 'Choudhury Bazar', 'Khan Nagar', 'Banka Bazar', 'Dargaah Bazaar', 'Balu Bazar'];
+export const RECURRING_SUBJECTS = [
+  { name: 'Animals, birds & flowers', note: 'The most common vocabulary, running vine and wing worked into everyday jewellery.' },
+  { name: 'Konark Chakra', note: 'The stone wheel of the Sun Temple, rendered in miniature wire.' },
+  { name: "Arjuna's chariot", note: 'Arjuna and Krishna as told in the Gita, worked as a display piece.' },
+  { name: 'Jagannath, Subhadra & Balabhadra', note: "Odisha's presiding deities, in idol and pendant form." },
+  { name: 'Taj Mahal & Eiffel Tower', note: 'Monument replicas made for the souvenir trade.' },
+  { name: 'Rose', note: 'A single rose motif takes three to four hours of continuous work.' },
+];
+
+export const PUJA_AREAS =['Chandni Chowk', 'Chauliaganj', 'Choudhury Bazar', 'Khan Nagar', 'Banka Bazar', 'Dargaah Bazaar', 'Balu Bazar'];
 
 export const GI_ROWS = [
   { q: 'Recognition date', a: 'Cuttack Rupa Tarakasi received Geographical Indication recognition on 15 March 2024.', sources: ['drishti'] },

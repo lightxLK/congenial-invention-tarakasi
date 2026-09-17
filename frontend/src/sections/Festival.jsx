@@ -47,6 +47,9 @@ export default function Festival() {
 
               <Reveal delay={0.1} className="mt-16">
                 <p className="font-micro text-[10px] uppercase tracking-[0.22em] text-accent">Weight of installed backdrops, kilograms of silver</p>
+                <p className="mt-3 max-w-md text-xs leading-relaxed text-silverm">
+                  Ten of the roughly 36 Cuttack puja committees known to install a chandi medha, by year and weight. <SourceNote keys={['orissapost']} />
+                </p>
                 <ol className="mt-6 space-y-5">
                   {MEDHA.map((m, i) => (
                     <li key={m.year} data-testid={`medha-row-${m.year}`}>
@@ -67,7 +70,7 @@ export default function Festival() {
                     </li>
                   ))}
                 </ol>
-                <div className="mt-4"><SourceNote keys={['wiki']} /></div>
+                <div className="mt-4"><SourceNote keys={['wiki', 'orissapost', 'obytes1', 'obytes2']} /></div>
               </Reveal>
             </div>
           </div>
