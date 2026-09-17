@@ -50,9 +50,9 @@ export default function Festival() {
                 <p className="mt-3 max-w-md text-xs leading-relaxed text-silverm">
                   Ten of the roughly 36 Cuttack puja committees known to install a chandi medha, by year and weight. <SourceNote keys={['orissapost']} />
                 </p>
-                <ol className="mt-6 space-y-5">
+                <ol className="masonry mt-6 columns-1 sm:columns-2">
                   {MEDHA.map((m, i) => (
-                    <li key={m.year} data-testid={`medha-row-${m.year}`}>
+                    <li key={m.year} className="mb-5" data-testid={`medha-row-${m.year}`}>
                       <div className="flex items-baseline justify-between gap-4 font-micro text-[11px] uppercase tracking-[0.16em] text-silverd">
                         <span>{m.year} · {m.place}</span>
                         <span className="text-ink">{m.kg} kg</span>

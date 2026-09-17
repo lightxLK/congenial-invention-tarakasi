@@ -9,6 +9,12 @@ const CLOSING_SLIDES = [
   '/images/closing-finished-piece-3.png',
 ];
 
+const CLOSING_SLIDES_MOBILE = [
+  '/images/closing-mobile-1.png',
+  '/images/closing-mobile-2.png',
+  '/images/closing-mobile-3.png',
+];
+
 function Challenge() {
   return (
     <section id="challenge" className="bg-charcoal py-16 text-silverl md:py-28" data-testid="section-challenge">
@@ -61,9 +67,15 @@ function Marquee() {
 
 function Thread() {
   const [slide, setSlide] = useState(0);
+  const [mobileSlide, setMobileSlide] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => setSlide((s) => (s + 1) % CLOSING_SLIDES.length), 5000);
+    return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => setMobileSlide((s) => (s + 1) % CLOSING_SLIDES_MOBILE.length), 5000);
     return () => clearInterval(id);
   }, []);
 
@@ -74,7 +86,19 @@ function Thread() {
           key={slide}
           src={CLOSING_SLIDES[slide]}
           alt="Finished Tarakasi silver filigree showpiece catching light"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 hidden h-full w-full object-cover object-center md:block"
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.6, ease: EASE }, scale: { duration: 5, ease: 'linear' } }}
+        />
+      </AnimatePresence>
+      <AnimatePresence>
+        <motion.img
+          key={mobileSlide}
+          src={CLOSING_SLIDES_MOBILE[mobileSlide]}
+          alt="Finished Tarakasi silver filigree showpiece catching light"
+          className="absolute inset-0 h-full w-full object-cover object-center md:hidden"
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
