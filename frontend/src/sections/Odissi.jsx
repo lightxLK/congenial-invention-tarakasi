@@ -55,7 +55,7 @@ export default function Odissi() {
                     >
                       <motion.span
                         className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'border-silverd bg-paper'}`}
-                        animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
+                        animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
                         transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.15 }}
                       >
                         <span className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`} />
