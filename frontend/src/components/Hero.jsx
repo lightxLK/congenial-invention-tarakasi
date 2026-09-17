@@ -66,7 +66,7 @@ export default function Hero() {
             transition={{ duration: 1.3, delay: 0.55, ease: EASE }}
           >
             <motion.img
-              src="/images/hero-macro.png"
+              src="/images/hero-macro.webp"
               alt="Macro of a finished Tarakasi silver filigree cross pendant catching light"
               className="h-full w-full object-cover"
               style={{ y: imgY, scale: 1.06 }}

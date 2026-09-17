@@ -1,6 +1,6 @@
 import { Loupe, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 
-const LOUPE_SRC = '/images/opening-loupe-wire-macro.png';
+const LOUPE_SRC = '/images/opening-loupe-wire-macro.webp';
 
 export default function Opening() {
   return (
@@ -24,7 +24,7 @@ export default function Opening() {
           </Reveal>
           <Reveal delay={0.15} className="mt-12">
             <Ph
-              src="/images/opening-city-street.png"
+              src="/images/opening-city-street.webp"
               alt="A Cuttack silver-market lane lined with filigree jewellery shops"
               ratio="aspect-[3/2]"
             />

@@ -4,15 +4,15 @@ import { EASE, MaskLine, Ph, Reveal, SectionHead, SourceNote, scrollToId } from 
 import { CHALLENGES, SOURCES } from '../content';
 
 const CLOSING_SLIDES = [
-  '/images/closing-finished-piece-1.png',
-  '/images/closing-finished-piece-2.png',
-  '/images/closing-finished-piece-3.png',
+  '/images/closing-finished-piece-1.webp',
+  '/images/closing-finished-piece-2.webp',
+  '/images/closing-finished-piece-3.webp',
 ];
 
 const CLOSING_SLIDES_MOBILE = [
-  '/images/closing-mobile-1.png',
-  '/images/closing-mobile-2.png',
-  '/images/closing-mobile-3.png',
+  '/images/closing-mobile-1.webp',
+  '/images/closing-mobile-2.webp',
+  '/images/closing-mobile-3.webp',
 ];
 
 function Challenge() {
@@ -38,8 +38,8 @@ function Challenge() {
             </ol>
           </div>
           <div className="space-y-8 lg:col-span-4 lg:col-start-9">
-            <Reveal><Ph dark label="WORKSHOP: tools at rest, window light" meta="Photograph to be supplied, no posed portraits" ratio="aspect-[4/5]" src="/images/challenge-workshop-tools.png" alt="Tarakasi workshop tools at rest in window light" /></Reveal>
-            <Reveal delay={0.08}><Ph dark label="INTERIOR: small workshop behind a showroom" meta="Photograph to be supplied" ratio="aspect-[4/3]" src="/images/challenge-workshop-interior.png" alt="Interior of a small Tarakasi workshop behind a showroom" /></Reveal>
+            <Reveal><Ph dark label="WORKSHOP: tools at rest, window light" meta="Photograph to be supplied, no posed portraits" ratio="aspect-[4/5]" src="/images/challenge-workshop-tools.webp" alt="Tarakasi workshop tools at rest in window light" /></Reveal>
+            <Reveal delay={0.08}><Ph dark label="INTERIOR: small workshop behind a showroom" meta="Photograph to be supplied" ratio="aspect-[4/3]" src="/images/challenge-workshop-interior.webp" alt="Interior of a small Tarakasi workshop behind a showroom" /></Reveal>
           </div>
         </div>
         <Reveal className="mt-20 border-t border-silverd/30 pt-10">

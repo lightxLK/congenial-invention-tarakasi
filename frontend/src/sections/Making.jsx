@@ -4,17 +4,17 @@ import { EASE, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared'
 import { STEPS, WORKSHOP } from '../content';
 
 const STEP_IMAGES = [
-  '/images/making-step-01.png',
-  '/images/making-step-2.png',
-  '/images/making-step-3.png',
-  '/images/making-step-04.png',
-  '/images/making-step-05.png',
-  '/images/making-step-06.png',
-  '/images/making-step-07.png',
-  '/images/making-step-08.png',
-  '/images/making-step-09.png',
-  '/images/making-step-10.png',
-  '/images/making-step-11.png',
+  '/images/making-step-01.webp',
+  '/images/making-step-2.webp',
+  '/images/making-step-3.webp',
+  '/images/making-step-04.webp',
+  '/images/making-step-05.webp',
+  '/images/making-step-06.webp',
+  '/images/making-step-07.webp',
+  '/images/making-step-08.webp',
+  '/images/making-step-09.webp',
+  '/images/making-step-10.webp',
+  '/images/making-step-11.webp',
 ];
 
 function buildWirePath(n, W, H, amp) {

@@ -4,12 +4,12 @@ import { EASE, Loupe, Ph, Reveal, SectionHead, SourceNote } from '../components/
 import { MOTIFS } from '../content';
 
 const MOTIF_IMAGES = {
-  Spiral: '/images/wire-motif-spiral.png',
-  Curl: '/images/wire-motif-curl.png',
-  Creeper: '/images/wire-motif-creeper.png',
-  'Jaali lattice': '/images/wire-motif-jaali.png',
-  Circle: '/images/wire-motif-circle.png',
-  Dot: '/images/wire-motif-dot.png',
+  Spiral: '/images/wire-motif-spiral.webp',
+  Curl: '/images/wire-motif-curl.webp',
+  Creeper: '/images/wire-motif-creeper.webp',
+  'Jaali lattice': '/images/wire-motif-jaali.webp',
+  Circle: '/images/wire-motif-circle.webp',
+  Dot: '/images/wire-motif-dot.webp',
 };
 
 export default function WireLanguage() {

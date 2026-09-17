@@ -12,12 +12,12 @@ const BENTO_SPANS = [
 
 const RATIOS = ['aspect-[3/4]', 'aspect-[4/3]', 'aspect-square', 'aspect-[3/4]', 'aspect-[16/10]', 'aspect-[4/5]'];
 const OBJECT_IMAGES = [
-  '/images/objects-jewellery.png',
-  '/images/objects-ornaments.png',
-  '/images/objects-souvenirs.png',
-  '/images/objects-idols.png',
-  '/images/objects-architectural.png',
-  '/images/objects-festival.png',
+  '/images/objects-jewellery.webp',
+  '/images/objects-ornaments.webp',
+  '/images/objects-souvenirs.webp',
+  '/images/objects-idols.webp',
+  '/images/objects-architectural.webp',
+  '/images/objects-festival.webp',
 ];
 
 export default function Objects() {
