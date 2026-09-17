@@ -33,34 +33,6 @@ export default function Festival() {
                   Tarakasi work is also associated with Cuttack&rsquo;s Bali Yatra celebrations. <SourceNote keys={['oaklores']} />
                 </p>
               </Reveal>
-
-              <Reveal delay={0.15} className="mt-14">
-                <p className="font-micro text-[10px] uppercase tracking-[0.22em] text-accent">Weight of installed backdrops, kilograms of silver</p>
-                <p className="mt-3 max-w-md text-xs leading-relaxed text-silverm">
-                  Ten of the roughly 36 Cuttack puja committees known to install a chandi medha, by year and weight. <SourceNote keys={['orissapost']} />
-                </p>
-                <ol className="mt-6 space-y-5">
-                  {MEDHA.map((m, i) => (
-                    <li key={m.year} data-testid={`medha-row-${m.year}`}>
-                      <div className="flex items-baseline justify-between gap-4 font-micro text-[11px] uppercase tracking-[0.16em] text-silverd">
-                        <span>{m.year} · {m.place}</span>
-                        <span className="text-ink">{m.kg} kg</span>
-                      </div>
-                      <div className="mt-2 h-[3px] w-full bg-rule/60">
-                        <motion.div
-                          className="h-full bg-silverd"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${(m.kg / 500) * 100}%` }}
-                          viewport={{ once: true, margin: '-10% 0px' }}
-                          transition={{ duration: 1.1, delay: i * 0.08, ease: EASE }}
-                        />
-                      </div>
-                      <p className="mt-1.5 text-xs text-silverm">{m.note}</p>
-                    </li>
-                  ))}
-                </ol>
-                <div className="mt-4"><SourceNote keys={['wiki', 'orissapost', 'obytes1', 'obytes2']} /></div>
-              </Reveal>
             </div>
 
             <div className="lg:col-span-7">
@@ -74,6 +46,34 @@ export default function Festival() {
               </Reveal>
             </div>
           </div>
+
+          <Reveal delay={0.15} className="mt-16 border-t border-rule pt-10 md:mt-24">
+            <p className="font-micro text-[10px] uppercase tracking-[0.22em] text-accent">Weight of installed backdrops, kilograms of silver</p>
+            <p className="mt-3 max-w-md text-xs leading-relaxed text-silverm">
+              Ten of the roughly 36 Cuttack puja committees known to install a chandi medha, by year and weight. <SourceNote keys={['orissapost']} />
+            </p>
+            <ol className="masonry mt-8 columns-1 sm:columns-2">
+              {MEDHA.map((m, i) => (
+                <li key={m.year} className="mb-6" data-testid={`medha-row-${m.year}`}>
+                  <div className="flex items-baseline justify-between gap-4 font-micro text-[11px] uppercase tracking-[0.16em] text-silverd">
+                    <span>{m.year} · {m.place}</span>
+                    <span className="text-ink">{m.kg} kg</span>
+                  </div>
+                  <div className="mt-2 h-[3px] w-full bg-rule/60">
+                    <motion.div
+                      className="h-full bg-silverd"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${(m.kg / 500) * 100}%` }}
+                      viewport={{ once: true, margin: '-10% 0px' }}
+                      transition={{ duration: 1.1, delay: i * 0.08, ease: EASE }}
+                    />
+                  </div>
+                  <p className="mt-1.5 text-xs text-silverm">{m.note}</p>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-6"><SourceNote keys={['wiki', 'orissapost', 'obytes1', 'obytes2']} /></div>
+          </Reveal>
         </div>
       </section>
 
