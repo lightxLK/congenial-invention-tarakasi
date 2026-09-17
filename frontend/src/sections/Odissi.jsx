@@ -26,7 +26,8 @@ export default function Odissi() {
         <div className="lg:col-span-6 lg:col-start-7">
           <Reveal>
             <div
-              className="relative aspect-[1536/2752] bg-paper2"
+              className="relative aspect-[1536/2752]"
+              style={{ backgroundColor: '#F3F0E9' }}
               role="img"
               aria-label="Odissi ornament set, photograph to be supplied; markers indicate the eight named ornament forms from head to feet"
               data-testid="odissi-panel"
