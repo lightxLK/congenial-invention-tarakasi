@@ -36,9 +36,9 @@ have — I've written the exact step for each so it's a paste-and-go list, not h
 - N/A No backend, no admin user, no seed data
 
 ### Repo hygiene (light SOP non-negotiables, not yet in this repo)
-- ⬜ `CHANGELOG.md` — not present. Want me to backfill one from git log, or start fresh from here?
+- ✅ `CHANGELOG.md` — added, backfilled from git log
 - ⬜ `PROJECT-CHECKLIST.md` — not present. Say the word and I'll add the live state artifact.
-- ⬜ `ALT+SHIFT+L+K` developer easter egg — the light SOP's signature feature, not present. This is an internal-SOP convention, not a client requirement — your call whether it belongs on a client-facing craft-heritage site. I won't add it without you saying yes.
+- ✅ `ALT+SHIFT+L+K` developer easter egg — added, opens `https://lightxlk.github.io/` in a new tab (`frontend/src/App.js`)
 
 **Sign-off note:** per the SOP, this checklist should be independently verified by someone other than whoever built the feature before calling it final — worth a second pair of eyes on the ⬜ items above once they're closed out.
 
@@ -76,11 +76,7 @@ relevant and this section should be revisited.
   (`SourceNote keys={[...]}`), the `Article` JSON-LD gives a clean machine-readable summary, and
   the copy avoids marketing fluff in favor of dated, attributed facts (the `TIMELINE`, `MEDHA`,
   `GI_ROWS` arrays in `content.js`)
-- One gap: the `Article` JSON-LD's `author`/`publisher` fields aren't set (schema.org allows
-  omitting them, but citing engines weight sourced authorship). If Katakia Tarakasi Centre wants
-  to be named as the authoring organization, tell me the exact name/URL and I'll add an
-  `Organization` entity to the JSON-LD.
-- No further action needed unless you want the author/publisher entity added.
+- ✅ `author`/`publisher` set on the `Article` JSON-LD: `Person` "Lokesh", `https://lightxlk.github.io/`.
 
 ### Verification steps (needs your access, not mine)
 - ⬜ Submit `sitemap.xml` in Google Search Console (after you verify domain ownership — DNS TXT
@@ -102,7 +98,7 @@ FAQPage), source map leak fix, real logo/favicon, image requirements (33/34, one
 aside image outstanding).
 
 **Blocked on your accounts/decisions:** analytics IDs, Sentry DSN, GSC/Bing verification,
-Lighthouse run, CHANGELOG/PROJECT-CHECKLIST/easter-egg decisions, author/publisher entity name.
+Lighthouse run, PROJECT-CHECKLIST.md.
 
 Send me any of the IDs/decisions above whenever you have them and I'll wire each one in — no
 need to batch them.
