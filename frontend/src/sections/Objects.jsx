@@ -4,8 +4,8 @@ import { OBJECT_CATS, RECURRING_SUBJECTS } from '../content';
 const RATIOS = ['aspect-[3/4]', 'aspect-[4/3]', 'aspect-square', 'aspect-[3/4]', 'aspect-[16/10]', 'aspect-[4/5]'];
 
 // Real delivered pixel dimensions per recurring-subject image, so tiles are sized to fit
-// (not cropped/stretched to an arbitrary grid cell): 2848x1504, 2880x1472, 1984x2144, 2880x1472, 4128x1024.
-const RECURRING_RATIOS = ['aspect-[89/47]', 'aspect-[45/23]', 'aspect-[62/67]', 'aspect-[45/23]', 'aspect-[129/32]'];
+// (not cropped/stretched to an arbitrary grid cell): 2848x1504, 1472x1472, 1984x2144, 2880x1472, 1280x1024, 1536x2752.
+const RECURRING_RATIOS = ['aspect-[89/47]', 'aspect-square', 'aspect-[62/67]', 'aspect-[45/23]', 'aspect-[5/4]', 'aspect-[24/43]'];
 const OBJECT_IMAGES = [
   '/images/objects-jewellery.webp',
   '/images/objects-ornaments.webp',
@@ -20,7 +20,8 @@ const RECURRING_IMAGES = [
   '/images/objects-recurring-konark-chakra.webp',
   '/images/objects-recurring-arjunas-chariot.webp',
   '/images/objects-recurring-jagannath-trio.webp',
-  '/images/objects-recurring-taj-eiffel.webp',
+  '/images/objects-recurring-taj-mahal.webp',
+  '/images/objects-recurring-eiffel-tower.webp',
   '/images/objects-recurring-rose.webp',
 ];
 
@@ -73,25 +74,25 @@ export default function Objects() {
       <Reveal className="mt-16 border-t border-rule pt-8 md:mt-24">
         <p className="font-micro text-[10px] uppercase tracking-[0.22em] text-accent">Recurring subjects</p>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
-          Across jewellery, showpieces and festival work, the same handful of subjects recur. Six of the most common: <SourceNote keys={['wiki', 'oaklores']} />
+          Across jewellery, showpieces and festival work, the same handful of subjects recur. Seven of the most common: <SourceNote keys={['wiki', 'oaklores']} />
         </p>
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Reveal><SubjectTile subject={RECURRING_SUBJECTS[0]} src={RECURRING_IMAGES[0]} ratio={RECURRING_RATIOS[0]} /></Reveal>
           <Reveal delay={0.05}><SubjectTile subject={RECURRING_SUBJECTS[1]} src={RECURRING_IMAGES[1]} ratio={RECURRING_RATIOS[1]} /></Reveal>
         </div>
 
-        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-[1fr_1.4fr]">
-          <Reveal delay={0.1}>
-            <SubjectTile subject={RECURRING_SUBJECTS[2]} src={RECURRING_IMAGES[2]} ratio={RECURRING_RATIOS[2]} className="h-full" />
-          </Reveal>
-          <div className="flex flex-col gap-4">
-            <Reveal delay={0.15}><SubjectTile subject={RECURRING_SUBJECTS[3]} src={RECURRING_IMAGES[3]} ratio={RECURRING_RATIOS[3]} /></Reveal>
-            <Reveal delay={0.2}><SubjectTile subject={RECURRING_SUBJECTS[4]} src={RECURRING_IMAGES[4]} ratio={RECURRING_RATIOS[4]} /></Reveal>
-          </div>
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Reveal delay={0.1}><SubjectTile subject={RECURRING_SUBJECTS[2]} src={RECURRING_IMAGES[2]} ratio={RECURRING_RATIOS[2]} /></Reveal>
+          <Reveal delay={0.15}><SubjectTile subject={RECURRING_SUBJECTS[5]} src={RECURRING_IMAGES[5]} ratio={RECURRING_RATIOS[5]} /></Reveal>
         </div>
 
-        <Reveal delay={0.25} className="mx-auto mt-6 max-w-xl">
-          <SubjectTile subject={RECURRING_SUBJECTS[5]} src={RECURRING_IMAGES[5]} ratio="aspect-[4/3]" />
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Reveal delay={0.2}><SubjectTile subject={RECURRING_SUBJECTS[3]} src={RECURRING_IMAGES[3]} ratio={RECURRING_RATIOS[3]} /></Reveal>
+          <Reveal delay={0.25}><SubjectTile subject={RECURRING_SUBJECTS[4]} src={RECURRING_IMAGES[4]} ratio={RECURRING_RATIOS[4]} /></Reveal>
+        </div>
+
+        <Reveal delay={0.3} className="mx-auto mt-6 max-w-xl">
+          <SubjectTile subject={RECURRING_SUBJECTS[6]} src={RECURRING_IMAGES[6]} ratio="aspect-[4/3]" />
         </Reveal>
 
         <p className="mt-8 max-w-xl text-xs leading-relaxed text-silverm">
