@@ -24,6 +24,24 @@ function App() {
     return () => { cancelAnimationFrame(raf); lenis.destroy(); window.__lenis = null; };
   }, []);
 
+  useEffect(() => {
+    const down = new Set();
+    const onKeyDown = (e) => {
+      down.add(e.key.toLowerCase());
+      if (e.altKey && e.shiftKey && down.has('l') && down.has('k')) {
+        window.open('https://lightxlk.github.io/', '_blank', 'noopener,noreferrer');
+        down.clear();
+      }
+    };
+    const onKeyUp = (e) => down.delete(e.key.toLowerCase());
+    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keyup', onKeyUp);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('keyup', onKeyUp);
+    };
+  }, []);
+
   return (
     <div className="grain bg-paper text-ink">
       <Nav />
