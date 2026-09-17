@@ -1,5 +1,14 @@
-import { Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
+import { Ph, Reveal, SectionHead, SourceNote, placeholderUrl } from '../components/Shared';
 import { OBJECT_CATS, RECURRING_SUBJECTS } from '../content';
+
+const BENTO_SPANS = [
+  'col-span-2 row-span-2',
+  'col-span-1 row-span-1',
+  'col-span-1 row-span-2',
+  'col-span-1 row-span-1',
+  'col-span-2 row-span-1',
+  'col-span-1 row-span-1',
+];
 
 const RATIOS = ['aspect-[3/4]', 'aspect-[4/3]', 'aspect-square', 'aspect-[3/4]', 'aspect-[16/10]', 'aspect-[4/5]'];
 const OBJECT_IMAGES = [
@@ -44,12 +53,22 @@ export default function Objects() {
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
           Across jewellery, showpieces and festival work, the same handful of subjects recur. Six of the most common: <SourceNote keys={['wiki', 'oaklores']} />
         </p>
-        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-8 grid grid-cols-2 auto-rows-[130px] gap-3 sm:grid-cols-3 sm:auto-rows-[150px] md:gap-4 lg:grid-cols-4 lg:auto-rows-[170px]">
           {RECURRING_SUBJECTS.map((s, i) => (
-            <Reveal key={s.name} delay={(i % 6) * 0.05}>
-              <Ph label={`MOTIF: ${s.name.toLowerCase()}`} ratio="aspect-square" alt={`Tarakasi work depicting ${s.name.toLowerCase()}`} />
-              <p className="mt-3 font-display text-base font-light leading-snug text-ink">{s.name}</p>
-              <p className="mt-1 text-xs leading-relaxed text-silverd">{s.note}</p>
+            <Reveal key={s.name} delay={(i % 6) * 0.05} className={BENTO_SPANS[i]}>
+              <div className="group relative h-full w-full overflow-hidden bg-paper2">
+                <img
+                  src={placeholderUrl(`MOTIF: ${s.name.toLowerCase()}`, 'aspect-square', 900)}
+                  alt={`Tarakasi work depicting ${s.name.toLowerCase()}`}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" aria-hidden="true" />
+                <div className="absolute inset-x-0 bottom-0 p-3 md:p-4">
+                  <p className="font-display text-sm font-light leading-snug text-paper md:text-lg">{s.name}</p>
+                  <p className="mt-1 hidden text-xs leading-relaxed text-silverl md:block">{s.note}</p>
+                </div>
+              </div>
             </Reveal>
           ))}
         </div>
