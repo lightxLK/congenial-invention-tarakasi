@@ -1,4 +1,4 @@
-import { Ph, Reveal, SectionHead, SourceNote, placeholderUrl } from '../components/Shared';
+import { Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { OBJECT_CATS, RECURRING_SUBJECTS } from '../content';
 
 const BENTO_SPANS = [
@@ -18,6 +18,15 @@ const OBJECT_IMAGES = [
   '/images/objects-idols.webp',
   '/images/objects-architectural.webp',
   '/images/objects-festival.webp',
+];
+
+const RECURRING_IMAGES = [
+  '/images/objects-recurring-animals-birds-flowers.webp',
+  '/images/objects-recurring-konark-chakra.webp',
+  '/images/objects-recurring-arjunas-chariot.webp',
+  '/images/objects-recurring-jagannath-trio.webp',
+  '/images/objects-recurring-taj-eiffel.webp',
+  '/images/objects-recurring-rose.webp',
 ];
 
 export default function Objects() {
@@ -58,7 +67,7 @@ export default function Objects() {
             <Reveal key={s.name} delay={(i % 6) * 0.05} className={BENTO_SPANS[i]}>
               <div className="group relative h-full w-full overflow-hidden bg-paper2">
                 <img
-                  src={placeholderUrl(`MOTIF: ${s.name.toLowerCase()}`, `[${s.w}/${s.h}]`, s.w)}
+                  src={RECURRING_IMAGES[i]}
                   alt={`Tarakasi work depicting ${s.name.toLowerCase()}`}
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
