@@ -53,13 +53,13 @@ export default function Odissi() {
                       aria-expanded={on}
                       className="flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
                     >
-                      <span className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'border-silverd bg-paper'}`}>
-                        <motion.span
-                          className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`}
-                          animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
-                          transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.15 }}
-                        />
-                      </span>
+                      <motion.span
+                        className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'border-silverd bg-paper'}`}
+                        animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
+                        transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.15 }}
+                      >
+                        <span className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`} />
+                      </motion.span>
                     </button>
                     <AnimatePresence>
                       {on && (
