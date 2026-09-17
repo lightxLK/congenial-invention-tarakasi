@@ -69,6 +69,7 @@ export default function Hero() {
               src="/images/hero-macro.webp"
               alt="Macro of a finished Tarakasi silver filigree cross pendant catching light"
               className="h-full w-full object-cover"
+              fetchpriority="high"
               style={{ y: imgY, scale: 1.06 }}
               initial={{ scale: 1.14 }}
               animate={{ scale: 1.06 }}
