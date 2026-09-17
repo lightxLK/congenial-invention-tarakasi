@@ -33,26 +33,15 @@ export default function Festival() {
                   Tarakasi work is also associated with Cuttack&rsquo;s Bali Yatra celebrations. <SourceNote keys={['oaklores']} />
                 </p>
               </Reveal>
-            </div>
 
-            <div className="lg:col-span-7">
-              <Reveal>
-                <div className="relative">
-                  <Ph label="PANORAMA: Chandi Medha backdrop framing the idol" meta="Photograph to be supplied, wide, festival light, drag-zoom intended" ratio="aspect-[21/10]" src="/images/festival-chandi-medha-panorama.png" alt="Chandi Medha silver backdrop framing the Durga idol" />
-                  <div className="relative z-10 -mt-10 ml-auto w-2/5 border-4 border-paper2 md:-mt-16">
-                    <Ph label="MACRO: one motif of the same backdrop" meta="The scale contrast, in one frame" ratio="aspect-square" src="/images/festival-chandi-medha-detail.png" alt="Macro detail of the Chandi Medha silver backdrop wirework" />
-                  </div>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.1} className="mt-16">
+              <Reveal delay={0.15} className="mt-14">
                 <p className="font-micro text-[10px] uppercase tracking-[0.22em] text-accent">Weight of installed backdrops, kilograms of silver</p>
                 <p className="mt-3 max-w-md text-xs leading-relaxed text-silverm">
                   Ten of the roughly 36 Cuttack puja committees known to install a chandi medha, by year and weight. <SourceNote keys={['orissapost']} />
                 </p>
-                <ol className="masonry mt-6 columns-1 sm:columns-2">
+                <ol className="mt-6 space-y-5">
                   {MEDHA.map((m, i) => (
-                    <li key={m.year} className="mb-5" data-testid={`medha-row-${m.year}`}>
+                    <li key={m.year} data-testid={`medha-row-${m.year}`}>
                       <div className="flex items-baseline justify-between gap-4 font-micro text-[11px] uppercase tracking-[0.16em] text-silverd">
                         <span>{m.year} · {m.place}</span>
                         <span className="text-ink">{m.kg} kg</span>
@@ -71,6 +60,17 @@ export default function Festival() {
                   ))}
                 </ol>
                 <div className="mt-4"><SourceNote keys={['wiki', 'orissapost', 'obytes1', 'obytes2']} /></div>
+              </Reveal>
+            </div>
+
+            <div className="lg:col-span-7">
+              <Reveal>
+                <div className="relative">
+                  <Ph label="PANORAMA: Chandi Medha backdrop framing the idol" meta="Photograph to be supplied, wide, festival light, drag-zoom intended" ratio="aspect-[21/10]" src="/images/festival-chandi-medha-panorama.png" alt="Chandi Medha silver backdrop framing the Durga idol" />
+                  <div className="relative z-10 -mt-10 ml-auto w-2/5 border-4 border-paper2 md:-mt-16">
+                    <Ph label="MACRO: one motif of the same backdrop" meta="The scale contrast, in one frame" ratio="aspect-square" src="/images/festival-chandi-medha-detail.png" alt="Macro detail of the Chandi Medha silver backdrop wirework" />
+                  </div>
+                </div>
               </Reveal>
             </div>
           </div>

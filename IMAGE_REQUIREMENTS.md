@@ -71,8 +71,8 @@ One catalogue-style object shot per category, even museum lighting (flat, not di
 ### 28. `odissi-ornament-set` — Odissi (`sections/Odissi.jsx`)
 Full-height image of a complete Odissi dance ornament set, head to waist, on a neutral backdrop.
 - Aspect: tall, portrait
-- Min. resolution: 1800×2800px
-- Note: eight numbered markers (Sinthi, Kapa, Choker, Padaka-tilaka, Bahichudi/Tayila, Kankana, Mekhala, Anklets & bells) are positioned over this image by percentage coordinates already in `content.js` (`ODISSI_FORMS`) — the ornament pieces must actually appear roughly at those body zones (head→feet) for the labels to land correctly; coordinates may need re-tuning once the final image is in.
+- **Delivered at 1536×2752px** — exact match to the frame the component was built for, no layout changes needed.
+- Note: eight numbered markers (Sinthi, Kapa, Choker, Padaka-tilaka, Bahichudi/Tayila, Kankana, Mekhala, Anklets & bells) are positioned over this image by percentage coordinates already in `content.js` (`ODISSI_FORMS`) — re-check marker alignment against the delivered photo and re-tune coordinates if the ornament pieces don't land on their named body zones.
 
 ### 29. `festival-chandi-medha-panorama` — Festival (`sections/Festival.jsx`)
 Wide panorama of a Chandi Medha silver backdrop framing the Durga idol, festival lighting.
@@ -107,11 +107,26 @@ One slowly moving macro shot of a finished piece catching natural light — can 
 - Aspect: fills viewport, treat as 16:9 minimum crop
 - Min. resolution: 2400×1350px
 - Note: this is a dark, full-bleed section (55% black overlay applied in CSS) — image should hold up under that overlay, not go muddy.
-- **Delivered as a 3-image crossfade + Ken Burns carousel** (`closing-finished-piece-1/2/3.png`), not a single static shot — upgrade over spec, not a shortfall.
+- **Delivered as a 3-image crossfade + Ken Burns carousel** (`closing-finished-piece-1/2/3.png`), desktop only — upgrade over spec, not a shortfall.
 
-**Total: 34 image slots** (11 of which are the Making sequence).
+### 35. `closing-mobile-{1,2,3}` — Closing, mobile breakpoint only (`sections/Closing.jsx`)
+Separate 3-image carousel shown below the `md` breakpoint in place of #34, so the mobile crop doesn't rely on a desktop-framed shot.
+- Aspect: portrait/mobile-viewport crop, fills viewport as `object-cover`
+- **Delivered.**
 
-**Delivered (33/34):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece (×3, carousel). Remaining placeholder (1/34): making-workshop-aside — low priority, small aside image only.
+### 36–41. `objects-recurring-{animals-birds-flowers, konark-chakra, arjunas-chariot, jagannath-trio, taj-eiffel, rose}` — Recurring subjects bento grid (`sections/Objects.jsx`)
+Six tiles in a fixed bento layout (one 2×2 feature, one tall, two banners, two standard) illustrating the motifs named in `content.js` → `RECURRING_SUBJECTS`. Each entry there now carries its own `w`/`h` so the placeholder reads the tile's real target resolution instead of a generic square.
+1. **Animals, birds & flowers** (feature tile) — 1900×1000px
+2. **Konark Chakra** — 1600×830px
+3. **Arjuna's chariot** (tall tile) — 1400×1520px
+4. **Jagannath, Subhadra & Balabhadra** — 1600×830px
+5. **Taj Mahal & Eiffel Tower** (banner tile) — 1900×480px
+6. **Rose** (banner tile) — 1900×480px
+- Note: these aspect ratios are load-bearing — the grid (`BENTO_SPANS` in `Objects.jsx`) is hand-tiled so all cells fill with no gaps; an image delivered at a noticeably different aspect than listed will letterbox or crop oddly inside its tile. If a tile's span is ever changed in code, recompute its target aspect from the new column/row footprint before reshooting.
+
+**Total: 41 image slots** (11 of which are the Making sequence, 3 the mobile closing carousel, 6 the recurring-subjects bento grid).
+
+**Delivered (35/41):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece (×3, desktop carousel), closing-mobile (×3, mobile carousel). Remaining placeholder (6/41): the objects-recurring-* bento set above. Also still open: making-workshop-aside — low priority, small aside image only (not counted in the 41, see #15).
 
 **Note:** `challenge-workshop-interior` shows the artisan's face in profile, which violates rule 3 ("no artisan faces"). Shipped anyway as it's the only interior shot supplied — swap if a faceless version becomes available.
 

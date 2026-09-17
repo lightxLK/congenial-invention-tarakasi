@@ -96,12 +96,12 @@ export const MEDHA = [
 ];
 
 export const RECURRING_SUBJECTS = [
-  { name: 'Animals, birds & flowers', note: 'The most common vocabulary, running vine and wing worked into everyday jewellery.' },
-  { name: 'Konark Chakra', note: 'The stone wheel of the Sun Temple, rendered in miniature wire.' },
-  { name: "Arjuna's chariot", note: 'Arjuna and Krishna as told in the Gita, worked as a display piece.' },
-  { name: 'Jagannath, Subhadra & Balabhadra', note: "Odisha's presiding deities, in idol and pendant form." },
-  { name: 'Taj Mahal & Eiffel Tower', note: 'Monument replicas made for the souvenir trade.' },
-  { name: 'Rose', note: 'A single rose motif takes three to four hours of continuous work.' },
+  { name: 'Animals, birds & flowers', note: 'The most common vocabulary, running vine and wing worked into everyday jewellery.', w: 1900, h: 1000 },
+  { name: 'Konark Chakra', note: 'The stone wheel of the Sun Temple, rendered in miniature wire.', w: 1600, h: 830 },
+  { name: "Arjuna's chariot", note: 'Arjuna and Krishna as told in the Gita, worked as a display piece.', w: 1400, h: 1520 },
+  { name: 'Jagannath, Subhadra & Balabhadra', note: "Odisha's presiding deities, in idol and pendant form.", w: 1600, h: 830 },
+  { name: 'Taj Mahal & Eiffel Tower', note: 'Monument replicas made for the souvenir trade.', w: 1900, h: 480 },
+  { name: 'Rose', note: 'A single rose motif takes three to four hours of continuous work.', w: 1900, h: 480 },
 ];
 
 export const PUJA_AREAS =['Chandni Chowk', 'Chauliaganj', 'Choudhury Bazar', 'Khan Nagar', 'Banka Bazar', 'Dargaah Bazaar', 'Balu Bazar'];
