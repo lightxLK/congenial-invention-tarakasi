@@ -114,19 +114,20 @@ Separate 3-image carousel shown below the `md` breakpoint in place of #34, so th
 - Aspect: portrait/mobile-viewport crop, fills viewport as `object-cover`
 - **Delivered.**
 
-### 36–41. `objects-recurring-{animals-birds-flowers, konark-chakra, arjunas-chariot, jagannath-trio, taj-eiffel, rose}` — Recurring subjects bento grid (`sections/Objects.jsx`)
-Six tiles in a fixed bento layout (one 2×2 feature, one tall, two banners, two standard) illustrating the motifs named in `content.js` → `RECURRING_SUBJECTS`. Each entry there now carries its own `w`/`h` so the placeholder reads the tile's real target resolution instead of a generic square.
-1. **Animals, birds & flowers** (feature tile) — 1900×1000px
-2. **Konark Chakra** — 1600×830px
-3. **Arjuna's chariot** (tall tile) — 1400×1520px
-4. **Jagannath, Subhadra & Balabhadra** — 1600×830px
-5. **Taj Mahal & Eiffel Tower** (banner tile) — 1900×480px
-6. **Rose** (banner tile) — 1900×480px
-- Note: these aspect ratios are load-bearing — the grid (`BENTO_SPANS` in `Objects.jsx`) is hand-tiled so all cells fill with no gaps; an image delivered at a noticeably different aspect than listed will letterbox or crop oddly inside its tile. If a tile's span is ever changed in code, recompute its target aspect from the new column/row footprint before reshooting.
+### 36–42. `objects-recurring-{animals-birds-flowers, konark-chakra, arjunas-chariot, jagannath-trio, taj-mahal, eiffel-tower, rose}` — Recurring subjects grid (`sections/Objects.jsx`)
+Seven tiles illustrating the motifs named in `content.js` → `RECURRING_SUBJECTS`, laid out in plain two-column rows (no fixed-cell bento grid) so each tile is sized to its own image's real aspect ratio — no forced crop, no dense-pack gaps. Each entry carries its own `w`/`h` (the delivered pixel dimensions).
+1. **Animals, birds & flowers** — 2848×1504px
+2. **Konark Chakra** — 1472×1472px (square, isolated on transparent-ish bg)
+3. **Arjuna's chariot** — 1984×2144px (portrait)
+4. **Jagannath, Subhadra & Balabhadra** — 2880×1472px
+5. **Taj Mahal** — 1280×1024px
+6. **Eiffel Tower** — 1536×2752px (tall portrait)
+7. **Rose** — displayed at a deliberate 4:3 center-crop (source is a 4128×1024 banner) — user's explicit call, not a mismatch.
+- Was originally a fixed-cell bento grid; switched to per-image aspect-ratio tiles (`RECURRING_RATIOS` in `Objects.jsx`) after the bento cells cropped/misjudged several images. If new photos replace any of these, update that tile's `aspect-[W/H]` to match the new file's real dimensions — do not assume the old ratio still applies.
 
-**Total: 41 image slots** (11 of which are the Making sequence, 3 the mobile closing carousel, 6 the recurring-subjects bento grid).
+**Total: 42 image slots** (11 of which are the Making sequence, 3 the mobile closing carousel, 7 the recurring-subjects grid).
 
-**Delivered (41/41):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece (×3, desktop carousel), closing-mobile (×3, mobile carousel), objects-recurring-{animals-birds-flowers,konark-chakra,arjunas-chariot,jagannath-trio,taj-eiffel,rose} (bento grid, matched by content not just aspect ratio — verified each image against its slot). All 41 shots complete. Still open: making-workshop-aside — low priority, small aside image only (not counted in the 41, see #15).
+**Delivered (42/42):** hero-macro, opening-loupe-wire-macro, opening-city-street, making-step-01…11 (full sequence), wire-motif-{spiral,curl,creeper,jaali,circle,dot}, objects-{jewellery,ornaments,souvenirs,idols,architectural,festival}, odissi-ornament-set, festival-chandi-medha-panorama, festival-chandi-medha-detail, cuttack-market-lane, challenge-workshop-tools, challenge-workshop-interior, closing-finished-piece (×3, desktop carousel), closing-mobile (×3, mobile carousel), objects-recurring-{animals-birds-flowers,konark-chakra,arjunas-chariot,jagannath-trio,taj-mahal,eiffel-tower,rose} (matched by content, not just aspect ratio — verified each image against its slot). All 42 shots complete. Still open: making-workshop-aside — low priority, small aside image only (not counted in the 42, see #15).
 
 **Note:** `challenge-workshop-interior` shows the artisan's face in profile, which violates rule 3 ("no artisan faces"). Shipped anyway as it's the only interior shot supplied — swap if a faceless version becomes available.
 
