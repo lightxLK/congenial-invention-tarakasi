@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { EASE, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { ODISSI_FORMS } from '../content';
 
-const BLINK = ODISSI_FORMS.map(() => ({ duration: 0.35 + Math.random() * 0.35, delay: Math.random() * 1 }));
+const BLINK = ODISSI_FORMS.map(() => ({ duration: 0.6 + Math.random() * 0.5, delay: Math.random() * 1 }));
 
 export default function Odissi() {
   const [active, setActive] = useState(null);
@@ -56,11 +56,15 @@ export default function Odissi() {
                       className="flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
                     >
                       <motion.span
-                        className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'border-silverd bg-paper'}`}
+                        className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'bg-paper'}`}
+                        style={on ? undefined : { borderColor: '#CDA98E' }}
                         animate={{ opacity: [1, 0.25, 1] }}
                         transition={{ duration: BLINK[i].duration, repeat: Infinity, ease: 'easeInOut', delay: BLINK[i].delay }}
                       >
-                        <span className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`} />
+                        <span
+                          className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : ''}`}
+                          style={on ? undefined : { backgroundColor: '#CDA98E' }}
+                        />
                       </motion.span>
                     </button>
                     <AnimatePresence>
