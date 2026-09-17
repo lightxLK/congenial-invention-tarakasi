@@ -57,13 +57,13 @@ export default function Odissi() {
                     >
                       <motion.span
                         className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'bg-paper'}`}
-                        style={on ? undefined : { borderColor: '#CDA98E' }}
+                        style={on ? undefined : { borderColor: '#B93947' }}
                         animate={{ opacity: [1, 0.25, 1] }}
                         transition={{ duration: BLINK[i].duration, repeat: Infinity, ease: 'easeInOut', delay: BLINK[i].delay }}
                       >
                         <span
                           className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : ''}`}
-                          style={on ? undefined : { backgroundColor: '#CDA98E' }}
+                          style={on ? undefined : { backgroundColor: '#B93947' }}
                         />
                       </motion.span>
                     </button>
