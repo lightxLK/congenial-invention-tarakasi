@@ -3,10 +3,9 @@ import { OBJECT_CATS, RECURRING_SUBJECTS } from '../content';
 
 const BENTO_SPANS = [
   'col-span-2 row-span-2',
-  'col-span-1 row-span-1',
-  'col-span-1 row-span-2',
-  'col-span-1 row-span-1',
-  'col-span-2 row-span-1',
+  'col-span-2 row-span-2',
+  'col-span-1 row-span-3',
+  'col-span-2 row-span-2',
   'col-span-2 row-span-1',
 ];
 
@@ -62,8 +61,8 @@ export default function Objects() {
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
           Across jewellery, showpieces and festival work, the same handful of subjects recur. Six of the most common: <SourceNote keys={['wiki', 'oaklores']} />
         </p>
-        <div className="mt-8 grid grid-flow-dense grid-cols-2 auto-rows-[130px] gap-3 sm:grid-cols-3 sm:auto-rows-[150px] md:gap-4 lg:grid-cols-4 lg:auto-rows-[170px]">
-          {RECURRING_SUBJECTS.map((s, i) => (
+        <div className="mt-8 grid grid-flow-dense grid-cols-2 auto-rows-[160px] gap-3 sm:grid-cols-3 sm:auto-rows-[190px] md:gap-4 lg:grid-cols-4 lg:auto-rows-[220px]">
+          {RECURRING_SUBJECTS.slice(0, 5).map((s, i) => (
             <Reveal key={s.name} delay={(i % 6) * 0.05} className={BENTO_SPANS[i]}>
               <div className="group relative h-full w-full overflow-hidden bg-paper2">
                 <img
@@ -81,6 +80,23 @@ export default function Objects() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.1} className="mx-auto mt-6 max-w-xl">
+          <div className="group relative aspect-[4/3] w-full overflow-hidden bg-paper2">
+            <img
+              src={RECURRING_IMAGES[5]}
+              alt={`Tarakasi work depicting ${RECURRING_SUBJECTS[5].name.toLowerCase()}`}
+              className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" aria-hidden="true" />
+            <div className="absolute inset-x-0 bottom-0 p-3 md:p-4">
+              <p className="font-display text-sm font-light leading-snug text-paper md:text-lg">{RECURRING_SUBJECTS[5].name}</p>
+              <p className="mt-1 hidden text-xs leading-relaxed text-silverl md:block">{RECURRING_SUBJECTS[5].note}</p>
+            </div>
+          </div>
+        </Reveal>
+
         <p className="mt-8 max-w-xl text-xs leading-relaxed text-silverm">
           <SourceNote keys={['virasat']} />
         </p>
