@@ -32,6 +32,11 @@ export default function Odissi() {
               aria-label="Odissi ornament set, photograph to be supplied; markers indicate the eight named ornament forms from head to feet"
               data-testid="odissi-panel"
             >
+              <div
+                className="absolute inset-x-0 bottom-0 h-24 opacity-40"
+                style={{ background: 'radial-gradient(ellipse 42% 100% at center, rgba(23,23,23,0.5), transparent 70%)', filter: 'blur(14px)' }}
+                aria-hidden="true"
+              />
               <img
                 src="/images/odissi-ornament-set.png"
                 alt="Odissi dancer wearing the full traditional Tarakasi ornament set, head to waist"
@@ -49,7 +54,11 @@ export default function Odissi() {
                       className="flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
                     >
                       <span className={`flex h-4 w-4 items-center justify-center rounded-full border transition-colors duration-300 ${on ? 'border-accent bg-accent/10' : 'border-silverd bg-paper'}`}>
-                        <span className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`} />
+                        <motion.span
+                          className={`h-1 w-1 rounded-full transition-colors duration-300 ${on ? 'bg-accent' : 'bg-silverd'}`}
+                          animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
+                          transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.15 }}
+                        />
                       </span>
                     </button>
                     <AnimatePresence>

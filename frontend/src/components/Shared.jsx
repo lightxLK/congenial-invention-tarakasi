@@ -116,7 +116,7 @@ export function SectionHead({ num, kicker, title, dark = false, id }) {
 
 export function SourceNote({ keys = [], dark = false }) {
   return (
-    <span className={`inline-flex flex-wrap items-center gap-1.5 align-middle ${dark ? 'text-silverm' : 'text-silverd'}`}>
+    <sup className={`ml-0.5 inline-flex gap-0.5 align-super text-[0.6em] ${dark ? 'text-silverm' : 'text-silverd'}`}>
       {keys.map((k) => (
         <a
           key={k}
@@ -125,12 +125,12 @@ export function SourceNote({ keys = [], dark = false }) {
           rel="noopener noreferrer"
           title={SOURCES[k].label}
           data-testid={`source-chip-${k}`}
-          className={`border px-1.5 py-0.5 font-micro text-[10px] uppercase tracking-[0.14em] transition-colors duration-200 ${dark ? 'border-silverd/50 hover:border-silverl hover:text-silverl' : 'border-rule hover:border-accent hover:text-accent'}`}
+          className={`font-micro tracking-[0.04em] transition-colors duration-200 ${dark ? 'hover:text-silverl' : 'hover:text-accent'}`}
         >
-          {k}
+          {SOURCES[k].sup}
         </a>
       ))}
-    </span>
+    </sup>
   );
 }
 
