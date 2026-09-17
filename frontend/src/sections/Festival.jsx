@@ -5,20 +5,20 @@ import { MEDHA, PUJA_AREAS } from '../content';
 export default function Festival() {
   return (
     <>
-      <section className="border-y border-rule bg-paper2/60 py-24 md:py-40" data-testid="section-durga-puja">
+      <section className="border-y border-rule bg-paper2/60 py-16 md:py-28" data-testid="section-durga-puja">
         <div className="mx-auto max-w-[1440px] px-5 md:px-10">
           <SectionHead num="07" kicker="In Culture: Durga Puja" title="When Cuttack Turns Silver" />
 
-          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
                 <p className="text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
                   Tarakasi is central to Cuttack&rsquo;s Durga Puja, most visibly in the immense silver backdrops known as Chandi Medha, which frame the goddess&rsquo;s idol, alongside silver crowns and ornaments made for the occasion. <SourceNote keys={['wiki']} />
                 </p>
-                <p className="mt-6 text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
+                <p className="mt-6 text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
                   The Sharadiya Utsav puja tradition in this form is linked to a 16th-century visit by Chaitanya Mahaprabhu, with consecration historically conducted at the Binod Behari Devi Mandap. <SourceNote keys={['wiki']} />
                 </p>
-                <p className="mt-6 text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
+                <p className="mt-6 text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
                   More than 150 filigree artisans are engaged each year making the backdrop and ornament designs. <SourceNote keys={['wiki']} />
                 </p>
               </Reveal>
@@ -56,7 +56,7 @@ export default function Festival() {
                       </div>
                       <div className="mt-2 h-[3px] w-full bg-rule/60">
                         <motion.div
-                          className={`h-full ${i === 3 ? 'bg-accent' : 'bg-silverd'}`}
+                          className="h-full bg-silverd"
                           initial={{ width: 0 }}
                           whileInView={{ width: `${(m.kg / 500) * 100}%` }}
                           viewport={{ once: true, margin: '-10% 0px' }}
@@ -74,15 +74,15 @@ export default function Festival() {
         </div>
       </section>
 
-      <section id="cuttack" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-cuttack">
+      <section id="cuttack" className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-cuttack">
         <SectionHead num="08" kicker="Place" title="Made in Cuttack" />
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Reveal>
               <p className="text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
                 Cuttack has been a commercial hub on Odisha&rsquo;s eastern coast since the early medieval period, and its silverwork earned it the epithet &lsquo;Silver City of Odisha&rsquo;. <SourceNote keys={['oaklores']} />
               </p>
-              <p className="mt-6 text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">
+              <p className="mt-6 text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
                 Across India, silver filigree carries associations with purity and ritual, used in ceremonial and auspicious occasions, historically in royal households, in temple ritual objects, and in festival processions. <SourceNote keys={['oaklores']} />
               </p>
             </Reveal>

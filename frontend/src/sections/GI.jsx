@@ -7,8 +7,8 @@ export default function GI() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="gi" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-gi">
-      <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+    <section id="gi" className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-gi">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
             <SectionHead num="09" kicker="Recognition" title="A Name Protected by Place" />

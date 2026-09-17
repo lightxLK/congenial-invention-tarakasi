@@ -7,8 +7,8 @@ export default function Odissi() {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="culture" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-odissi">
-      <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+    <section id="culture" className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-odissi">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-28">
             <SectionHead num="06" kicker="In Culture: Odissi" title="Silver in Motion" />

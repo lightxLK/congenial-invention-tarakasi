@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { motion, useMotionValueEvent, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { EASE, Ph, Reveal, SectionHead, SourceNote } from '../components/Shared';
 import { STEPS, WORKSHOP } from '../content';
 
@@ -26,7 +26,6 @@ function buildWirePath(n, W, H, amp) {
     const ym = y0 + stepH / 2;
     const dir = i % 2 === 0 ? 1 : -1;
     d += ` C ${cx + dir * amp} ${y0 + stepH * 0.16}, ${cx - dir * amp} ${ym - stepH * 0.2}, ${cx} ${ym}`;
-    d += ' a 8 8 0 1 1 0.01 0';
     if (i < n - 1) {
       const y1 = (i + 1) * stepH;
       d += ` C ${cx + dir * amp} ${ym + stepH * 0.2}, ${cx - dir * amp} ${y1 - stepH * 0.16}, ${cx} ${y1}`;
@@ -68,18 +67,17 @@ export default function Making() {
   const reduced = useReducedMotion();
   const [active, setActive] = useState(-1);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.7', 'end 0.65'] });
-  const smooth = useSpring(scrollYProgress, { stiffness: 60, damping: 20, mass: 0.6 });
   const full = useTransform(scrollYProgress, () => 1);
-  const progress = reduced ? full : smooth;
+  const progress = reduced ? full : scrollYProgress;
 
   useMotionValueEvent(scrollYProgress, 'change', (v) => {
     setActive(Math.min(STEPS.length - 1, Math.floor(v * STEPS.length * 1.02)));
   });
 
   return (
-    <section id="making" className="border-y border-rule bg-paper2/60 py-24 md:py-40" data-testid="section-making">
+    <section id="making" className="border-y border-rule bg-paper2/60 py-16 md:py-28" data-testid="section-making">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10">
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
               <SectionHead num="03" kicker="The Making" title="From Silver to Filigree" />

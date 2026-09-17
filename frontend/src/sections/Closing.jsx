@@ -11,18 +11,18 @@ const CLOSING_SLIDES = [
 
 function Challenge() {
   return (
-    <section id="challenge" className="bg-charcoal py-24 text-silverl md:py-40" data-testid="section-challenge">
+    <section id="challenge" className="bg-charcoal py-16 text-silverl md:py-28" data-testid="section-challenge">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10">
         <SectionHead dark num="10" kicker="The Present Tense" title="The Craft Must Continue" />
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <ol>
               {CHALLENGES.map((c, i) => (
                 <li key={i} className="border-t border-silverd/30 py-7 first:border-t-0 first:pt-0">
                   <Reveal>
                     <div className="flex gap-6">
-                      <span className="font-micro text-xs tracking-[0.2em] text-silverd">{String(i + 1).padStart(2, '0')}</span>
-                      <p className={`max-w-xl text-sm leading-relaxed md:text-base md:leading-[1.7] ${c.closing ? 'text-paper' : 'text-silverm'}`}>
+                      <span className="font-micro text-xs tracking-[0.2em] text-silverm">{String(i + 1).padStart(2, '0')}</span>
+                      <p className="max-w-xl text-sm leading-relaxed text-paper md:text-base md:leading-[1.7]">
                         {c.text} <SourceNote keys={c.sources} dark />
                       </p>
                     </div>
@@ -117,7 +117,7 @@ function Thread() {
 function Sources() {
   const keys = Object.keys(SOURCES);
   return (
-    <section id="sources" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-sources">
+    <section id="sources" className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-sources">
       <SectionHead num="11" kicker="Provenance" title="Sources &amp; Further Reading" />
       <Reveal>
         <p className="max-w-[680px] text-sm leading-relaxed text-silverd md:text-base md:leading-[1.7]">

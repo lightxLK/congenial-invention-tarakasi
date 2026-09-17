@@ -18,8 +18,8 @@ function Node({ kind }) {
 
 export default function History() {
   return (
-    <section className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-history">
-      <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+    <section className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-history">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
             <SectionHead num="02" kicker="History" title="A Craft With Many Beginnings" />

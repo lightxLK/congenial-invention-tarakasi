@@ -27,9 +27,9 @@ export default function Hero() {
             </MaskLine>
           </div>
 
-          <h1 className="font-display font-light leading-[0.95] tracking-[-0.02em] text-ink" style={{ fontSize: 'clamp(4.2rem, 11.5vw, 10.5rem)' }}>
+          <h1 className="flex font-display font-light leading-[0.95] tracking-[-0.02em] text-ink" style={{ fontSize: 'clamp(4.2rem, 11.5vw, 10.5rem)' }}>
             <MaskLine delay={0.35}>Tara</MaskLine>
-            <MaskLine delay={0.5} className="pl-[0.9em] italic text-silverd">kasi</MaskLine>
+            <MaskLine delay={0.5} className="italic text-silverd">kasi</MaskLine>
           </h1>
 
           <div className="mt-10 max-w-md">

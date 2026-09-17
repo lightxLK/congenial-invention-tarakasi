@@ -13,7 +13,7 @@ const OBJECT_IMAGES = [
 
 export default function Objects() {
   return (
-    <section className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-objects">
+    <section className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-objects">
       <SectionHead num="05" kicker="Forms" title="What Silver Becomes" />
 
       <Reveal>

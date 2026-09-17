@@ -4,10 +4,10 @@ const LOUPE_SRC = '/images/opening-loupe-wire-macro.png';
 
 export default function Opening() {
   return (
-    <section id="craft" className="mx-auto max-w-[1440px] px-5 pb-24 pt-10 md:px-10 md:pb-40 md:pt-16" data-testid="section-craft">
+    <section id="craft" className="mx-auto max-w-[1440px] px-5 pb-16 pt-8 md:px-10 md:pb-28 md:pt-12" data-testid="section-craft">
       <SectionHead num="01" kicker="The Craft" title="The Silver City" />
 
-      <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
         <div className="lg:col-span-6 lg:col-start-2">
           <Reveal>
             <p className="max-w-[680px] text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
@@ -17,7 +17,7 @@ export default function Opening() {
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-8 max-w-[680px] text-base leading-relaxed text-silverd md:text-lg md:leading-[1.7]">
+            <p className="mt-8 max-w-[680px] text-base leading-relaxed text-ink md:text-lg md:leading-[1.7]">
               Its silverwork earned the city its epithet, the Silver City of Odisha. This is not a museum relic; it is a living tradition, worked daily in neighbourhoods where hundreds of shops still carry the craft.{' '}
               <SourceNote keys={['oaklores']} />
             </p>

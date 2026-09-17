@@ -97,7 +97,7 @@ export function MaskLine({ children, delay = 0, inView = false, className = '' }
 
 export function SectionHead({ num, kicker, title, dark = false, id }) {
   return (
-    <div className="mb-14 md:mb-20">
+    <div className="mb-10 md:mb-14">
       <Reveal y={10}>
         <div className={`flex items-baseline gap-4 border-t pt-4 ${dark ? 'border-silverd/40' : 'border-rule'}`}>
           <span className="font-micro text-xs tracking-[0.2em] text-accent">{num}</span>

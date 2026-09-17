@@ -22,7 +22,7 @@ export default function WireLanguage() {
   }, []);
 
   return (
-    <section id="motifs" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-40" data-testid="section-motifs">
+    <section id="motifs" className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 md:py-28" data-testid="section-motifs">
       <SectionHead num="04" kicker="Motifs" title="A Language of Wire" />
 
       <Reveal>
