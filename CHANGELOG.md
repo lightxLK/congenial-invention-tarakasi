@@ -3,6 +3,18 @@
 Notable changes to katakatarakasi.com, grouped by day. All entries are backfilled from git
 history; entries from here on are added as work ships.
 
+## 2026-09-18
+
+- Content: swapped real filigree photography into every remaining placeholder slot — all 6 wire
+  motifs (spiral, curl, creeper, jaali, circle, dot), all 6 "Forms" catalogue shots (jewellery,
+  ornaments, souvenirs, idols, architectural, festival), and all 7 recurring-subject tiles
+  (animals/birds/flowers, Konark Chakra, Arjuna's chariot, Jagannath trio, Taj Mahal, Eiffel
+  Tower, rose).
+- Branding: replaced the header/footer logo and favicon/apple-touch-icon with the final Katakia
+  Tarakasi Centre artwork.
+- GI section: replaced the CSS-drawn placeholder seal (typographic circle) with the real GI
+  shield artwork.
+
 ## 2026-09-17
 
 - Perf: converted 264MB of uncompressed content-photo PNGs to WebP (sharp, q82) — 19.7MB total,
