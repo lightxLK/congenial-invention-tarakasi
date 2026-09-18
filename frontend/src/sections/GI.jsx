@@ -23,16 +23,12 @@ export default function GI() {
         <div className="lg:col-span-7 lg:col-start-6">
           <Reveal className="flex justify-center lg:justify-start">
             <div className="flex flex-col items-center gap-5">
-              <div
-                className="flex h-56 w-56 flex-col items-center justify-center gap-1.5 rounded-full border border-silverd/60 text-center md:h-64 md:w-64"
+              <img
+                src="/images/gi-seal.png"
+                alt="Cuttack Rupa Tarakasi Geographical Indication seal, 15 March 2024"
+                className="h-56 w-56 object-contain md:h-64 md:w-64"
                 data-testid="gi-seal"
-              >
-                <span className="font-micro text-[10px] uppercase tracking-[0.3em] text-silverd">Cuttack</span>
-                <span className="font-display text-2xl font-light italic text-ink md:text-3xl">Rupa Tarakasi</span>
-                <span className="h-px w-12 bg-accent" aria-hidden="true" />
-                <span className="font-micro text-[10px] uppercase tracking-[0.3em] text-silverd">Geographical Indication</span>
-                <span className="font-micro text-xs tracking-[0.2em] text-accent">15 · 03 · 2024</span>
-              </div>
+              />
               <p className="font-micro text-[10px] uppercase tracking-[0.16em] text-silverm">Typographic marker, not an official emblem</p>
             </div>
           </Reveal>

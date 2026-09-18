@@ -4,8 +4,8 @@ import { OBJECT_CATS, RECURRING_SUBJECTS } from '../content';
 const RATIOS = ['aspect-[3/4]', 'aspect-[4/3]', 'aspect-square', 'aspect-[3/4]', 'aspect-[16/10]', 'aspect-[4/5]'];
 
 // Real delivered pixel dimensions per recurring-subject image, so tiles are sized to fit
-// (not cropped/stretched to an arbitrary grid cell): 2848x1504, 1472x1472, 1984x2144, 2880x1472, 1280x1024, 1536x2752.
-const RECURRING_RATIOS = ['aspect-[89/47]', 'aspect-square', 'aspect-[62/67]', 'aspect-[45/23]', 'aspect-[5/4]', 'aspect-[24/43]'];
+// (not cropped/stretched to an arbitrary grid cell): 1792x2400, 1472x1472, 1984x2144, 2880x1472, 1280x1024, 1536x2752.
+const RECURRING_RATIOS = ['aspect-[112/150]', 'aspect-square', 'aspect-[62/67]', 'aspect-[45/23]', 'aspect-[5/4]', 'aspect-[24/43]'];
 const OBJECT_IMAGES = [
   '/images/objects-jewellery.webp',
   '/images/objects-ornaments.webp',
