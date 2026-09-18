@@ -96,7 +96,7 @@ export const MEDHA = [
 ];
 
 export const RECURRING_SUBJECTS = [
-  { name: 'Animals, birds & flowers', note: 'The most common vocabulary, running vine and wing worked into everyday jewellery.', w: 1792, h: 2400 },
+  { name: 'Animals, birds & flowers', note: 'The most common vocabulary, running vine and wing worked into everyday jewellery.', w: 1900, h: 1000 },
   { name: 'Konark Chakra', note: 'The stone wheel of the Sun Temple, rendered in miniature wire.', w: 1472, h: 1472 },
   { name: "Arjuna's chariot", note: 'Arjuna and Krishna as told in the Gita, worked as a display piece.', w: 1984, h: 2144 },
   { name: 'Sri Jagannath, Maa Subhadra & Sri Balabhadra', note: "Odisha's presiding deities, in idol and pendant form.", w: 1600, h: 830 },
