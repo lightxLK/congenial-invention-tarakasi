@@ -40,7 +40,12 @@ const W = 140, H = 1400;
 const DESKTOP_PATH = buildWirePath(STEPS.length, W, H, 30);
 const MOBILE_PATH = `M ${W / 2} 0 L ${W / 2} ${H}`;
 
+// The SVG is stretched (preserveAspectRatio="none") with non-scaling strokes, so
+// dash-based pathLength would measure in viewBox units but dash in screen pixels
+// and break/repeat on a tall section. Reveal with a clip rect in viewBox units instead.
 function WireRail({ progress, mobile }) {
+  const clipH = useTransform(progress, (v) => v * H);
+  const clipId = mobile ? 'wire-clip-m' : 'wire-clip-d';
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
@@ -48,15 +53,20 @@ function WireRail({ progress, mobile }) {
       className="h-full w-full"
       aria-hidden="true"
     >
+      <defs>
+        <clipPath id={clipId}>
+          <motion.rect x="0" y="0" width={W} height={clipH} />
+        </clipPath>
+      </defs>
       <path d={mobile ? MOBILE_PATH : DESKTOP_PATH} fill="none" stroke="#C9C4BA" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-      <motion.path
+      <path
         d={mobile ? MOBILE_PATH : DESKTOP_PATH}
         fill="none"
         stroke="#575650"
         strokeWidth="1.6"
         strokeLinecap="round"
         vectorEffect="non-scaling-stroke"
-        style={{ pathLength: progress }}
+        clipPath={`url(#${clipId})`}
       />
     </svg>
   );
