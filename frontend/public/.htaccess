@@ -11,3 +11,5 @@
   RewriteRule ^ /%1 [R=301,L]
   RewriteRule ^(about|privacy)/?$ /$1.html [L]
 </IfModule>
+
+AddType text/markdown .md

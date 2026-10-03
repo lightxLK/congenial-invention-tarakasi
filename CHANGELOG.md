@@ -18,6 +18,7 @@ history; entries from here on are added as work ships.
   makes no third-party requests; added static About and Privacy pages at `/about` and `/privacy` (footer-linked, styled to match the exhibition; `.htaccess` rewrites the extensionless URLs and 301s `.html`).
 - SEO/agents: raw HTML now carries a text summary inside `#root` (replaced on hydration) so
   non-JS crawlers see content; added `name` to Article JSON-LD; sitemap lists the new pages.
+- SEO/agents: added `index.md` (markdown version of the exhibition) with a `rel=alternate` link and `.md` served as `text/markdown`; sitemap `lastmod` is stamped from the build date in CI.
 - CI: deploy job now has `timeout-minutes: 15`; docs-only commits no longer trigger a deploy.
 
 ## 2026-09-18

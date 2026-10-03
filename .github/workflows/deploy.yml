@@ -27,6 +27,9 @@ jobs:
         working-directory: frontend
         run: yarn install --frozen-lockfile
 
+      - name: Stamp sitemap lastmod
+        run: sed -i "s#<changefreq>#<lastmod>$(date +%F)</lastmod><changefreq>#" frontend/public/sitemap.xml
+
       - name: Build static site
         working-directory: frontend
         run: yarn build
