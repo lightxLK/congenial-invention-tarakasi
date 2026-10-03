@@ -193,6 +193,11 @@ function Footer() {
           <p className="mt-3 max-w-sm font-micro text-[10px] uppercase leading-relaxed tracking-[0.16em] text-silverd">
             A digital exhibition · all editorial content drawn from the six cited sources
           </p>
+          {window.location.hostname.includes('ssjewellers') && (
+            <p className="mt-2 font-micro text-[10px] uppercase tracking-[0.16em] text-silverd">
+              Presented by SS Jewellers
+            </p>
+          )}
         </div>
         <div className="space-y-2 md:text-right">
           <button

@@ -45,11 +45,34 @@ jobs:
             **/.git*
             **/.git*/**
 
+      - name: Rebrand copy for ssjewellerskataka.com
+        run: |
+          cp -r frontend/build frontend/build-ss
+          cd frontend/build-ss
+          sed -i 's/katakatarakasi\.com/ssjewellerskataka.com/g' index.html robots.txt sitemap.xml
+          sed -i 's#og:site_name" content="Tarakasi"#og:site_name" content="SS Jewellers · Tarakasi"#; s#<title>Tarakasi: The Silver Filigree of Cuttack</title>#<title>Tarakasi: The Silver Filigree of Cuttack | SS Jewellers</title>#' index.html
+
+      - name: Deploy build-ss/ to FTP (ssjewellerskataka.com)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SS_HOST }}
+          username: ${{ secrets.FTP_SS_USERNAME }}
+          password: ${{ secrets.FTP_SS_PASSWORD }}
+          port: 21
+          local-dir: ./frontend/build-ss/
+          server-dir: ./
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+
       - name: Verify deployment
         run: |
-          for i in $(seq 1 12); do
-            STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 10 https://katakatarakasi.com/)
-            [ "$STATUS" = "200" ] && break
-            sleep 5
+          for d in katakatarakasi.com ssjewellerskataka.com; do
+            for i in $(seq 1 12); do
+              STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 10 https://$d/)
+              [ "$STATUS" = "200" ] && break
+              sleep 5
+            done
+            [ "$STATUS" = "200" ] || { echo "Verification failed: $d got HTTP $STATUS"; exit 1; }
           done
-          [ "$STATUS" = "200" ] || { echo "Verification failed: got HTTP $STATUS"; exit 1; }
