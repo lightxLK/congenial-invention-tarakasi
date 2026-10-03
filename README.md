@@ -17,7 +17,9 @@ Chandi Medha backdrops), and the March 2024 Geographical Indication recognition.
 Static, content-only exhibition site with no backend and no database — the entire page is one
 long-scroll narrative built from a single content file (`frontend/src/content.js`). The
 production host only accepts FTP uploads, which is why deployment builds a static export and
-pushes the `build/` folder directly, rather than running a Node server.
+pushes the `build/` folder directly, rather than running a Node server. The same build is
+served from two domains: katakatarakasi.com and ssjewellerskataka.com (Tarakasi presented by SS
+Jewellers).
 
 ## Build and Deployment Status
 
@@ -59,7 +61,8 @@ _None captured yet — see the live site at [katakatarakasi.com](https://katakat
   superscript inline citations.
 - WebP-optimized imagery throughout, lazy-loaded below the fold, with the hero image preloaded
   and prioritized as the page's LCP element.
-- SEO: `robots.txt`, `sitemap.xml`, canonical tag, OG/Twitter cards, `Article` + `FAQPage`
+- Two domains from one build: katakatarakasi.com and ssjewellerskataka.com, each self-canonical.
+- SEO: `llms.txt`, `robots.txt`, `sitemap.xml`, canonical tag, OG/Twitter cards, `Article` + `FAQPage`
   JSON-LD.
 
 ## Project Structure
@@ -120,6 +123,12 @@ Handled entirely by [`.github/workflows/deploy.yml`](.github/workflows/deploy.ym
 to `main`, GitHub Actions installs dependencies (`yarn install --frozen-lockfile`), builds the
 static bundle, and FTP-deploys `frontend/build/` straight to the production host. A final step
 polls `https://katakatarakasi.com/` for an HTTP 200 to confirm the deploy took effect.
+
+A second step copies the build, rewrites the domain and branding meta for
+**ssjewellerskataka.com** (canonical, OG, JSON-LD, robots, sitemap, llms.txt, title), and
+FTP-deploys it with the `FTP_SS_HOST` / `FTP_SS_USERNAME` / `FTP_SS_PASSWORD` secrets. The footer
+credit "Presented by SS Jewellers" is added at runtime by hostname, so there is still one build.
+Both domains are verified for HTTP 200.
 
 ## Contributing
 

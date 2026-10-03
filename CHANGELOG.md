@@ -3,6 +3,19 @@
 Notable changes to katakatarakasi.com, grouped by day. All entries are backfilled from git
 history; entries from here on are added as work ships.
 
+## 2026-10-03
+
+- Deploy: the same build now also ships to [ssjewellerskataka.com](https://ssjewellerskataka.com)
+  (Tarakasi presented by SS Jewellers). A post-build step copies `build/`, rewrites the domain in
+  `index.html`/`robots.txt`/`sitemap.xml`, and sets `og:site_name` and `<title>` to the SS
+  Jewellers variant; a second FTP deploy uses the `FTP_SS_*` secrets. The verify step checks both
+  domains.
+- Branding: footer shows "Presented by SS Jewellers" when served from an `ssjewellers*` hostname.
+- Security: added `.htaccess` with HSTS, `X-Content-Type-Options`, `X-Frame-Options` and
+  `Referrer-Policy` for both domains.
+- SEO/agents: added `llms.txt` (domain-rewritten per site).
+- CI: deploy job now has `timeout-minutes: 15`; docs-only commits no longer trigger a deploy.
+
 ## 2026-09-18
 
 - Content: swapped real filigree photography into every remaining placeholder slot — all 6 wire

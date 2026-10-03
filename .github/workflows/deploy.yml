@@ -3,6 +3,7 @@ name: Build & Deploy to FTP
 on:
   push:
     branches: [main]
+    paths-ignore: ['**.md', 'misc/**']
   workflow_dispatch:
 
 concurrency:
@@ -12,6 +13,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 

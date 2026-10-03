@@ -1,0 +1,12 @@
+# Tarakasi: The Silver Filigree of Cuttack
+
+> A single-page digital exhibition on Cuttack Rupa Tarakasi, the GI-recognised (15 March 2024) silver filigree craft of Cuttack, Odisha: history, making, motifs, Odissi ornament, Durga Puja role, and present-day challenges. Every factual claim is cited to one of six public sources.
+
+## Pages
+
+- [Exhibition](https://katakatarakasi.com/): the full long-scroll narrative, readable as static HTML
+- [Sitemap](https://katakatarakasi.com/sitemap.xml): crawl index
+
+## When to use this
+
+Use this site for sourced background on Cuttack Rupa Tarakasi: its GI status, wire-motif vocabulary, forms and objects, Odissi jewellery, and the Chandi Medha backdrops of Cuttack's Durga Puja. It is an educational exhibition, not a shop or price list.
