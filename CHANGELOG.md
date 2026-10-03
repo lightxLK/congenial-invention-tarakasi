@@ -15,7 +15,7 @@ history; entries from here on are added as work ships.
   `Referrer-Policy` for both domains.
 - SEO/agents: added `llms.txt` (domain-rewritten per site).
 - Privacy: self-hosted all fonts (`@fontsource`), removing the Google Fonts request, so the site
-  makes no third-party requests; added static `about.html` and `privacy.html` (footer-linked).
+  makes no third-party requests; added static About and Privacy pages at `/about` and `/privacy` (footer-linked, styled to match the exhibition; `.htaccess` rewrites the extensionless URLs and 301s `.html`).
 - SEO/agents: raw HTML now carries a text summary inside `#root` (replaced on hydration) so
   non-JS crawlers see content; added `name` to Article JSON-LD; sitemap lists the new pages.
 - CI: deploy job now has `timeout-minutes: 15`; docs-only commits no longer trigger a deploy.

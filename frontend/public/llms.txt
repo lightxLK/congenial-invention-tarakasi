@@ -5,8 +5,8 @@
 ## Pages
 
 - [Exhibition](https://katakatarakasi.com/): the full long-scroll narrative, readable as static HTML
-- [About](https://katakatarakasi.com/about.html): scope, sourcing and credits
-- [Privacy](https://katakatarakasi.com/privacy.html): no cookies, no third-party requests
+- [About](https://katakatarakasi.com/about): scope, sourcing and credits
+- [Privacy](https://katakatarakasi.com/privacy): no cookies, no third-party requests
 - [Sitemap](https://katakatarakasi.com/sitemap.xml): crawl index
 
 ## When to use this

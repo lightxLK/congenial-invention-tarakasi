@@ -1,14 +1,49 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F4F1EA" />
 <title>Privacy: Tarakasi, The Silver Filigree of Cuttack</title>
 <meta name="description" content="Privacy notice for the Tarakasi digital exhibition: what the site does and does not collect." />
-<style>body{max-width:44rem;margin:0 auto;padding:2rem 1.25rem;font:18px/1.6 Georgia,serif;color:#2a2a28;background:#f4f1ea}a{color:#7a4b1e}</style></head>
-<body><main>
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/legal.css" />
+</head>
+<body>
+<header><div class="bar">
+  <a href="/" aria-label="Tarakasi, back to the exhibition"><img src="/images/logo-full.png" alt="Tarakasi" /></a>
+  <nav class="micro" aria-label="Pages">
+    <a href="/">Exhibition</a>
+    <a href="/about">About</a>
+    <a href="/privacy" aria-current="page">Privacy</a>
+  </nav>
+</div></header>
+<main id="top">
 <h1>Privacy</h1>
-<p>This is a static, read-only exhibition. It has no user accounts, no forms, no comments, no advertising, no analytics and no tracking scripts, and it sets no cookies.</p>
-<p>All fonts, images and code are served from the same domain you are visiting. The page makes no requests to third-party services, so no third party receives your IP address or browsing information from this site.</p>
-<p>As with any website, the hosting provider's servers record standard access logs (IP address, time, requested page, browser type) for security and operation. The site owners do not use these logs to identify or profile visitors.</p>
-<p>Links to external sources open the websites of those sources, which have their own privacy practices.</p>
-<p>If analytics, forms or any other data collection is ever added, this notice will be updated first.</p>
-<p><a href="/">Back to the exhibition</a> · <a href="/about.html">About</a></p>
-</main></body></html>
+<p class="lede">This site collects nothing about you. It has no accounts, forms, advertising, analytics or tracking scripts, and it sets no cookies.</p>
+<div class="rule"></div>
+<section><h2>Third parties</h2><div>
+<p>All fonts, images and code are served from the same domain you are visiting. The page makes no requests to third-party services, so no third party receives your IP address or browsing information from this site.</p></div></section>
+<section><h2>Server logs</h2><div>
+<p>As with any website, the hosting provider's servers record standard access logs (IP address, time, requested page, browser type) for security and operation. The site owners do not use these logs to identify or profile visitors.</p></div></section>
+<section><h2>External links</h2><div>
+<p>Citations open the websites of the original sources, which have their own privacy practices.</p></div></section>
+<section><h2>Changes</h2><div>
+<p>If analytics, forms or any other data collection is ever added, this notice will be updated first. Read more <a href="/about">about the exhibition</a>.</p></div></section>
+</main>
+<footer><div class="foot">
+  <div>
+    <img src="/images/logo-full.png" alt="Tarakasi" />
+    <p class="micro">A digital exhibition · all editorial content drawn from the six cited sources</p>
+    <p class="micro" id="ss" hidden>Presented by SS Jewellers</p>
+  </div>
+  <div class="links micro">
+    <a class="top" href="#top">Back to top</a>
+    <span><a href="/about">About</a> · <a href="/privacy">Privacy</a></span>
+  </div>
+</div></footer>
+<script>if(location.hostname.indexOf("ssjewellers")>-1)document.getElementById("ss").hidden=false</script>
+</body>
+</html>

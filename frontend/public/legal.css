@@ -1,0 +1,55 @@
+@font-face{font-family:"Fraunces Variable";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/fraunces-latin-opsz-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces Variable";font-style:italic;font-weight:100 900;font-display:swap;src:url(/fonts/fraunces-latin-opsz-italic.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/instrument-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/instrument-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/montserrat-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/montserrat-latin-500-normal.woff2) format("woff2")}
+
+:root{--paper:#F4F1EA;--paper2:#EDE9DF;--ink:#171717;--silverd:#575650;--accent:#A47B45;--rule:#C9C4BA;--focus:#3A6EA5;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Instrument Sans",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--paper)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:1px}
+a{color:inherit}
+.micro{font:500 11px/1.4 Montserrat,ui-sans-serif,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+
+header{position:fixed;inset:0 0 auto;z-index:10;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.bar{max-width:1440px;height:64px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.bar img{height:36px;width:auto;display:block}
+nav{display:flex;gap:28px}
+nav a{position:relative;color:var(--silverd);text-decoration:none;padding:12px 0;transition:color .3s}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+nav a::after{content:"";position:absolute;left:0;bottom:6px;height:1px;width:0;background:var(--accent);transition:width .3s var(--ease)}
+nav a:hover::after,nav a[aria-current]::after{width:100%}
+
+main{max-width:1440px;margin:0 auto;padding:calc(64px + clamp(56px,10vw,128px)) 20px clamp(64px,10vw,128px)}
+h1{margin:0;max-width:16ch;font:300 clamp(2.5rem,7vw,5.5rem)/1.04 "Fraunces Variable",Georgia,serif;letter-spacing:-.02em;text-wrap:balance}
+.lede{max-width:46ch;margin:clamp(24px,3vw,40px) 0 0;font:300 clamp(1.25rem,2vw,1.625rem)/1.5 "Fraunces Variable",Georgia,serif;color:var(--silverd)}
+.rule{height:1px;background:var(--rule);margin:clamp(48px,8vw,96px) 0 0}
+section{display:grid;gap:12px;padding:clamp(32px,5vw,56px) 0;border-bottom:1px solid var(--rule)}
+h2{margin:0;font:400 1.5rem/1.2 "Fraunces Variable",Georgia,serif;letter-spacing:-.01em}
+section p{margin:0 0 1em;max-width:68ch;font-size:1.0625rem;line-height:1.7;color:#2c2c2a}
+section p:last-child{margin-bottom:0}
+section a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:4px;transition:text-decoration-color .3s}
+section a:hover{text-decoration-color:var(--accent)}
+
+footer{border-top:1px solid var(--rule);background:color-mix(in srgb,var(--paper2) 60%,transparent)}
+.foot{max-width:1440px;margin:0 auto;padding:40px 20px;display:flex;flex-direction:column;gap:24px}
+.foot img{height:40px;width:auto;display:block}
+.foot p{margin:12px 0 0;max-width:24rem;font-size:10px;line-height:1.7;color:var(--silverd)}
+.foot .links{display:flex;flex-direction:column;gap:8px}
+.foot .links a{color:var(--silverd);text-decoration:none}
+.foot .links a:hover{color:var(--accent)}
+.foot .links .top{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:4px;letter-spacing:.2em}
+.foot .links .top:hover{text-decoration-color:var(--accent)}
+#ss[hidden]{display:none}
+
+@media(min-width:768px){
+  .bar,.foot,main{padding-left:40px;padding-right:40px}
+  section{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:48px}
+  .foot{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .foot .links{text-align:right}
+}
+@media(max-width:480px){nav{gap:18px}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
