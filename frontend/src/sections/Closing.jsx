@@ -207,6 +207,11 @@ function Footer() {
           >
             Back to top
           </button>
+          <p className="font-micro text-[11px] uppercase tracking-[0.2em] text-silverd">
+            <a href="/about.html" className="hover:text-accent">About</a>
+            {' · '}
+            <a href="/privacy.html" className="hover:text-accent">Privacy</a>
+          </p>
         </div>
       </div>
     </footer>

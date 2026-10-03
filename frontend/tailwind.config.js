@@ -26,7 +26,7 @@ module.exports = {
         ring: 'hsl(var(--ring))',
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
+        display: ['"Fraunces Variable"', 'Fraunces', 'Georgia', 'serif'],
         sans: ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         micro: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

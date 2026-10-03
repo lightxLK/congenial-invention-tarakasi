@@ -51,7 +51,7 @@ jobs:
         run: |
           cp -r frontend/build frontend/build-ss
           cd frontend/build-ss
-          sed -i 's/katakatarakasi\.com/ssjewellerskataka.com/g' index.html robots.txt sitemap.xml
+          sed -i 's/katakatarakasi\.com/ssjewellerskataka.com/g' index.html robots.txt sitemap.xml llms.txt
           sed -i 's#og:site_name" content="Tarakasi"#og:site_name" content="SS Jewellers · Tarakasi"#; s#<title>Tarakasi: The Silver Filigree of Cuttack</title>#<title>Tarakasi: The Silver Filigree of Cuttack | SS Jewellers</title>#' index.html
 
       - name: Deploy build-ss/ to FTP (ssjewellerskataka.com)

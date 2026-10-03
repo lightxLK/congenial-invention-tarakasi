@@ -61,6 +61,7 @@ _None captured yet — see the live site at [katakatarakasi.com](https://katakat
   superscript inline citations.
 - WebP-optimized imagery throughout, lazy-loaded below the fold, with the hero image preloaded
   and prioritized as the page's LCP element.
+- Self-hosted fonts, no third-party requests; static About and Privacy pages.
 - Two domains from one build: katakatarakasi.com and ssjewellerskataka.com, each self-canonical.
 - SEO: `llms.txt`, `robots.txt`, `sitemap.xml`, canonical tag, OG/Twitter cards, `Article` + `FAQPage`
   JSON-LD.
